@@ -1,3 +1,5 @@
+const languages = require("./src/data/languages");
+
 module.exports = {
   siteMetadata: {
     title: "Wedding RSVP",
@@ -5,12 +7,14 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sass",
     {
-      resolve: "gatsby-plugin-sass",
+      resolve: "gatsby-plugin-i18n",
       options: {
-        sassOptions: {
-          indentedSyntax: true,
-        },
+        langKeyForNull: languages.defaultLangKey,
+        langKeyDefault: languages.defaultLangKey,
+        useLangKeyLayout: false,
+        prefixDefault: true,
       },
     },
     {
@@ -70,8 +74,8 @@ module.exports = {
       resolve: "gatsby-plugin-purgecss", // purges all unused/unreferenced css rules
       options: {
         develop: true, // Activates purging in npm run develop
-        purgeOnly: ["/all.sass"], // applies purging only on the bulma css file
+        purgeOnly: ["/all.scss"], // applies purging only on the bulma css file
       },
-    }, // must be after other CSS plugins
+    },
   ],
 };

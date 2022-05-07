@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import FormContainer from "../components/rsvp-form/FormContainer";
 
 // eslint-disable-next-line
 export const RsvpPageTemplate = ({ title, content, contentComponent }) => {
@@ -18,6 +19,7 @@ export const RsvpPageTemplate = ({ title, content, contentComponent }) => {
                 {title}
               </h2>
               <PageContent className="content" content={content} />
+              <FormContainer />
             </div>
           </div>
         </div>

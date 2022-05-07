@@ -12,7 +12,7 @@ const Countdown = () => {
   return (
     <>
       <h3 className="counter has-text-centered" style={{ fontSize: "30px" }}>
-        <span>{toCountdown("2022-09-10")}</span>
+        <span>{toCountdown({ until: "2022-09-10" })}</span>
       </h3>
     </>
   );
