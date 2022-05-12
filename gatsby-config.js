@@ -9,12 +9,26 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     {
-      resolve: "gatsby-plugin-i18n",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        langKeyForNull: languages.defaultLangKey,
-        langKeyDefault: languages.defaultLangKey,
-        useLangKeyLayout: false,
-        prefixDefault: true,
+        path: `${__dirname}//src/locales`,
+        name: `locale`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`,
+        languages: [`en`, `de`, `pl`],
+        defaultLanguage: `en`,
+        siteUrl: `http://localhost:8000/`,
+        i18nextOptions: {
+          interpolation: {
+            escapeValue: false,
+          },
+          keySeparator: false,
+          nsSeparator: false,
+        },
       },
     },
     {

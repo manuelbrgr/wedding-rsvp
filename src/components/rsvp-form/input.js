@@ -1,14 +1,17 @@
 import React from "react";
 import FormFooter from "./form-footer";
+import template from "../../utils/template";
 
 const Input = (props) => {
+  const translations = props.formProps;
+
   return (
     <div className="form__body">
       <div className="form__controls">
         <div className="control__textbox-group">
           <label className="control__textbox-label" htmlFor="fullName">
             {props.guestNum === 0
-              ? "First Name"
+              ? template(translations.firstName, { number: 3 })
               : `Guest ${props.guestNum}'s name`}
           </label>
           <input

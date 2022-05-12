@@ -8,6 +8,10 @@ require("es6-promise").polyfill();
 require("isomorphic-fetch");
 
 class FormContainer extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   state = {
     fullName: "",
     attendingCeremony: false,
@@ -443,6 +447,7 @@ class FormContainer extends React.Component {
             guestNum={this.state.editGuestNum}
             isInvalidName={this.state.isInvalidName}
             renderFooter={this.renderFooter}
+            formProps={this.props.formProps}
           />
         );
       case "showSummary":

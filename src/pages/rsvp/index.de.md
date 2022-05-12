@@ -1,9 +1,10 @@
 ---
 templateKey: "rsvp-page"
-path: "/rsvp"
 title: RSVP
+formProps:
+  firstName: Vorname %number%
 ---
 
-### Hello World
+### Kommst du?
 
 Hello World

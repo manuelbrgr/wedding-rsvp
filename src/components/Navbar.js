@@ -1,16 +1,11 @@
-import React from "react";
-import { Link } from "gatsby";
+import React, { useState } from "react";
+import { Link, useI18next } from "gatsby-plugin-react-i18next";
 
-const Navbar = class extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      active: false,
-      navBarActiveClass: "",
-    };
-  }
+function Navbar(props) {
+  const [active, setActive] = useState(false);
+  const [navBarActiveClass, setNavBarActiveClass] = useState("");
 
-  toggleHamburger() {
+  function toggleHamburger() {
     // toggle the active boolean in the state
     this.setState(
       {
@@ -19,83 +14,70 @@ const Navbar = class extends React.Component {
       // after state has been updated,
       () => {
         // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: "is-active",
-            })
-          : this.setState({
-              navBarActiveClass: "",
-            });
+        active ? setNavBarActiveClass("is-active") : setNavBarActiveClass("");
       }
     );
   }
 
-  render() {
-    return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <div className="container">
-          <div className="navbar-brand">
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              role="menuitem"
-              tabIndex={0}
-              onKeyPress={() => this.toggleHamburger()}
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
+  const { language, languages } = useI18next();
+
+  return (
+    <nav
+      className="navbar is-transparent"
+      role="navigation"
+      aria-label="main-navigation"
+    >
+      <div className="container">
+        <div className="navbar-brand">
+          {/* Hamburger menu */}
           <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
+            className={`navbar-burger burger ${navBarActiveClass}`}
+            data-target="navMenu"
+            role="menuitem"
+            tabIndex={0}
+            onKeyPress={() => toggleHamburger()}
+            onClick={() => toggleHamburger()}
           >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/">
-                Home
-              </Link>
-              <Link className="navbar-item" to="/location">
-                Location
-              </Link>
-              <Link className="navbar-item" to="/activities">
-                Things To Do
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Updates
-              </Link>
-              <Link className="navbar-item" to="/rsvp">
-                RSVP
-              </Link>
-              <Link className="navbar-item" to="/faq">
-                FAQ
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <Link className="navbar-item" to="/en">
-                EN
-              </Link>
-              <Link className="navbar-item" to="/de">
-                DE
-              </Link>
-              <Link className="navbar-item" to="/pl">
-                PL
-              </Link>
-            </div>
+            <span />
+            <span />
+            <span />
           </div>
         </div>
-      </nav>
-    );
-  }
-};
+        <div id="navMenu" className={`navbar-menu ${navBarActiveClass}`}>
+          <div className="navbar-start has-text-centered">
+            <Link className="navbar-item" to={`/`}>
+              Home
+            </Link>
+            <Link className="navbar-item" to={`/location`} language={language}>
+              Location
+            </Link>
+            <Link className="navbar-item" to="/activities">
+              Things To Do
+            </Link>
+            <Link className="navbar-item" to="/blog">
+              Updates
+            </Link>
+            <Link className="navbar-item" to="/rsvp">
+              RSVP
+            </Link>
+            <Link className="navbar-item" to="/faq">
+              FAQ
+            </Link>
+            <Link className="navbar-item" to="/contact">
+              Contact
+            </Link>
+          </div>
+          <div className="navbar-end has-text-centered">
+            {languages.map((lng) => (
+              <Link className="navbar-item" to="/" language={lng}>
+                {lng.toUpperCase()}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+}
 
 export default Navbar;

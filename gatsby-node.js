@@ -14,7 +14,6 @@ exports.createPages = ({ actions, graphql }) => {
             id
             fields {
               slug
-              langKey
             }
             frontmatter {
               tags
@@ -43,7 +42,6 @@ exports.createPages = ({ actions, graphql }) => {
         // additional data can be passed via context
         context: {
           id,
-          langKey: edge.node.fields.langKey,
         },
       });
     });

@@ -6,7 +6,12 @@ import Content, { HTMLContent } from "../components/Content";
 import FormContainer from "../components/rsvp-form/FormContainer";
 
 // eslint-disable-next-line
-export const RsvpPageTemplate = ({ title, content, contentComponent }) => {
+export const RsvpPageTemplate = ({
+  title,
+  content,
+  contentComponent,
+  formProps,
+}) => {
   const PageContent = contentComponent || Content;
 
   return (
@@ -19,7 +24,7 @@ export const RsvpPageTemplate = ({ title, content, contentComponent }) => {
                 {title}
               </h2>
               <PageContent className="content" content={content} />
-              <FormContainer />
+              <FormContainer formProps={formProps} />
             </div>
           </div>
         </div>
@@ -32,6 +37,7 @@ RsvpPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
+  formProps: PropTypes.object.isRequired,
 };
 
 const RsvpPage = ({ data }) => {
@@ -42,6 +48,7 @@ const RsvpPage = ({ data }) => {
       <RsvpPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
+        formProps={post.frontmatter.formProps}
         content={post.html}
       />
     </Layout>
@@ -60,6 +67,9 @@ export const rsvpPageQuery = graphql`
       html
       frontmatter {
         title
+        formProps {
+          firstName
+        }
       }
     }
   }
