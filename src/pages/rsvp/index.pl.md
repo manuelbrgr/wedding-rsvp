@@ -5,6 +5,6 @@ formProps:
   firstName: Imię %number%
 ---
 
-### Kommst du?
+### Ty hoczicz?
 
 Hello World

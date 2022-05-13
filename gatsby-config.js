@@ -9,28 +9,15 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-plugin-i18n",
       options: {
-        path: `${__dirname}//src/locales`,
-        name: `locale`,
+        langKeyForNull: languages.defaultLangKey,
+        langKeyDefault: languages.defaultLangKey,
+        useLangKeyLayout: false,
+        prefixDefault: true,
       },
     },
-    {
-      resolve: `gatsby-plugin-react-i18next`,
-      options: {
-        localeJsonSourceName: `locale`,
-        languages: [`en`, `de`, `pl`],
-        defaultLanguage: `en`,
-        siteUrl: `http://localhost:8000/`,
-        i18nextOptions: {
-          interpolation: {
-            escapeValue: false,
-          },
-          keySeparator: false,
-          nsSeparator: false,
-        },
-      },
-    },
+    "gatsby-plugin-sass",
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: "gatsby-source-filesystem",

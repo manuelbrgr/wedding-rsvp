@@ -6,7 +6,6 @@ import Countdown from "../components/Countdown";
 
 import Layout from "../components/Layout";
 import Features from "../components/Features";
-import BlogRoll from "../components/BlogRoll";
 import FullWidthImage from "../components/FullWidthImage";
 
 // eslint-disable-next-line
@@ -56,12 +55,6 @@ export const IndexPageTemplate = ({
                     <h3 className="has-text-weight-semibold is-size-2">
                       Latest stories
                     </h3>
-                    <BlogRoll />
-                    <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/blog">
-                        Read more
-                      </Link>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -114,8 +107,14 @@ IndexPage.propTypes = {
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+  query IndexPageTemplate($langKey: String!) {
+    markdownRemark(
+      fields: { langKey: { eq: $langKey } }
+      frontmatter: { templateKey: { eq: "index-page" } }
+    ) {
+      fields {
+        langKey
+      }
       frontmatter {
         title
         image {
