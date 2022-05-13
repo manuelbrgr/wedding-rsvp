@@ -8,6 +8,7 @@
     "bulma": "^0.9.0",
     "es6-promise": "^4.2.8",
     "gatsby": "^4.0.0",
+    "gatsby-plugin-i18n": "^1.0.1",
     "gatsby-plugin-image": "^2.0.0",
     "gatsby-plugin-purgecss": "^6.0.0",
     "gatsby-plugin-react-helmet": "^5.0.0",

@@ -47,7 +47,7 @@ function Navbar(props) {
               Home
             </Link>
             <Link className="navbar-item" to={`/${langKey}/location`}>
-              {t("location")}
+              {t("navigation.location")}
             </Link>
             <Link className="navbar-item" to={`/${langKey}/activities`}>
               Things To Do

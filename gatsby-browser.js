@@ -8,6 +8,13 @@ const locale = ~languages.langs.indexOf(userLang)
   ? userLang
   : languages.defaultLangKey;
 
+// @ts-ignore
+const translationEN = require("./src/locales/en/translation.json");
+// @ts-ignore
+const translationDE = require("./src/locales/de/translation.json");
+// @ts-ignore
+const translationPL = require("./src/locales/pl/translation.json");
+
 exports.onClientEntry = () => {
   if (window.location.pathname === "/") {
     window.location.pathname = `/${locale}`;
@@ -17,19 +24,14 @@ exports.onClientEntry = () => {
     lng: getLangKey(),
     resources: {
       en: {
-        translation: {
-          location: "Location",
-        },
+        translation: translationEN,
       },
+
       de: {
-        translation: {
-          location: "Ort",
-        },
+        translation: translationDE,
       },
       pl: {
-        translation: {
-          location: "Miasto",
-        },
+        translation: translationPL,
       },
     },
     fallbackLng: "en",
