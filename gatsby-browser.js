@@ -8,11 +8,8 @@ const locale = ~languages.langs.indexOf(userLang)
   ? userLang
   : languages.defaultLangKey;
 
-// @ts-ignore
 const translationEN = require("./src/locales/en/translation.json");
-// @ts-ignore
 const translationDE = require("./src/locales/de/translation.json");
-// @ts-ignore
 const translationPL = require("./src/locales/pl/translation.json");
 
 exports.onClientEntry = () => {

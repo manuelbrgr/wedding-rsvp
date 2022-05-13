@@ -1,4 +1,6 @@
-@import url("./rsvp-form/form.scss");
+@import "breakpoints";
+@import "mixins";
+@import "form";
 
 $kaldi-red: #354d37;
 $kaldi-red-invert: #fff;
@@ -10,22 +12,28 @@ $black: #2b2523;
 
 @font-face {
   font-family: "northwell";
-  src: url("../../static/fonts/northwell.ttf");
+  src: url("../../../static/fonts/northwell.ttf");
 }
 
 @font-face {
   font-family: "lato";
-  src: url("../../static/fonts/lato-light.ttf");
+  src: url("../../../static/fonts/lato-light.ttf");
 }
 
 @font-face {
   font-family: "lato-bold";
-  src: url("../../static/fonts/lato-bold.ttf");
+  src: url("../../../static/fonts/lato-bold.ttf");
 }
 
 body * {
   font-family: "lato";
 }
+
+.font-northwell {
+  letter-spacing: 5px;
+  font-family: northwell;
+}
+
 .navbar .navbar-menu {
   box-shadow: none !important;
 }
@@ -173,4 +181,31 @@ $menu-label-color: white;
 h1,
 h2 {
   font-family: "lato-bold";
+}
+
+.header-teaser {
+  > .gatsby-image-wrapper {
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in-out;
+
+    @include breakpoint(xlarge) {
+      opacity: 0.8;
+    }
+  }
+
+  h3 {
+    top: -15px;
+    position: relative;
+    @include breakpoint(small) {
+      top: 0;
+    }
+  }
+}
+
+.is-size-0 {
+  font-size: 5em;
+}
+
+.is-size-0-h {
+  font-size: 6em;
 }

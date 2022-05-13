@@ -8,10 +8,6 @@ require("es6-promise").polyfill();
 require("isomorphic-fetch");
 
 class FormContainer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   state = {
     fullName: "",
     attendingCeremony: false,
@@ -164,7 +160,10 @@ class FormContainer extends React.Component {
               display: "showSummary",
             }));
             break;
+          default:
+            break;
         }
+        break;
       default:
         return;
     }
@@ -243,12 +242,18 @@ class FormContainer extends React.Component {
         switch (attending) {
           case true:
             return "Hurray! Can't wait to see you on the big day!";
+          default:
+            break;
         }
+        break;
       case "showForm":
         switch (this.state.isEdit) {
           case true:
             return `Guest ${currentGuest}`;
+          default:
+            break;
         }
+        break;
       default:
         return "Angelika and Manuel's celebration on September 10th, 2022";
     }
@@ -294,7 +299,10 @@ class FormContainer extends React.Component {
                     </button>
                   </React.Fragment>
                 );
+              default:
+                break;
             }
+            break;
           default:
             return (
               <button
@@ -318,6 +326,8 @@ class FormContainer extends React.Component {
               </button>
             );
         }
+        break;
+
       case "showSummary":
         switch (this.state.isLoading) {
           case true:
@@ -332,7 +342,7 @@ class FormContainer extends React.Component {
                 </svg>
               </button>
             );
-            break;
+
           case false:
             return (
               <div>
@@ -374,7 +384,10 @@ class FormContainer extends React.Component {
                 </button>
               </div>
             );
+          default:
+            break;
         }
+        break;
       case "showResult":
         return (
           <a className="result__link" href="/">
@@ -395,6 +408,8 @@ class FormContainer extends React.Component {
             </button>
           </a>
         );
+      default:
+        break;
     }
   };
 
@@ -468,6 +483,8 @@ class FormContainer extends React.Component {
             renderFooter={this.renderFooter}
           />
         );
+      default:
+        break;
     }
   };
 

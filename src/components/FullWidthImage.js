@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { GatsbyImage } from "gatsby-plugin-image";
+import logo from "../img/logo.svg";
 
 export default function FullWidthImage(props) {
   const {
     height = 400,
     img,
     title,
-    logo,
     subheading,
     imgPosition = "top left",
   } = props;

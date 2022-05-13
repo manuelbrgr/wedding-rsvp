@@ -49,17 +49,20 @@ function Navbar(props) {
             <Link className="navbar-item" to={`/${langKey}/location`}>
               {t("navigation.location")}
             </Link>
+            <Link className="navbar-item" to={`/${langKey}/accommodation`}>
+              {t("navigation.accommodation")}
+            </Link>
             <Link className="navbar-item" to={`/${langKey}/activities`}>
-              Things To Do
+              {t("navigation.activities")}
             </Link>
             <Link className="navbar-item" to={`/${langKey}/rsvp`}>
-              RSVP
+              {t("navigation.rsvp")}
             </Link>
             <Link className="navbar-item" to={`/${langKey}/faq`}>
-              FAQ
+              {t("navigation.faq")}
             </Link>
             <Link className="navbar-item" to={`/${langKey}/contact`}>
-              Contact
+              {t("navigation.contact")}
             </Link>
           </div>
           <div className="navbar-end has-text-centered">

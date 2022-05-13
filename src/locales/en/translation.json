@@ -1,6 +1,12 @@
 {
   "navigation": {
     "home": "Home",
-    "location": "Location"
+    "location": "Location",
+    "accommodation": "Accomodation",
+    "activities": "Things to do",
+    "rsvp": "RSVP",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "imprint": "Imprint"
   }
 }

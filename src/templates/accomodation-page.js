@@ -4,18 +4,12 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
 
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
 // eslint-disable-next-line
-export const FaqPageTemplate = ({
+export const AccomodationPageTemplate = ({
   title,
   content,
   contentComponent,
-  questions,
+  formProps,
 }) => {
   const PageContent = contentComponent || Content;
 
@@ -29,17 +23,6 @@ export const FaqPageTemplate = ({
                 {title}
               </h2>
               <PageContent className="content" content={content} />
-
-              {questions.map((item) => (
-                <Accordion>
-                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography>{item.question}</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>{item.answer}</Typography>
-                  </AccordionDetails>
-                </Accordion>
-              ))}
             </div>
           </div>
         </div>
@@ -48,43 +31,42 @@ export const FaqPageTemplate = ({
   );
 };
 
-FaqPageTemplate.propTypes = {
+AccomodationPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
-  questions: PropTypes.array,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
+  formProps: PropTypes.object.isRequired,
 };
 
-const FaqPage = ({ data }) => {
+const AccomodationPage = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
     <Layout>
-      <FaqPageTemplate
+      <AccomodationPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
-        questions={post.frontmatter.questions}
+        formProps={post.frontmatter.formProps}
         content={post.html}
       />
     </Layout>
   );
 };
 
-FaqPage.propTypes = {
+AccomodationPage.propTypes = {
   data: PropTypes.object.isRequired,
 };
 
-export default FaqPage;
+export default AccomodationPage;
 
-export const faqPageQuery = graphql`
-  query FaqPage($id: String!) {
+export const accomodationPageQuery = graphql`
+  query AccomodationPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         title
-        questions {
-          question
-          answer
+        formProps {
+          firstName
         }
       }
     }

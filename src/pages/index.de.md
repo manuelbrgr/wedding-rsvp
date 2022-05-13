@@ -3,7 +3,7 @@ templateKey: index-page
 title: Angelika & Manuel
 image: /img/home-tuscany.jpg
 heading: Manuel & Angelika
-subheading: 10th of September in Toskana
+subheading: 10. September in der Toskana
 mainpitch:
   title: Title
   description: >

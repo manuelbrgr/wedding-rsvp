@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, graphql, withPrefix } from "gatsby";
+import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import Countdown from "../components/Countdown";
 
@@ -12,6 +12,7 @@ import FullWidthImage from "../components/FullWidthImage";
 export const IndexPageTemplate = ({
   image,
   title,
+  date,
   heading,
   subheading,
   mainpitch,
@@ -22,11 +23,7 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
-      <FullWidthImage
-        img={heroImage}
-        logo={`${withPrefix("/")}img/logo.svg`}
-        subheading={subheading}
-      />
+      <FullWidthImage img={heroImage} subheading={date} />
       <section className="section section--gradient">
         <Countdown />
         <div className="container">
@@ -34,28 +31,40 @@ export const IndexPageTemplate = ({
             <div className="columns">
               <div className="column is-10 is-offset-1">
                 <div className="content">
-                  <div className="content">
+                  <div className="content has-text-centered">
+                    <h2 className="title has-text-weight-semibold has-text-centered">
+                      {mainpitch.title}
+                    </h2>
                     <div className="tile">
-                      <h1 className="title">{mainpitch.title}</h1>
-                    </div>
-                    <div className="tile">
-                      <h3 className="subtitle">{mainpitch.description}</h3>
+                      <p className="subtitle">{mainpitch.description}</p>
                     </div>
                   </div>
                   <div className="columns">
-                    <div className="column is-12">
-                      <h3 className="has-text-weight-semibold is-size-2">
+                    <div className="column is-12 has-text-centered">
+                      <h3
+                        style={{
+                          textTransform: "uppercase",
+                          position: "relative",
+                          top: "30px",
+                          right: "10%",
+                        }}
+                        className="has-text-weight-semibold is-size-4"
+                      >
                         {heading}
                       </h3>
-                      <p>{description}</p>
+                      <p
+                        style={{
+                          color: "orange",
+                          position: "relative",
+                          left: "5%",
+                        }}
+                        className="is-size-0-h font-northwell"
+                      >
+                        {subheading}
+                      </p>
                     </div>
                   </div>
                   <Features gridItems={intro.blurbs} />
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      Latest stories
-                    </h3>
-                  </div>
                 </div>
               </div>
             </div>
@@ -71,6 +80,7 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
+  date: PropTypes.string,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
@@ -86,6 +96,7 @@ const IndexPage = ({ data }) => {
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
+        date={frontmatter.date}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
@@ -126,6 +137,7 @@ export const pageQuery = graphql`
             )
           }
         }
+        date
         heading
         subheading
         mainpitch {
@@ -137,9 +149,11 @@ export const pageQuery = graphql`
           blurbs {
             image {
               childImageSharp {
-                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
+                gatsbyImageData(quality: 80, layout: CONSTRAINED)
               }
             }
+            headline
+            subheading
             text
           }
           heading

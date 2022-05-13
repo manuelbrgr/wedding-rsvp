@@ -1,6 +1,12 @@
 {
   "navigation": {
     "home": "Home",
-    "location": "Ort"
+    "location": "Ort",
+    "accommodation": "Unterkunft",
+    "activities": "Aktivitäten",
+    "rsvp": "RSVP",
+    "faq": "FAQ",
+    "contact": "Kontakt",
+    "imprint": "Impressum"
   }
 }
