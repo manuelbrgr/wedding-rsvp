@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
 import languages from "../data/languages";
-import { getLangKey, getPathAfterLang } from "../utils/getLangKey";
+import { getLangKey, getPath } from "../utils/getLangKey";
 import { useTranslation } from "react-i18next";
+import { useLocation } from "@reach/router";
 
 function Navbar(props) {
+  const location = useLocation();
+
+  const langKey = getLangKey(location);
+  const path = getPath(location);
+
   const { t, i18n } = useTranslation();
 
-  const langKey = getLangKey();
-  const pathAfterLang = getPathAfterLang();
   const [active, setActive] = useState(false);
   const [navBarActiveClass, setNavBarActiveClass] = useState("");
 
@@ -70,7 +74,7 @@ function Navbar(props) {
               <Link
                 key={i}
                 className="navbar-item"
-                to={`/${lng}/${pathAfterLang}`}
+                to={`/${lng}/${path}`}
                 onClick={() => i18n.changeLanguage(lng)}
               >
                 {lng.toUpperCase()}

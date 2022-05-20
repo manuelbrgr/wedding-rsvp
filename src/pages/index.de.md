@@ -2,28 +2,35 @@
 templateKey: index-page
 title: Angelika & Manuel
 image: /img/home-tuscany.jpg
-heading: Manuel & Angelika
-subheading: 10. September in der Toskana
+date: 10th of September in Siena
 mainpitch:
-  title: Title
+  title: Join us under the Tuscan sun
   description: >
-    Description.
-description: >-
-  Description.
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+heading: Wedding day
+subheading: schedule
 intro:
   blurbs:
-    - image: /img/home-tuscany.jpg
+    - image: /img/ceremony.jpg
+      headline: Join us for
+      subheading: I do
       text: >
-        Intro Test 2.
-    - image: /img/home-tuscany.jpg
+        from 14:00 at the garden of Villa Ca' Nova Sud
+    - image: /img/apertivo.jpg
+      headline: Have some bubbles
+      subheading: and mingle
       text: >
-        Intro Text 2.
-    - image: /img/home-tuscany.jpg
+        from 15:00 at the front garden of Villa Colombaio
+    - image: /img/dinner.jpg
+      headline: Bring me the
+      subheading: Pasta!
       text: >
-        Intro Text 3.
-    - image: /img/home-tuscany.jpg
+        from 16:00 at the back garden of Villa Colombaio
+    - image: /img/party.jpg
+      headline: Let's get the party
+      subheading: started!
       text: >
-        Intro Text 4.
+        from 19:30 at the back garden of Villa Colombaio, and from midnight inside of the Villa Colombaio.
   heading: Heading
   description: >
     Text...

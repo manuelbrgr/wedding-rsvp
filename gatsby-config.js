@@ -2,13 +2,12 @@ const languages = require("./src/data/languages");
 
 module.exports = {
   siteMetadata: {
-    title: "Wedding RSVP",
-    description: "Wedding RSVP of wedding in 2022.",
+    title: "Wedding in Tuscany",
+    description: "Wedding of Angelika and Manuel in Siena.",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-material-ui",
-    "gatsby-plugin-sass",
     {
       resolve: "gatsby-plugin-i18n",
       options: {
@@ -49,7 +48,7 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: "gatsby-remark-relative-images",
+            resolve: "gatsby-remark-relative-images-v2",
             options: {
               name: "uploads",
             },
@@ -61,7 +60,11 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 2048,
+              linkImagesToOriginal: false,
             },
+          },
+          {
+            resolve: `react-medium-image-zoom`,
           },
           {
             resolve: "gatsby-remark-copy-linked-files",

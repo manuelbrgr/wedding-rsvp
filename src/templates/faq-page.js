@@ -3,53 +3,56 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
-
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { getImage } from "gatsby-plugin-image";
+import FullWidthImage from "../components/FullWidthImage";
+import Accordion from "react-bootstrap/Accordion";
 
 // eslint-disable-next-line
 export const FaqPageTemplate = ({
   title,
+  subheading,
   content,
+  image,
   contentComponent,
   questions,
 }) => {
   const PageContent = contentComponent || Content;
+  const heroImage = getImage(image) || image;
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
+    <>
+      <FullWidthImage img={heroImage} subheading={subheading} />
+      <section className="section section--gradient">
+        <div className="container">
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
+              <div className="section">
+                <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+                  {title}
+                </h2>
+                <PageContent className="content" content={content} />
 
-              {questions.map((item) => (
                 <Accordion>
-                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography>{item.question}</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>{item.answer}</Typography>
-                  </AccordionDetails>
+                  {questions.map((item, i) => (
+                    <Accordion.Item eventKey={i}>
+                      <Accordion.Header>{item.question}</Accordion.Header>
+                      <Accordion.Body>{item.answer}</Accordion.Body>
+                    </Accordion.Item>
+                  ))}
                 </Accordion>
-              ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
 FaqPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
+  image: PropTypes.object,
+  subheading: PropTypes.string,
   questions: PropTypes.array,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
@@ -63,6 +66,8 @@ const FaqPage = ({ data }) => {
       <FaqPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
+        image={post.frontmatter.image}
+        subheading={post.frontmatter.subheading}
         questions={post.frontmatter.questions}
         content={post.html}
       />
@@ -82,6 +87,16 @@ export const faqPageQuery = graphql`
       html
       frontmatter {
         title
+        subheading
+        image {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 100
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+            )
+          }
+        }
         questions {
           question
           answer

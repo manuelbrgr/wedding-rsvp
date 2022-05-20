@@ -1,0 +1,14 @@
+/* make the customizations */
+$primary: #000;
+$secondary: #8f5325;
+$success: #3e8d63;
+$info: #7854e4;
+$warning: #b8c924;
+$danger: #d62518;
+
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";
+
+.accordion-button {
+  box-shadow: none !important;
+}

@@ -1,7 +1,7 @@
-export function getLangKey() {
-  return window.location.pathname.slice(1, 3);
+export function getLangKey(location) {
+  return location?.pathname.slice(1, 3);
 }
 
-export function getPathAfterLang() {
-  return window.location.pathname.slice(4);
+export function getPath(location) {
+  return location?.pathname.slice(4);
 }

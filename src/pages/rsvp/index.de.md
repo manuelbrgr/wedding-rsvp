@@ -1,10 +1,12 @@
 ---
 templateKey: "rsvp-page"
+image: /img/home-tuscany.jpg
 title: RSVP
+subheading: répondez s'il vous plaît
 formProps:
-  firstName: Vorname %number%
+  firstName: First Name %number%
 ---
 
-### Kommst du?
+### Do you come?
 
 Hello World

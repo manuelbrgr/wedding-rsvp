@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import Countdown from "../components/Countdown";
 
@@ -76,7 +76,8 @@ export const IndexPageTemplate = ({
 };
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  langKey: PropTypes.string,
+  image: PropTypes.object,
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
@@ -144,7 +145,6 @@ export const pageQuery = graphql`
           title
           description
         }
-        description
         intro {
           blurbs {
             image {

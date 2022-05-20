@@ -1,7 +1,7 @@
 const _ = require("lodash");
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
-const { fmImagesToRelative } = require("gatsby-remark-relative-images");
+const { fmImagesToRelative } = require("gatsby-remark-relative-images-v2");
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
@@ -35,11 +35,9 @@ exports.createPages = ({ actions, graphql }) => {
       const id = edge.node.id;
       createPage({
         path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
         component: path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
         ),
-        // additional data can be passed via context
         context: {
           id,
           langKey: edge.node.fields.langKey,
@@ -56,7 +54,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode });
     createNodeField({
-      name: `slug`,
+      name: `layout`,
       node,
       value,
     });

@@ -1,6 +1,7 @@
+@import "../../../node_modules/bulma/bulma.sass";
 @import "breakpoints";
 @import "mixins";
-@import "form";
+@import "bootstrap";
 
 $kaldi-red: #354d37;
 $kaldi-red-invert: #fff;
@@ -30,7 +31,6 @@ body * {
 }
 
 .font-northwell {
-  letter-spacing: 5px;
   font-family: northwell;
 }
 
@@ -208,4 +208,8 @@ h2 {
 
 .is-size-0-h {
   font-size: 6em;
+}
+
+.push-in {
+  padding-left: 40px;
 }
