@@ -6,12 +6,16 @@ import Content, { HTMLContent } from "../components/Content";
 import FormContainer from "../components/rsvp-form/FormContainer";
 import FullWidthImage from "../components/FullWidthImage";
 import { getImage } from "gatsby-plugin-image";
+import Heading from "../components/Heading";
 
 // eslint-disable-next-line
 export const RsvpPageTemplate = ({
   title,
   subheading,
   content,
+  description,
+  rsvpTitle,
+  rsvpSubheading,
   contentComponent,
   formProps,
   image,
@@ -23,18 +27,20 @@ export const RsvpPageTemplate = ({
     <>
       <FullWidthImage img={heroImage} subheading={subheading} />
       <section className="section section--gradient">
-        <div className="container">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="section">
-                <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                  {title}
-                </h2>
-                <PageContent className="content" content={content} />
-                <FormContainer formProps={formProps} />
-              </div>
+        <div className="columns">
+          <div className="column is-8 is-offset-2">
+            <h2 className="title is-size-3 has-text-weight-bold has-text-centered is-bold-light">
+              {title}
+            </h2>
+            <div className="content has-text-centered mb-5">
+              <p className="subtitle has-text-weight-semibold">{description}</p>
+            </div>
+            <Heading aboveText={rsvpTitle} belowText={rsvpSubheading} />
+            <div className="column is-8 is-offset-2">
+              <FormContainer formProps={formProps} />
             </div>
           </div>
+          <PageContent />
         </div>
       </section>
     </>
@@ -45,6 +51,10 @@ RsvpPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.object,
   content: PropTypes.string,
+  subheadin: PropTypes.string,
+  description: PropTypes.string,
+  rsvpTitle: PropTypes.string,
+  rsvpSubheading: PropTypes.string,
   contentComponent: PropTypes.func,
   formProps: PropTypes.object.isRequired,
 };
@@ -59,6 +69,9 @@ const RsvpPage = ({ data }) => {
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         subheading={post.frontmatter.subheading}
+        description={post.frontmatter.description}
+        rsvpTitle={post.frontmatter.rsvpTitle}
+        rsvpSubheading={post.frontmatter.rsvpSubheading}
         formProps={post.frontmatter.formProps}
         content={post.html}
       />
@@ -79,6 +92,9 @@ export const rsvpPageQuery = graphql`
       frontmatter {
         title
         subheading
+        description
+        rsvpTitle
+        rsvpSubheading
         formProps {
           firstName
         }

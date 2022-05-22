@@ -24,34 +24,30 @@ export const FaqPageTemplate = ({
     <>
       <FullWidthImage img={heroImage} subheading={subheading} />
       <section className="section section--gradient">
-        <div className="container">
-          <div className="section">
-            <div className="columns">
-              <div className="column is-10 is-offset-1">
-                <div className="content">
-                  <div className="content has-text-centered">
-                    <h2 className="title has-text-weight-semibold has-text-centered">
-                      {title}
-                    </h2>
-                    <div className="tile">
-                      <p className="subtitle">{description}</p>
-                    </div>
-                  </div>
+        <div className="columns">
+          <div className="column is-8 is-offset-2">
+            <div className="content">
+              <div className="content has-text-centered">
+                <h2 className="title has-text-weight-semibold has-text-centered">
+                  {title}
+                </h2>
+                <div className="tile">
+                  <p className="subtitle">{description}</p>
                 </div>
               </div>
             </div>
-            <div className="columns">
-              <div className="column is-10 is-offset-1">
-                <Accordion>
-                  {questions.map((item, i) => (
-                    <Accordion.Item eventKey={i}>
-                      <Accordion.Header>{item.question}</Accordion.Header>
-                      <Accordion.Body>{item.answer}</Accordion.Body>
-                    </Accordion.Item>
-                  ))}
-                </Accordion>
-              </div>
-            </div>
+          </div>
+        </div>
+        <div className="columns">
+          <div className="column is-10 is-offset-1">
+            <Accordion>
+              {questions.map((item, i) => (
+                <Accordion.Item eventKey={i}>
+                  <Accordion.Header>{item.question}</Accordion.Header>
+                  <Accordion.Body>{item.answer}</Accordion.Body>
+                </Accordion.Item>
+              ))}
+            </Accordion>
           </div>
         </div>
       </section>

@@ -27,28 +27,28 @@ export const LocationPageTemplate = ({
     <div>
       <FullWidthImage img={heroImage} subheading={subheading} />
       <section className="section section--gradient">
-        <div className="container">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content has-text-centered">
-                <p className="subtitle has-text-weight-semibold">
-                  {mainpitch.descriptionTuscany}
-                </p>
-              </div>
-              <div className="column is-8" style={{ margin: "auto" }}>
-                <Zoom zoomMargin={40}>
-                  <GatsbyImage
-                    image={images.imageVilla.childImageSharp.gatsbyImageData}
-                    alt={"Tenuta Larnianone"}
-                  />
-                </Zoom>
-              </div>
-              <div className="content has-text-centered">
-                <p className="subtitle has-text-weight-semibold">
-                  {mainpitch.descriptionTenuta}
-                </p>
-              </div>
-              <div className="columns">
+        <div className="columns">
+          <div className="column is-8 is-offset-2">
+            <div className="content has-text-centered">
+              <p className="subtitle has-text-weight-semibold mb-5">
+                {mainpitch.descriptionTuscany}
+              </p>
+            </div>
+            <div className="column is-8 mb-5" style={{ margin: "auto" }}>
+              <Zoom zoomMargin={40}>
+                <GatsbyImage
+                  image={images.imageVilla.childImageSharp.gatsbyImageData}
+                  alt={"Tenuta Larnianone"}
+                />
+              </Zoom>
+            </div>
+            <div className="content has-text-centered mb-5">
+              <p className="subtitle has-text-weight-semibold">
+                {mainpitch.descriptionTenuta}
+              </p>
+            </div>
+            <div className="column is-12">
+              <div className="columns mt-5 mb-5">
                 <div className="column is-4">
                   <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                     {title}
@@ -88,32 +88,32 @@ export const LocationPageTemplate = ({
                   </Zoom>
                 </div>
               </div>
-              <div className="content has-text-centered">
-                <p className="subtitle has-text-weight-semibold">
-                  {mainpitch.descriptionTenuta}
-                </p>
+            </div>
+            <div className="content has-text-centered mb-5">
+              <p className="subtitle has-text-weight-semibold">
+                {mainpitch.descriptionTenuta}
+              </p>
+            </div>
+            <div className="columns mt-5 mb-5">
+              <div className="column is-12">
+                <Accordion>
+                  {questions.map((item, i) => (
+                    <Accordion.Item eventKey={i}>
+                      <Accordion.Header>{item.question}</Accordion.Header>
+                      <Accordion.Body
+                        dangerouslySetInnerHTML={{ __html: item.answer }}
+                      ></Accordion.Body>
+                    </Accordion.Item>
+                  ))}
+                </Accordion>
               </div>
-              <div className="columns">
-                <div className="column is-10 is-offset-1">
-                  <Accordion>
-                    {questions.map((item, i) => (
-                      <Accordion.Item eventKey={i}>
-                        <Accordion.Header>{item.question}</Accordion.Header>
-                        <Accordion.Body
-                          dangerouslySetInnerHTML={{ __html: item.answer }}
-                        ></Accordion.Body>
-                      </Accordion.Item>
-                    ))}
-                  </Accordion>
-                </div>
-              </div>
-              <div className="columns">
-                <div className="column is-12">
-                  <PageContent
-                    className="content has-text-centered"
-                    content={content}
-                  />
-                </div>
+            </div>
+            <div className="columns">
+              <div className="column is-12">
+                <PageContent
+                  className="content has-text-centered"
+                  content={content}
+                />
               </div>
             </div>
           </div>

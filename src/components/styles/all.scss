@@ -212,8 +212,10 @@ h2 {
 }
 
 .push-up {
+  display: block;
   position: relative;
   top: -30px;
+  margin-bottom: -30px;
 }
 
 .push-in {

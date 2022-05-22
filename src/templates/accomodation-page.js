@@ -28,68 +28,68 @@ export const AccomodationPageTemplate = ({
     <div>
       <FullWidthImage img={heroImage} subheading={subheading} />
       <section className="section section--gradient">
-        <div className="container">
-          <div className="section">
-            <div className="columns">
-              <div className="column is-10 is-offset-1">
-                <div className="content">
-                  <div className="content has-text-centered">
-                    <h2 className="title has-text-weight-semibold has-text-centered">
-                      {title}
-                    </h2>
-                    <div className="tile">
-                      <p className="subtitle">{description}</p>
-                    </div>
+        <div>
+          <div className="columns">
+            <div className="column is-8 is-offset-2">
+              <div className="content">
+                <div className="content has-text-centered">
+                  <h2 className="title has-text-weight-semibold has-text-centered">
+                    {title}
+                  </h2>
+                  <div className="tile">
+                    <p className="subtitle">{description}</p>
                   </div>
-
-                  <div className="columns">
-                    <div className="column is-12 has-text-centered">
-                      <h3
-                        style={{
-                          textTransform: "uppercase",
-                          position: "relative",
-                          top: "30px",
-                          right: "10%",
-                        }}
-                        className="has-text-weight-semibold is-size-4"
-                      >
-                        {listTitle}
-                      </h3>
-                      <p
-                        style={{
-                          position: "relative",
-                          left: "5%",
-                        }}
-                        className="is-size-0-h font-northwell color-info"
-                      >
-                        {listSubtitle}
-                      </p>
-                    </div>
-                  </div>
-                  <Cards gridItems={accommodations} />
                 </div>
+
+                <div className="columns">
+                  <div className="column is-12 has-text-centered">
+                    <h3
+                      style={{
+                        textTransform: "uppercase",
+                        position: "relative",
+                        top: "30px",
+                        right: "10%",
+                      }}
+                      className="has-text-weight-semibold is-size-4"
+                    >
+                      {listTitle}
+                    </h3>
+                    <p
+                      style={{
+                        position: "relative",
+                        left: "40px",
+                        top: "-20px",
+                        marginBottom: "-20px",
+                      }}
+                      className="is-size-0-h font-northwell color-info"
+                    >
+                      {listSubtitle}
+                    </p>
+                  </div>
+                </div>
+                <Cards gridItems={accommodations} />
               </div>
             </div>
+          </div>
 
-            <div className="column has-text-centered is-10 is-offset-1">
-              <div className="tile">
-                <p className="subtitle">{information}</p>
-              </div>
+          <div className="column has-text-centered is-10 is-offset-1 mb-5">
+            <div className="tile">
+              <p className="subtitle">{information}</p>
             </div>
+          </div>
 
-            <div className="columns">
-              <div className="column is-10 is-offset-1">
-                <Accordion>
-                  {questions.map((item, i) => (
-                    <Accordion.Item eventKey={i}>
-                      <Accordion.Header>{item.question}</Accordion.Header>
-                      <Accordion.Body
-                        dangerouslySetInnerHTML={{ __html: item.answer }}
-                      ></Accordion.Body>
-                    </Accordion.Item>
-                  ))}
-                </Accordion>
-              </div>
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
+              <Accordion>
+                {questions.map((item, i) => (
+                  <Accordion.Item eventKey={i}>
+                    <Accordion.Header>{item.question}</Accordion.Header>
+                    <Accordion.Body
+                      dangerouslySetInnerHTML={{ __html: item.answer }}
+                    ></Accordion.Body>
+                  </Accordion.Item>
+                ))}
+              </Accordion>
             </div>
           </div>
         </div>

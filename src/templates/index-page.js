@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Countdown from "../components/Countdown";
-
+import Zoom from "react-medium-image-zoom";
+import Content, { HTMLContent } from "../components/Content";
 import Layout from "../components/Layout";
 import Features from "../components/Features";
 import FullWidthImage from "../components/FullWidthImage";
@@ -11,7 +12,10 @@ import FullWidthImage from "../components/FullWidthImage";
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
   image,
+  imageUs,
   title,
+  content,
+  contentComponent,
   date,
   heading,
   subheading,
@@ -19,54 +23,66 @@ export const IndexPageTemplate = ({
   description,
   intro,
 }) => {
+  const PageContent = contentComponent || Content;
   const heroImage = getImage(image) || image;
 
   return (
     <div>
       <FullWidthImage img={heroImage} subheading={date} />
       <section className="section section--gradient">
-        <Countdown />
-        <div className="container">
-          <div className="section">
-            <div className="columns">
-              <div className="column is-10 is-offset-1">
-                <div className="content">
-                  <div className="content has-text-centered">
-                    <h2 className="title has-text-weight-semibold has-text-centered">
-                      {mainpitch.title}
-                    </h2>
-                    <div className="tile">
-                      <p className="subtitle">{mainpitch.description}</p>
-                    </div>
-                  </div>
-                  <div className="columns">
-                    <div className="column is-12 has-text-centered">
-                      <h3
-                        style={{
-                          textTransform: "uppercase",
-                          position: "relative",
-                          top: "30px",
-                          right: "10%",
-                        }}
-                        className="has-text-weight-semibold is-size-4"
-                      >
-                        {heading}
-                      </h3>
-                      <p
-                        style={{
-                          position: "relative",
-                          left: "5%",
-                        }}
-                        className="is-size-0-h font-northwell color-info"
-                      >
-                        {subheading}
-                      </p>
-                    </div>
-                  </div>
-                  <Features gridItems={intro.blurbs} />
+        <Countdown className="has-text-centered mb-5" />
+        <div className="columns">
+          <div className="column is-8 is-offset-2">
+            <div className="content">
+              <div className="content has-text-centered">
+                <h2 className="title has-text-weight-semibold has-text-centered">
+                  {mainpitch.title}
+                </h2>
+                <div className="tile">
+                  <p className="subtitle">{mainpitch.description}</p>
                 </div>
               </div>
+              <div className="column is-8 mb-5" style={{ margin: "auto" }}>
+                <Zoom zoomMargin={40}>
+                  <GatsbyImage
+                    image={imageUs.childImageSharp.gatsbyImageData}
+                    alt={"Tenuta Larnianone"}
+                  />
+                </Zoom>
+              </div>
+              <div className="columns">
+                <div className="column is-12 has-text-centered">
+                  <h3
+                    style={{
+                      textTransform: "uppercase",
+                      position: "relative",
+                      top: "30px",
+                      right: "10%",
+                    }}
+                    className="has-text-weight-semibold is-size-4"
+                  >
+                    {heading}
+                  </h3>
+                  <p
+                    style={{
+                      position: "relative",
+                      left: "40px",
+                      top: "-20px",
+                      marginBottom: "-20px",
+                    }}
+                    className="is-size-0-h font-northwell color-info"
+                  >
+                    {subheading}
+                  </p>
+                </div>
+              </div>
+              <Features gridItems={intro.blurbs} />
             </div>
+          </div>
+        </div>
+        <div className="columns">
+          <div className="column is-10 is-offset-1 has-text-centered">
+            {description}
           </div>
         </div>
       </section>
@@ -77,7 +93,9 @@ export const IndexPageTemplate = ({
 IndexPageTemplate.propTypes = {
   langKey: PropTypes.string,
   image: PropTypes.object,
+  imageUs: PropTypes.object,
   title: PropTypes.string,
+  contentComponent: PropTypes.func,
   heading: PropTypes.string,
   subheading: PropTypes.string,
   date: PropTypes.string,
@@ -95,6 +113,9 @@ const IndexPage = ({ data }) => {
     <Layout>
       <IndexPageTemplate
         image={frontmatter.image}
+        imageUs={frontmatter.imageUs}
+        content={frontmatter.html}
+        contentComponent={HTMLContent}
         title={frontmatter.title}
         date={frontmatter.date}
         heading={frontmatter.heading}
@@ -123,6 +144,7 @@ export const pageQuery = graphql`
       fields: { langKey: { eq: $langKey } }
       frontmatter: { templateKey: { eq: "index-page" } }
     ) {
+      html
       fields {
         langKey
       }
@@ -135,6 +157,11 @@ export const pageQuery = graphql`
               layout: FULL_WIDTH
               placeholder: BLURRED
             )
+          }
+        }
+        imageUs {
+          childImageSharp {
+            gatsbyImageData(quality: 80, layout: CONSTRAINED)
           }
         }
         date
@@ -158,6 +185,7 @@ export const pageQuery = graphql`
           heading
           description
         }
+        description
       }
     }
   }

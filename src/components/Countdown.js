@@ -10,10 +10,14 @@ export const toCountdown = ({ from = moment(), until }) => {
   return `${timeBetween.months()} Months ${timeBetween.days()} Days ${timeBetween.hours()} Hours`;
 };
 
-const Countdown = () => {
+const Countdown = (props) => {
   return (
     <>
-      <h3 className="counter has-text-centered" style={{ fontSize: "30px" }}>
+      <h3
+        className="counter has-text-centered"
+        style={{ fontSize: "30px" }}
+        {...props}
+      >
         <span>{toCountdown({ until: "2022-09-10" })}</span>
       </h3>
     </>

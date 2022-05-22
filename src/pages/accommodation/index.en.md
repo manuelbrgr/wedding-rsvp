@@ -8,7 +8,7 @@ description: >
 information: >
   Some hotels might not be available anymore on Booking.com or other search engines, but it could pay off to just call there and ask. There might be still something available. ☎️ If you come by car and stay inside of Siena or any other bigger city, make sure to pick a hotel that is outside of the ZTL (Zona Traffico Limitato - Limited Traffic Zone) ⛔ or one, that gives you an allowance to enter and park, otherwise you will have to pay a fine. 👮‍♂️ ⚠️
 listTitle: What can we
-listSubtitle: recommend?
+listSubtitle: advice?
 accommodations:
   - img: /img/appartamentopalazzetto.jpg
     name: Appartamento Palazzetto

@@ -4,8 +4,6 @@ $form-background: tint-color($success, 80%) !default;
 .form-container {
   background-color: $form-background;
   border: 1px solid $secondary;
-  margin: 0 auto 10rem;
-  width: 90%;
   position: relative;
 }
 

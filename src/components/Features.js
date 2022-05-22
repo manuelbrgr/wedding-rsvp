@@ -12,9 +12,9 @@ const colorPalette = [
 const FeatureGrid = ({ gridItems }) => (
   <div className="columns is-multiline">
     {gridItems.map((item, i) => (
-      <div key={item.text} className="has-text-centered column is-12">
-        <section className="columns section">
-          <div className="column is-6">
+      <div key={item.text} className="has-text-centered column is-12 mb-5">
+        <section className="columns">
+          <div className="column is-4 is-offset-1">
             <div
               style={{
                 width: "100%",
@@ -28,10 +28,14 @@ const FeatureGrid = ({ gridItems }) => (
             <h4 style={{ textTransform: "uppercase" }}>{item.headline}</h4>
             <span
               className={`font-northwell is-size-0 ${colorPalette[i]} push-in push-up`}
+              style={{ whiteSpace: "nowrap" }}
             >
               {item.subheading}
             </span>
-            <p className="is-size-4">{item.text}</p>
+            <p
+              className="is-size-4"
+              dangerouslySetInnerHTML={{ __html: item.text }}
+            />
           </div>
         </section>
       </div>
