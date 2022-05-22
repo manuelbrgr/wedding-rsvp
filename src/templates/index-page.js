@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import Countdown from "../components/Countdown";
 
@@ -54,11 +54,10 @@ export const IndexPageTemplate = ({
                       </h3>
                       <p
                         style={{
-                          color: "orange",
                           position: "relative",
                           left: "5%",
                         }}
-                        className="is-size-0-h font-northwell"
+                        className="is-size-0-h font-northwell color-info"
                       >
                         {subheading}
                       </p>

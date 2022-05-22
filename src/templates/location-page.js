@@ -7,13 +7,7 @@ import FullWidthImage from "../components/FullWidthImage";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
-import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
-  Typography,
-} from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Accordion from "react-bootstrap/Accordion";
 
 // eslint-disable-next-line
 export const LocationPageTemplate = ({
@@ -24,6 +18,7 @@ export const LocationPageTemplate = ({
   content,
   contentComponent,
   address,
+  questions,
 }) => {
   const PageContent = contentComponent || Content;
   const heroImage = getImage(images.home) || images.home;
@@ -60,7 +55,7 @@ export const LocationPageTemplate = ({
                   </h2>
                   <div className="is-size-4">
                     <h3 className="is-size-5">{address.name}</h3>
-                    <h4 className="is-size-1 font-northwell push-in">
+                    <h4 className="is-size-1 font-northwell push-in color-info">
                       {address.villa}
                     </h4>
                     <p>{address.street}</p>
@@ -99,42 +94,25 @@ export const LocationPageTemplate = ({
                 </p>
               </div>
               <div className="columns">
-                <div className="column is-12">
+                <div className="column is-10 is-offset-1">
                   <Accordion>
-                    <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                      <Typography>
-                        What's the best to get there from Germany?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>Check out</Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                  <Accordion>
-                    <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                      <Typography>
-                        What's the best to get there from Poland?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>Check out</Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                  <Accordion>
-                    <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                      <Typography>
-                        What's the best to get there from Austria?
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography>Check out</Typography>
-                    </AccordionDetails>
+                    {questions.map((item, i) => (
+                      <Accordion.Item eventKey={i}>
+                        <Accordion.Header>{item.question}</Accordion.Header>
+                        <Accordion.Body
+                          dangerouslySetInnerHTML={{ __html: item.answer }}
+                        ></Accordion.Body>
+                      </Accordion.Item>
+                    ))}
                   </Accordion>
                 </div>
               </div>
               <div className="columns">
                 <div className="column is-12">
-                  <PageContent className="content" content={content} />
+                  <PageContent
+                    className="content has-text-centered"
+                    content={content}
+                  />
                 </div>
               </div>
             </div>
@@ -151,9 +129,9 @@ LocationPageTemplate.propTypes = {
   subheading: PropTypes.string,
   content: PropTypes.string,
   mainpitch: PropTypes.object,
-
   contentComponent: PropTypes.func,
   address: PropTypes.object,
+  questions: PropTypes.object,
 };
 
 const LocationPage = ({ data }) => {
@@ -169,6 +147,7 @@ const LocationPage = ({ data }) => {
         mainpitch={post.frontmatter.mainpitch}
         content={post.html}
         address={post.frontmatter.address}
+        questions={post.frontmatter.questions}
       />
     </Layout>
   );
@@ -220,6 +199,10 @@ export const locationPageQuery = graphql`
           country
           linkToGoogle
           linkToTenuta
+        }
+        questions {
+          question
+          answer
         }
       }
     }

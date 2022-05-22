@@ -14,9 +14,9 @@ describe("toCountdown", () => {
     expect(toCountdown({ until: "2022-09-10" })).toEqual(expected);
   });
 
-  test("returns a negative time information given a from date in the future", () => {
+  test("returns an empty string given a from date in the future", () => {
     expect(toCountdown({ from: "2022-10-01", until: "2022-09-10" })).toEqual(
-      "0 Months -21 Days 0 Hours"
+      ""
     );
   });
 

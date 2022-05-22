@@ -2,6 +2,7 @@
 @import "breakpoints";
 @import "mixins";
 @import "bootstrap";
+@import "form";
 
 $kaldi-red: #354d37;
 $kaldi-red-invert: #fff;
@@ -208,6 +209,11 @@ h2 {
 
 .is-size-0-h {
   font-size: 6em;
+}
+
+.push-up {
+  position: relative;
+  top: -30px;
 }
 
 .push-in {

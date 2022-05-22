@@ -2,7 +2,12 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
 
-const colorPalette = ["green", "red", "yellow", "orange"];
+const colorPalette = [
+  "color-secondary",
+  "color-primary",
+  "color-success",
+  "color-warning",
+];
 
 const FeatureGrid = ({ gridItems }) => (
   <div className="columns is-multiline">
@@ -22,13 +27,7 @@ const FeatureGrid = ({ gridItems }) => (
           <div className="has-text-left column is-6">
             <h4 style={{ textTransform: "uppercase" }}>{item.headline}</h4>
             <span
-              className="font-northwell is-size-0"
-              style={{
-                color: colorPalette[i],
-                position: "relative",
-                top: "-12%",
-                left: "14%",
-              }}
+              className={`font-northwell is-size-0 ${colorPalette[i]} push-in push-up`}
             >
               {item.subheading}
             </span>

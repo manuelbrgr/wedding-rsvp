@@ -1,9 +1,9 @@
 /* make the customizations */
-$primary: #000;
-$secondary: #8f5325;
-$success: #3e8d63;
-$info: #7854e4;
-$warning: #b8c924;
+$primary: #923315;
+$secondary: #354d37;
+$success: #727d5f;
+$info: #da8c44;
+$warning: #c06240;
 $danger: #d62518;
 
 /* import bootstrap to set changes */
@@ -11,4 +11,24 @@ $danger: #d62518;
 
 .accordion-button {
   box-shadow: none !important;
+}
+
+.color-primary {
+  color: $primary;
+}
+
+.color-secondary {
+  color: $secondary;
+}
+
+.color-success {
+  color: $success;
+}
+
+.color-info {
+  color: $info;
+}
+
+.color-warning {
+  color: $warning;
 }

@@ -1,7 +1,9 @@
 /* Form */
+$form-background: tint-color($success, 80%) !default;
+
 .form-container {
-  background-color: #e8f0f4;
-  border: 1px solid #7f909e;
+  background-color: $form-background;
+  border: 1px solid $secondary;
   margin: 0 auto 10rem;
   width: 90%;
   position: relative;
@@ -30,7 +32,7 @@
 }
 
 .header__title {
-  color: blue;
+  color: $secondary;
   font-size: 1.4rem;
   letter-spacing: 0.13rem;
   margin: 0 0 0.1rem;
@@ -38,7 +40,7 @@
 }
 
 .header__subtitle {
-  color: #444;
+  color: $secondary;
   font-size: 1.3rem;
   font-style: italic;
   margin: 0;
@@ -52,7 +54,7 @@
 }
 
 .is-error {
-  color: #de8787;
+  color: $warning;
 }
 
 /* Input.js */
@@ -77,7 +79,7 @@
 
 .control__textbox-input {
   border: 1px solid #8a97a3;
-  color: blue;
+  color: $secondary;
   line-height: 1.6rem;
   padding: 8px 11px;
   width: 100%;
@@ -107,7 +109,7 @@
 }
 
 .control__textbox-caption {
-  color: #979797;
+  color: $secondary;
   display: block;
   margin-bottom: 0.5rem;
 }
@@ -228,7 +230,7 @@
 }
 
 .guest__detail {
-  color: #979797;
+  color: $secondary;
   margin: 0.3rem 0 0.5rem;
 }
 

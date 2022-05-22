@@ -12,9 +12,10 @@ export const FaqPageTemplate = ({
   title,
   subheading,
   content,
+  description,
+  questions,
   image,
   contentComponent,
-  questions,
 }) => {
   const PageContent = contentComponent || Content;
   const heroImage = getImage(image) || image;
@@ -24,14 +25,23 @@ export const FaqPageTemplate = ({
       <FullWidthImage img={heroImage} subheading={subheading} />
       <section className="section section--gradient">
         <div className="container">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="section">
-                <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                  {title}
-                </h2>
-                <PageContent className="content" content={content} />
-
+          <div className="section">
+            <div className="columns">
+              <div className="column is-10 is-offset-1">
+                <div className="content">
+                  <div className="content has-text-centered">
+                    <h2 className="title has-text-weight-semibold has-text-centered">
+                      {title}
+                    </h2>
+                    <div className="tile">
+                      <p className="subtitle">{description}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="columns">
+              <div className="column is-10 is-offset-1">
                 <Accordion>
                   {questions.map((item, i) => (
                     <Accordion.Item eventKey={i}>
@@ -53,6 +63,7 @@ FaqPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.object,
   subheading: PropTypes.string,
+  description: PropTypes.string,
   questions: PropTypes.array,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
@@ -68,6 +79,7 @@ const FaqPage = ({ data }) => {
         title={post.frontmatter.title}
         image={post.frontmatter.image}
         subheading={post.frontmatter.subheading}
+        description={post.frontmatter.description}
         questions={post.frontmatter.questions}
         content={post.html}
       />
@@ -97,6 +109,7 @@ export const faqPageQuery = graphql`
             )
           }
         }
+        description
         questions {
           question
           answer
