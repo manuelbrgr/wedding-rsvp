@@ -17,7 +17,6 @@ export const RsvpPageTemplate = ({
   rsvpTitle,
   rsvpSubheading,
   contentComponent,
-  formProps,
   image,
 }) => {
   const PageContent = contentComponent || Content;
@@ -35,9 +34,13 @@ export const RsvpPageTemplate = ({
             <div className="content has-text-centered mb-5">
               <p className="subtitle has-text-weight-semibold">{description}</p>
             </div>
-            <Heading aboveText={rsvpTitle} belowText={rsvpSubheading} />
+            <Heading
+              aboveText={rsvpTitle}
+              belowText={rsvpSubheading}
+              colorClass="color-primary"
+            />
             <div className="column is-8 is-offset-2">
-              <FormContainer formProps={formProps} />
+              <FormContainer />
             </div>
           </div>
           <PageContent />
@@ -56,7 +59,6 @@ RsvpPageTemplate.propTypes = {
   rsvpTitle: PropTypes.string,
   rsvpSubheading: PropTypes.string,
   contentComponent: PropTypes.func,
-  formProps: PropTypes.object.isRequired,
 };
 
 const RsvpPage = ({ data }) => {
@@ -72,7 +74,6 @@ const RsvpPage = ({ data }) => {
         description={post.frontmatter.description}
         rsvpTitle={post.frontmatter.rsvpTitle}
         rsvpSubheading={post.frontmatter.rsvpSubheading}
-        formProps={post.frontmatter.formProps}
         content={post.html}
       />
     </Layout>
@@ -95,9 +96,6 @@ export const rsvpPageQuery = graphql`
         description
         rsvpTitle
         rsvpSubheading
-        formProps {
-          firstName
-        }
         image {
           childImageSharp {
             gatsbyImageData(

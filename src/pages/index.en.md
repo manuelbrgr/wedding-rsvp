@@ -7,7 +7,7 @@ date: 10th of September in Siena
 mainpitch:
   title: Join us under the Tuscan sun
   description: >
-    Dear friends and family, we are happy and excited to finally get married and have you all join us in Tuscany as we say "I do". As an international couple we can only organize an even more international party, so brace yourself for a lot of wine, fun and simply having a great time. This website contains all the infos and updates about our Big Day, so make sure to check it all out.
+    Dear friends and family, we are happy and excited to finally get married and have you all join us in Tuscany as we say "I do". As an international couple we can only organize an even more international party, so brace yourself for a lot of wine, fun and simply having a great time. This website contains all the infos and updates about our Big Day, so make sure to check it all out. 🥳
 
 heading: Wedding day
 subheading: schedule

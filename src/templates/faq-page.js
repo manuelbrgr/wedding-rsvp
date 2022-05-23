@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
+import { HTMLContent } from "../components/Content";
 import { getImage } from "gatsby-plugin-image";
 import FullWidthImage from "../components/FullWidthImage";
 import Accordion from "react-bootstrap/Accordion";
@@ -11,13 +11,11 @@ import Accordion from "react-bootstrap/Accordion";
 export const FaqPageTemplate = ({
   title,
   subheading,
-  content,
   description,
   questions,
   image,
   contentComponent,
 }) => {
-  const PageContent = contentComponent || Content;
   const heroImage = getImage(image) || image;
 
   return (
@@ -39,12 +37,14 @@ export const FaqPageTemplate = ({
           </div>
         </div>
         <div className="columns">
-          <div className="column is-10 is-offset-1">
+          <div className="column is-6 is-offset-3">
             <Accordion>
               {questions.map((item, i) => (
                 <Accordion.Item eventKey={i}>
                   <Accordion.Header>{item.question}</Accordion.Header>
-                  <Accordion.Body>{item.answer}</Accordion.Body>
+                  <Accordion.Body
+                    dangerouslySetInnerHTML={{ __html: item.answer }}
+                  />
                 </Accordion.Item>
               ))}
             </Accordion>

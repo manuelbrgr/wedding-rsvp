@@ -8,6 +8,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import Accordion from "react-bootstrap/Accordion";
+import Heading from "../components/Heading";
 
 // eslint-disable-next-line
 export const LocationPageTemplate = ({
@@ -27,9 +28,14 @@ export const LocationPageTemplate = ({
     <div>
       <FullWidthImage img={heroImage} subheading={subheading} />
       <section className="section section--gradient">
-        <div className="columns">
+        <div className="columns mb-0">
           <div className="column is-8 is-offset-2">
             <div className="content has-text-centered">
+              <Heading
+                aboveText={"So we meet in"}
+                belowText={"Tuscany!"}
+                colorClass="color-success"
+              />
               <p className="subtitle has-text-weight-semibold mb-5">
                 {mainpitch.descriptionTuscany}
               </p>
@@ -89,33 +95,28 @@ export const LocationPageTemplate = ({
                 </div>
               </div>
             </div>
-            <div className="content has-text-centered mb-5">
-              <p className="subtitle has-text-weight-semibold">
-                {mainpitch.descriptionTenuta}
-              </p>
-            </div>
-            <div className="columns mt-5 mb-5">
-              <div className="column is-12">
-                <Accordion>
-                  {questions.map((item, i) => (
-                    <Accordion.Item eventKey={i}>
-                      <Accordion.Header>{item.question}</Accordion.Header>
-                      <Accordion.Body
-                        dangerouslySetInnerHTML={{ __html: item.answer }}
-                      ></Accordion.Body>
-                    </Accordion.Item>
-                  ))}
-                </Accordion>
-              </div>
-            </div>
-            <div className="columns">
-              <div className="column is-12">
-                <PageContent
-                  className="content has-text-centered"
-                  content={content}
-                />
-              </div>
-            </div>
+          </div>
+        </div>
+        <div className="columns mb-5">
+          <div className="column is-6 is-offset-3">
+            <Accordion>
+              {questions.map((item, i) => (
+                <Accordion.Item eventKey={i}>
+                  <Accordion.Header>{item.question}</Accordion.Header>
+                  <Accordion.Body
+                    dangerouslySetInnerHTML={{ __html: item.answer }}
+                  ></Accordion.Body>
+                </Accordion.Item>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+        <div className="columns">
+          <div className="column is-8 is-offset-2">
+            <PageContent
+              className="content has-text-centered"
+              content={content}
+            />
           </div>
         </div>
       </section>

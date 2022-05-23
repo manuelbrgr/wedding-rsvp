@@ -2,6 +2,7 @@ import React from "react";
 import Input from "./input";
 import Summary from "./summary";
 import Result from "./result";
+import { withTranslation } from "react-i18next";
 
 const uuid = require("uuid");
 require("es6-promise").polyfill();
@@ -9,13 +10,18 @@ require("isomorphic-fetch");
 
 class FormContainer extends React.Component {
   state = {
-    fullName: "",
-    attendingCeremony: false,
-    attendingBanquet: false,
+    firstName: "",
+    lastName: "",
+    attending: "",
+    eatingMeat: "",
     dietaryRestrictions: "",
+    comment: "",
     guestList: [],
     display: "showForm",
-    isInvalidName: false,
+    isInvalidFirstName: false,
+    isInvalidLastName: false,
+    isInvalidAttending: false,
+    isInvalidEatingMeat: false,
     isSubmissionError: false,
     isLoading: false,
     isEdit: false,
@@ -26,33 +32,46 @@ class FormContainer extends React.Component {
   buildRequestBody = ({ guestList }) => {
     //Take out id of leader
     const [
-      { fullName, attendingCeremony, attendingBanquet, dietaryRestrictions },
+      {
+        firstName,
+        lastName,
+        attending,
+        eatingMeat,
+        dietaryRestrictions,
+        comment,
+      },
       ...guests
     ] = guestList;
     return {
-      fullName,
-      attendingCeremony,
-      attendingBanquet,
+      firstName,
+      lastName,
+      attending,
+      eatingMeat,
       dietaryRestrictions,
+      comment,
       guests,
     };
   };
 
   /* Creates guest to be added to guest list */
   buildGuest = ({
-    fullName,
-    attendingCeremony,
-    attendingBanquet,
+    firstName,
+    lastName,
+    attending,
+    eatingMeat,
     dietaryRestrictions,
+    comment,
   }) => {
     if (dietaryRestrictions === "") {
       dietaryRestrictions = "No dietary restrictions";
     }
     return {
-      fullName,
-      attendingCeremony,
-      attendingBanquet,
+      firstName,
+      lastName,
+      attending,
+      eatingMeat,
       dietaryRestrictions,
+      comment,
       id: uuid.v1(),
     };
   };
@@ -85,7 +104,6 @@ class FormContainer extends React.Component {
       }
 
       const data = await response.json();
-      console.log(data);
       this.setState({
         isSubmissionError: false,
         isLoading: false,
@@ -94,7 +112,6 @@ class FormContainer extends React.Component {
 
       //In case of network errors
     } catch (err) {
-      console.log(err);
       this.setState({
         isSubmissionError: true,
         isLoading: false,
@@ -105,10 +122,12 @@ class FormContainer extends React.Component {
   /* Reset state for new guest */
   handleAddGuest = () => {
     this.setState({
-      fullName: "",
-      attendingCeremony: false,
-      attendingBanquet: false,
+      firstName: "",
+      lastName: "",
+      attending: "",
+      eatingMeat: "",
       dietaryRestrictions: "",
+      comment: "",
       isEdit: false,
       editGuestNum: 0,
       display: "showForm",
@@ -129,13 +148,28 @@ class FormContainer extends React.Component {
     });
   };
 
-  /* Validates fullName and puts guest in guest list*/
+  /* Validates firstName and puts guest in guest list*/
   handleNext = () => {
-    const isInvalid = this.state.fullName.trim() === "";
+    const isInvalidFirstName = this.state.firstName.trim() === "";
+    const isInvalidLastName = this.state.lastName.trim() === "";
+    const isInvalidAttending = this.state.attending === "";
+    const isInvalidEatingMeat =
+      this.state.attending !== "no" && this.state.eatingMeat === "";
+
+    const isInvalid =
+      isInvalidFirstName ||
+      isInvalidLastName ||
+      isInvalidAttending ||
+      isInvalidEatingMeat;
+
     this.setState({
-      isInvalidName: isInvalid,
+      isInvalidFirstName: isInvalidFirstName,
+      isInvalidLastName: isInvalidLastName,
+      isInvalidAttending: isInvalidAttending,
+      isInvalidEatingMeat: isInvalidEatingMeat,
     });
 
+    console.log(isInvalid);
     switch (isInvalid) {
       case false:
         const newGuest = this.buildGuest(this.state);
@@ -171,23 +205,32 @@ class FormContainer extends React.Component {
 
   /* Sets state for editing and keeps name */
   handleEdit = (e, personInfo, guestNum) => {
-    let { fullName, attendingCeremony, attendingBanquet, dietaryRestrictions } =
-      personInfo;
+    let {
+      firstName,
+      lastName,
+      attending,
+      eatingMeat,
+      dietaryRestrictions,
+      comment,
+    } = personInfo;
 
     if (dietaryRestrictions === "No dietary restrictions") {
       dietaryRestrictions = "";
     }
 
     console.dir(personInfo);
-    console.warn(attendingCeremony);
-    console.warn(attendingBanquet);
+    console.warn(attending);
+    console.warn(eatingMeat);
     console.warn(dietaryRestrictions);
+    console.warn(comment);
 
     this.setState({
-      fullName: fullName,
-      attendingCeremony: attendingCeremony,
-      attendingBanquet: attendingBanquet,
+      firstName: firstName,
+      lastName: lastName,
+      attending: attending,
+      eatingMeat: eatingMeat,
       dietaryRestrictions: dietaryRestrictions,
+      comment: comment,
       isEdit: true,
       editGuestNum: guestNum,
       display: "showForm",
@@ -198,14 +241,14 @@ class FormContainer extends React.Component {
   handleChange = (e) => {
     let name = "";
 
-    if (e.target.type === "checkbox") {
+    if (e.target.type === "radio") {
       name = e.target.name;
-      console.warn("check");
+      console.warn("radio");
       console.warn(name);
       this.setState((prevState) => {
         console.warn(prevState);
         return {
-          [name]: !prevState[name],
+          [name]: e.target.value,
         };
       });
     } else {
@@ -220,7 +263,7 @@ class FormContainer extends React.Component {
   isAttending = () => {
     if (this.state.guestList.length) {
       const leader = this.state.guestList[0];
-      return leader.attendingBanquet || leader.attendingCeremony;
+      return leader.eatingMeat || leader.attending;
     }
   };
 
@@ -302,7 +345,6 @@ class FormContainer extends React.Component {
               default:
                 break;
             }
-            break;
           default:
             return (
               <button
@@ -326,8 +368,6 @@ class FormContainer extends React.Component {
               </button>
             );
         }
-        break;
-
       case "showSummary":
         switch (this.state.isLoading) {
           case true:
@@ -455,14 +495,18 @@ class FormContainer extends React.Component {
           <Input
             handleChange={this.handleChange}
             handleNext={this.handleNext}
-            guestNameValue={this.state.fullName}
+            firstNameValue={this.state.firstName}
+            lastNameValue={this.state.lastName}
             dietaryRestrictionsValue={this.state.dietaryRestrictions}
-            attendingCeremonyValue={this.state.attendingCeremony}
-            attendingBanquetValue={this.state.attendingBanquet}
+            comment={this.state.comment}
+            attendingValue={this.state.attending}
+            eatingMeatValue={this.state.eatingMeat}
             guestNum={this.state.editGuestNum}
-            isInvalidName={this.state.isInvalidName}
+            isInvalidFirstName={this.state.isInvalidFirstName}
+            isInvalidLastName={this.state.isInvalidLastName}
+            isInvalidAttending={this.state.isInvalidAttending}
+            isInvalidEatingMeat={this.state.isInvalidEatingMeat}
             renderFooter={this.renderFooter}
-            formProps={this.props.formProps}
           />
         );
       case "showSummary":
@@ -489,10 +533,12 @@ class FormContainer extends React.Component {
   };
 
   render() {
+    const { t } = this.props;
+
     return (
       <div className="form-container">
         <div className="form__header">
-          <h1 className="header__title">Rsvp</h1>
+          <h1 className="header__title">{t("form.title")}</h1>
           <p className="header__subtitle">{this.renderHeaderSubtitle()}</p>
         </div>
 
@@ -502,4 +548,4 @@ class FormContainer extends React.Component {
   }
 }
 
-export default FormContainer;
+export default withTranslation()(FormContainer);

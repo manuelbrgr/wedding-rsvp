@@ -7,6 +7,7 @@ import { getImage } from "gatsby-plugin-image";
 import FullWidthImage from "../components/FullWidthImage";
 import Cards from "../components/Cards";
 import { Accordion } from "react-bootstrap";
+import Heading from "../components/Heading";
 
 // eslint-disable-next-line
 export const AccomodationPageTemplate = ({
@@ -43,28 +44,11 @@ export const AccomodationPageTemplate = ({
 
                 <div className="columns">
                   <div className="column is-12 has-text-centered">
-                    <h3
-                      style={{
-                        textTransform: "uppercase",
-                        position: "relative",
-                        top: "30px",
-                        right: "10%",
-                      }}
-                      className="has-text-weight-semibold is-size-4"
-                    >
-                      {listTitle}
-                    </h3>
-                    <p
-                      style={{
-                        position: "relative",
-                        left: "40px",
-                        top: "-20px",
-                        marginBottom: "-20px",
-                      }}
-                      className="is-size-0-h font-northwell color-info"
-                    >
-                      {listSubtitle}
-                    </p>
+                    <Heading
+                      aboveText={listTitle}
+                      belowText={listSubtitle}
+                      colorClass="color-warning"
+                    />
                   </div>
                 </div>
                 <Cards gridItems={accommodations} />
@@ -72,14 +56,14 @@ export const AccomodationPageTemplate = ({
             </div>
           </div>
 
-          <div className="column has-text-centered is-10 is-offset-1 mb-5">
+          <div className="column has-text-centered is-8 is-offset-2 mb-5">
             <div className="tile">
               <p className="subtitle">{information}</p>
             </div>
           </div>
 
           <div className="columns">
-            <div className="column is-10 is-offset-1">
+            <div className="column is-6 is-offset-3">
               <Accordion>
                 {questions.map((item, i) => (
                   <Accordion.Item eventKey={i}>

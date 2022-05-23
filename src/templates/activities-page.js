@@ -41,20 +41,24 @@ export const ActivitiesPageTemplate = ({
                 </div>
               </div>
 
-              <Heading aboveText={listTitle} belowText={listSubtitle} />
+              <Heading
+                aboveText={listTitle}
+                belowText={listSubtitle}
+                colorClass="color-secondary"
+              />
               <Cards gridItems={activities} />
             </div>
           </div>
         </div>
 
-        <div className="column has-text-centered is-10 is-offset-1 mb-5">
+        <div className="column has-text-centered is-8 is-offset-2 mb-5">
           <div className="tile">
             <p className="subtitle">{information}</p>
           </div>
         </div>
 
         <div className="columns">
-          <div className="column is-10 is-offset-1">
+          <div className="column is-6 is-offset-3">
             <Accordion>
               {questions.map((item, i) => (
                 <Accordion.Item eventKey={i}>
@@ -142,7 +146,6 @@ export const ActivitiesPageQuery = graphql`
           }
           name
           description
-          url
         }
         questions {
           question

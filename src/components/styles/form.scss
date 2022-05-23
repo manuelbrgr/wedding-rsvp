@@ -84,17 +84,32 @@ $form-background: tint-color($success, 80%) !default;
 }
 
 .control__textbox-group {
-  margin: 1rem 0 1.7rem;
+  margin: 0 0 1.7rem;
 }
 
 .control__checkbox-fieldset {
   border: none;
-  margin: 3.5em 0 2.5rem;
+  margin: 0 0 0;
   padding: 0;
 }
 
 .control__checkbox-group {
-  margin: 1rem 0 1.7rem;
+  margin: 0 0 1.7rem;
+  width: 140px;
+  display: flex;
+  font-size: 20px;
+
+  > div {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+
+    > input {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+  }
 }
 
 .control__checkbox-input {

@@ -6,8 +6,6 @@ description: Please add each person individually to the RSVP form. Once you've a
 rsvpTitle: So, what do you
 rsvpSubheading: say?
 subheading: RSVP
-formProps:
-  firstName: First Name %number%
 ---
 
 ### Do you come?

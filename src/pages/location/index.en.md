@@ -9,10 +9,10 @@ subheading: Wedding Location
 title: Address
 mainpitch:
   descriptionTuscany: >
-    We want our wedding to be, what’s important for us, what’s our dream and vision, we said in one voice that we want our guests to have an amazing experience, just like we had, to have an amazing adventure that will stay forever in the memory.
+    We want our wedding to be an unforgettable experience and an opportunity for an amazing adventure, not only for us but also for everybody coming. And what better place than the rolling hills of Tuscany? 🌞
 
   descriptionTenuta: >
-    A perfect place for this occcasion was the Villa Colombaio. It's located in the hills just near the medieval city Siena surrounded by nature, vineyards and woods and it's part of the family owned wine estate Tenuta Larnianone.
+    Villa Colombaio is an old farmhouse belonging to the Tenuta Larnianone. It’s located in the middle of nature, surrounded by vineyards, olive groves and cypress trees, overlooking the city of Siena. We fell in love with this place not only because it’s beautiful and authentic, but also because it has history. It's belonging to an Italian family since the 1930's who are keeping care of nature, environment and traditions. 🛵
 address:
   name: Tenuta Larnianone
   villa: Villa Colombaio

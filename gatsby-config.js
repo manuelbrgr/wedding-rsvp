@@ -7,7 +7,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-material-ui",
+    "gatsby-plugin-no-index",
     {
       resolve: "gatsby-plugin-i18n",
       options: {

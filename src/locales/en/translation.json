@@ -8,5 +8,17 @@
     "faq": "FAQ",
     "contact": "Contact",
     "imprint": "Imprint"
+  },
+  "form": {
+    "title": "Guest List",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "guestReference": "Guest {{number}}'s name",
+    "errors": {
+      "firstNameRequired": "First name is required.",
+      "lastNameRequired": "Last name is required.",
+      "attendingRequired": "Please answer, if you attend.",
+      "eatingMeatRequired": "Do you eat meat?"
+    }
   }
 }

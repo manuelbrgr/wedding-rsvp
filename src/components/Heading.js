@@ -1,7 +1,7 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 
-const Heading = ({ aboveText, belowText }) => (
+const Heading = ({ aboveText, belowText, colorClass = "color-info" }) => (
   <div className="columns">
     <div className="column is-12 has-text-centered">
       <h3
@@ -22,7 +22,7 @@ const Heading = ({ aboveText, belowText }) => (
           top: "-20px",
           marginBottom: "-20px",
         }}
-        className="is-size-0-h font-northwell color-info"
+        className={`is-size-0-h font-northwell ${colorClass}`}
       >
         {belowText}
       </p>

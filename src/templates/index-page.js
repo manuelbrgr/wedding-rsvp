@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Countdown from "../components/Countdown";
 import Zoom from "react-medium-image-zoom";
-import Content, { HTMLContent } from "../components/Content";
+import { HTMLContent } from "../components/Content";
 import Layout from "../components/Layout";
 import Features from "../components/Features";
 import FullWidthImage from "../components/FullWidthImage";
@@ -23,7 +23,6 @@ export const IndexPageTemplate = ({
   description,
   intro,
 }) => {
-  const PageContent = contentComponent || Content;
   const heroImage = getImage(image) || image;
 
   return (
