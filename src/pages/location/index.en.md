@@ -10,7 +10,6 @@ title: Address
 mainpitch:
   descriptionTuscany: >
     We want our wedding to be an unforgettable experience and an opportunity for an amazing adventure, not only for us but also for everybody coming. And what better place than the rolling hills of Tuscany? 🌞
-
   descriptionTenuta: >
     Villa Colombaio is an old farmhouse belonging to the Tenuta Larnianone. It’s located in the middle of nature, surrounded by vineyards, olive groves and cypress trees, overlooking the city of Siena. We fell in love with this place not only because it’s beautiful and authentic, but also because it has history. It's belonging to an Italian family since the 1930's who are keeping care of nature, environment and traditions. 🛵
 address:
@@ -20,11 +19,11 @@ address:
   city: 53100 Siena SI
   country: Italy
   linkToGoogle: Show location in Google Maps
-  linkToTenuta: Vitit Tenuta Larnianone
+  linkToTenuta: Visit Tenuta Larnianone
 questions:
   - question: What's the best way to get to the Tenuta Larnianone? 🍇
     answer: >
-      <p>There are plenty of ways to get to Siena - one of them is coming by car, however if you don’t have or don’t want to drive all this way, you can book a flight to one of the following airports and then renting a car or taking a train:</p><br />
+      <p>There are plenty of ways to get to Siena - one of them is coming by car, however if you don’t have or don’t want to drive all this way, you can book a flight to one of the following airports and then rent a car, take a train or a bus:</p><br />
       <li>Pisa International Airport (PSA) - 144 km to Siena (1:30h by car / 2h by train / 2:10h by bus)</li>
       <li>Florence International Airport (FLR) - 77 km to Siena (1h by car / 1:40h by train / 1h by bus)</li>
       <li>Bologna Guglielmo Marconi Airport (BLQ) - 168 km to Siena (1:40h by car / 2:30h by train / 2:15h by bus)</li><br />
@@ -33,13 +32,13 @@ questions:
     answer: >
       There are many convenient ways to reach Siena.<br>
       🚘&nbsp; You can travel all the way down by car (around 700km one way) and discover places like Garda Lake, Bologna or Florence on the way. It’s also a convenient way to be flexible and drive around Tuscany to see other beautiful towns nearby, like San Gimignano or Pienza.<br>
-      ✈️&nbsp; You can travel by plane (if you fly from Munich there’s a convenient and cheap <a href="https://www.ryanair.com/" target="_blank"> Ryanair</a> connection from Memmingen to Pisa, with flights on Friday and Monday evenings). From there you can either rent a car, take a <a href="https://www.flixbus.com/" target="_blank">FlixBus</a> or a train (<a href="https://www.omio.com/" target="_blank">www.omio.com</a>) to Siena. For info on other airports see the General info tab.<br>
-      🚍&nbsp; You can take a <a href="https://www.flixbus.com/" target="_blank">Flixbus</a> all way down to Siena
+      ✈️&nbsp; You can travel by plane (if you fly from Munich there’s a convenient and cheap <a href="https://www.ryanair.com/" target="_blank"> Ryanair</a> connection from Memmingen to Pisa, with flights on Friday and Monday evenings). From there you can either rent a car, take a <a href="https://www.flixbus.com/" target="_blank">FlixBus</a> or a train (<a href="https://www.omio.com/" target="_blank">www.omio.com</a>) to Siena.<br>
+      🚍&nbsp; You can take a <a href="https://www.flixbus.com/" target="_blank">Flixbus</a> all way down to Siena.
   - question: What's the best way to get there from Poland? 🇵🇱
     answer: >
       There are many convenient ways to reach Siena.<br>
       🏎️&nbsp; You can travel all the way down by car (around 1600km one way) and discover cities like Vienna, Venice, Bologna or Florence on the way. It’s also a convenient way to be flexible and drive around Tuscany to see other beautiful towns nearby, like San Gimignano or Pienza.<br>
-      🛩️&nbsp; You can travel by plane (if you fly from Warsaw there’s a convenient and cheap connection to Bologna with <a href="https://www.ryanair.com/" target="_blank">Ryanair</a> from Modlin on Tuesdays and Thursdays to Sundays and with <a href="https://www.wizzair.com/" target="_blank">WizzAir</a> from Chopin on Tuesdays, Thursdays and Saturdays). From there you can either rent a car, take a <a href="https://www.flixbus.com/" target="_blank">FlixBus</a> or a train (<a href="https://www.omio.com/" target="_blank">www.omio.com</a>) to Siena.
+      🛩️&nbsp; You can travel by plane (if you fly from Warsaw there’s a convenient and cheap connection to Bologna with <a href="https://www.ryanair.com/" target="_blank">Ryanair</a> from Modlin on Tuesdays and Thursdays to Sundays and with <a href="https://www.wizzair.com/" target="_blank">WizzAir</a> from Chopin on Tuesdays, Thursdays and Saturdays. From there you can either rent a car, take a <a href="https://www.flixbus.com/" target="_blank">FlixBus</a> or a train (<a href="https://www.omio.com/" target="_blank">www.omio.com</a>) to Siena.
   - question: What's the best way to get there from Austria? 🇦🇹
     answer: >
       There are many convenient ways to reach Siena.<br>

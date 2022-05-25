@@ -1,12 +1,12 @@
 {
   "navigation": {
-    "home": "Strona glowna",
-    "location": "Location",
-    "accommodation": "Accomodation",
-    "activities": "Things to do",
+    "home": "Strona główna",
+    "location": "Miejsce",
+    "accommodation": "Noclegi",
+    "activities": "Atrakcje",
     "rsvp": "RSVP",
     "faq": "FAQ",
-    "contact": "Contact",
+    "contact": "Kontakt",
     "imprint": "Imprint"
   }
 }

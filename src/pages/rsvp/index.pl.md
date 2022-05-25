@@ -2,7 +2,7 @@
 templateKey: "rsvp-page"
 image: /img/home-tuscany.jpg
 title: RSVP
-subheading: répondez s'il vous plaît
+subheading: Prosimy o potwierdzenie przybycia
 formProps:
   firstName: First Name
 ---

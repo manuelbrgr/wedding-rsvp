@@ -7,6 +7,11 @@ description: >
 image: /img/home-tuscany.jpg
 subheading: Frequently Asked Questions
 questions:
+  - question: What's the dress code?
+    answer: >
+      Knowing what to wear for the wedding is never easy so we defined the wedding dress code as Garden Party - think of something that is pretty but not too formal and at the same time location and event appropriate. Please don't wear jeans or shorts and a t-shirt. The weather should be warm, so light and flowy summer dresses or jumpsuits for women, and light coloured or mixed colour suits for men should be a perfect choice.<br><br>
+      Please don’t wear black, white/off-white, or neon colors. If possible go for something inspired by Tuscan landscape or earthy colors (click for inspiration here). Also, bring something to put on in the evening as it might get chilly. Some terrain is uneven, so girls opt for block heels, wedges, sandals or flats, and guys, if you want, feel free to swap your formal dress shoes for loafers if that’s more comfortable. 😄
+ 😄
   - question: When is the RSVP deadline?
     answer: >
       Please RSVP by July 1st, so we can have an accurate headcount. We also understand that unexpected things happen and if that will be the case, please let us know about it as soon as possible. 😄
@@ -21,7 +26,7 @@ questions:
       Both the ceremony and wedding reception will take place in close proximity at the territory of Tenuta Larnianone. Ceremony will be in the garden of Villa Ca’ Nova Sud and the wedding reception in the backyard garden of Villa Colombaio. After midnight the party moves indoors. 💃
   - question: Why do we have to move indoors after midnight?
     answer: >
-      We will be having neighbors in the villas around, so in order to respect them and not continue the party we have to move indoors. If you have to go out after midnight to get some air, smoke or talk, please try to use the front garden and keep the volume of your talk low. 🔈
+      We will be having neighbors in the villas around, so in order to respect them and be able to continue the party we have to move indoors. If you have to go out after midnight to get some air, smoke or talk, please try to use the front garden and keep the volume of your talk low. If we don|t complz with these rules the partz will be stopped by the villa owners. 🔈
 
   - question: Is it okay to take pictures with phones and cameras? Can I post pictures and stories on Social Media?
     answer: >
@@ -29,9 +34,6 @@ questions:
   - question: How do I get to the Tenuta Larnianone?
     answer: >
       Depending where you stay, you can come on foot, by car or by self-organized transportation. Since we have a limited parking opportunity (around 10 cars can fit), please try to carpool with somebody or organize outside transportation. Since there’s no Uber in Siena and Taxi service is not the most reliable, especially at late night hours, we strongly suggest you contact a service, for example Sartini Siena, to set up a drive both to and from the party.
-  - question: What’s the dress code?
-    answer: >
-      Knowing what to wear for the wedding is never easy so we defined the wedding dress code as Garden Party - think of something that is pretty but not too formal and at the same time location and event appropriate. The weather should be warm, so light and flowy summer dresses or jumpsuits for girls, and lighter coloured or linen suits for guys. Please don’t wear black, white/bright cream, or neon colors, if possible go for something inspired by Tuscan landscape or earthy colors (click for inspiration here). Also, bring something to put on in the evening as it might get chilly. Some terrain is uneven, so girls opt for block heels, wedges, sandals or flats, and guys, if you want, feel free to swap your formal dress shoes for loafers if that’s more comfortable. 😄
   - question: What about gifts?
     answer: >
       We're so grateful that you are traveling to Italy to celebrate with us. Your presence is the only present we need. 💝
@@ -49,11 +51,11 @@ questions:
       Several accommodations, ranging from hotels, Airbnbs, and B&Bs, Agriturismos, can be found within a 30-minute drive from our venue, in the neighboring villages or Siena. Please see our <a href="/en/accommodation">Accommodation</a> page for more details. 🛏️
   - question: What’s the best way to get to Siena?
     answer: >
-      There are few ways and they all depend on your transportation choice. If you don’t come all the way by car, we suggest flying to one of these airports (check out if you have a cheap Ryanair connection!): Florence, Bologna or Pisa and from there either rent a car (opt for a smaller one - italian streets, especially in the countryside and inside the cities are really tight!) or take a train to Siena. If you have time or planned vacation around our wedding, you can look for our recommendations for a trip here. 🚗
+      There are few ways and they all depend on your transportation choice. If you don’t come all the way by car, we suggest flying to one of these airports (check out if you have a cheap Ryanair connection!): Florence, Bologna or Pisa and from there either rent a car (opt for a smaller one - italian streets, especially in the countryside and inside the cities are really tight!) or take a train or a bus to Siena. If you have time or planned vacation around our wedding, you can look for our recommendations for a trip here. 🚗
   - question: Is the wedding indoors or outdoors?
     answer: >
       If the weather allows, our wedding ceremony, aperitif and reception are outdoors, in case of rain we will move to an outdoor tent with a dancefloor inside the villa. ☀️
-  - question: What’s the weather going to be like?
+  - question: What’s the weather like in Siena in September?
     answer: >
       We are hoping for a rain-free and warm day. Historically, the weather in Siena mid-September is lovely and reliable, with the average minimum temperature being 14.2°C and the average maximum daytime temperature lying around 23.5°C. It rains on average a total of 5 days with an average of 57mm. We advise putting on sunscreen for our outdoor wedding. 🌡️
   - question: Whom can I contact with questions?

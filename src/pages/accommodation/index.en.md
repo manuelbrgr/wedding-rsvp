@@ -40,15 +40,15 @@ accommodations:
     url: https://www.booking.com/hotel/it/podere-la-strega.html
   - img: /img/palazzoravizza.jpg
     name: Palazzo Ravizza
-    description: Right in the city of Siena you can find the Palazzo Ravizza, a hotel we once stayed during our vacation in Tuscany. They offer cute, exclusive rooms with a very nostalgic flair and atmosphere. It's the perfect choice, if you want to explore Siena, although it's 17,0 km from the wedding location.
+    description: Right in the city of Siena you can find the Palazzo Ravizza, a hotel we once stayed during our vacation in Tuscany. They offer cute, exclusive rooms with a very nostalgic flair and atmosphere. It's the perfect choice, if you want to explore Siena, although it's 8,5km on foot and 17,0 km by car from the wedding location.
     url: https://www.booking.com/hotel/it/palazzo-ravizza-siena.html
 questions:
   - question: How to get from the accommodation to the wedding location? 🚕
     answer: >
       Due to limited parking possibility at the property we are asking and strongly advising to carpool with other guests to and from the wedding, eventually please use local transportation service <a href="https://www.sartinisiena.com/en/" target="_blank">www.sartinisiena.com</a> to arrange a transportation for coming back to your booked accommodations, since Taxis in Siena are not reliable at late night hours.
-  - question: Where can I find some accomodation?
+  - question: How can I find accommodation in Italy?
     answer: >
-      Booking.com or Airbnb.
+      There are numerous ways to find a place to stay. You can look at search engines like <a href="https://www.booking.com" target="_blank">www.booking.com</a>, <a href="https://www.airbnb.com" target="_blank">www.airbnb.com</a>, <a href="https://www.agriturismo.it/en/" target="_blank">www.agriturismo.it</a>, <a href="https://www.expedia.com" target="_blank">www.expedia.com</a>, <a href="https://www.kayak.com" target="_blank">www.kayak.com</a>, <a href="https://www.tripadvisor.com" target="_blank">www.tripadvisor.com</a>. It often happens that a place is booked out on some website but it’s always worth trying to ask them directly, since many places always keep a room or two just for such a case. Many amazing places have no website or don’t announce themselves on those popular search engines, so go through google maps and reach out to them.
 ---
 
 ### Hast du Fragen?

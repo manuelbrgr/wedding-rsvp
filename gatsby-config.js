@@ -13,6 +13,7 @@ module.exports = {
       options: {
         langKeyForNull: languages.defaultLangKey,
         langKeyDefault: languages.defaultLangKey,
+        languages: languages.langs,
         useLangKeyLayout: false,
         prefixDefault: true,
       },

@@ -2,36 +2,37 @@
 templateKey: index-page
 title: Angelika & Manuel
 image: /img/home-tuscany.jpg
-date: 10th of September in Siena
+imageUs: /img/us.jpg
+date: 10-ego września w Sienie
 mainpitch:
-  title: Join us under the Tuscan sun
+  title: Dołącz do nas pod toskańskim słońcem
   description: >
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-heading: Wedding day
-subheading: schedule
+    Drodzy przyjaciele i rodzino, jesteśmy bardzo szczęśliwi i podekscytowani, że nareszcie bierzemy ślub i że będziecie z nami w Toskanii, kiedy powiemy sobie "tak". Jako międzynarodowa para organizujemy jeszcze bardziej międzynarodowe przyjęcie, więc przygotujcie się na dużo wina, pysznego jedzenia i świetnej zabawy. Na tej stronie znajdziecie wszystkie informacje i aktualizacje dotyczące naszego Wielkiego Dnia, więc koniecznie zapoznajcie się z ich treścią. 🥳
+heading: Harmonogram dnia
+subheading: ślubu
 intro:
   blurbs:
     - image: /img/ceremony.jpg
-      headline: Join us for
-      subheading: I do
+      headline: Dołącz do nas podczas
+      subheading: przysięgi
       text: >
-        from 14:00 at the garden of Villa Ca' Nova Sud
+        Od godz. 15:00 w ogrodzie Willi Ca' Nova Sud z widokiem na średniowieczną Sienę.
     - image: /img/apertivo.jpg
-      headline: Have some bubbles
-      subheading: and mingle
+      headline: Napij się bąbelków i
+      subheading: poznaj ludzi
       text: >
-        from 15:00 at the front garden of Villa Colombaio
+        Od godziny 16:00 w przednim ogrodzie Villa Colombaio, z muzyką na żywo w wykonaniu niesamowitej <a href="https://www.instagram.com/gisellazambito" target="_blank">Giselli Zambito</a>.
     - image: /img/dinner.jpg
-      headline: Bring me the
-      subheading: Pasta!
+      headline: Podano do
+      subheading: stołu!
       text: >
-        from 16:00 at the back garden of Villa Colombaio
+        Od 17:00 w tylnym ogrodzie Villa Colombaio, z autentycznymi toskańskimi potrawami przygotowanymi przez <a href="https://www.lauroracatering.it/" target="_blank"> L'Aurora Catering</a>.
     - image: /img/party.jpg
-      headline: Let's get the party
-      subheading: started!
+      headline: Czas rozpocząć
+      subheading: imprezę!
       text: >
-        from 19:30 at the back garden of Villa Colombaio, and from midnight inside of the Villa Colombaio.
+        Od godz. 20:00 w ogrodzie na tyłach willi Colombaio, a od północy wewnątrz willi Colombaio.
   heading: Heading
-  description: >
-    Text...
+description: >
+  Godziny i miejsca wydarzeń mogą ulec zmianie ze względu na warunki pogodowe, dlatego prosimy o sprawdzanie aktualności na stronie internetowej.
 ---

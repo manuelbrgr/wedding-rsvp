@@ -65,7 +65,7 @@ export const AccomodationPageTemplate = ({
           <div className="columns">
             <div className="column is-6 is-offset-3">
               <Accordion>
-                {questions.map((item, i) => (
+                {questions?.map((item, i) => (
                   <Accordion.Item eventKey={i}>
                     <Accordion.Header>{item.question}</Accordion.Header>
                     <Accordion.Body

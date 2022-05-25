@@ -1,9 +1,8 @@
 ---
-templateKey: "activities-page"
-path: "/activities"
+templateKey: activities-page
 title: Kilka wskazówek i pomysłów
 image: /img/home-tuscany.jpg
-subheading: Things to do
+subheading: Co warto zobaczyć
 description: >
   Zebraliśmy tu kilka informacji dla tych, którzy planują odwiedzić inne miejsca w Toskanii, wybrać się na wycieczkę po okolicy lub szukają wskazówek, co warto zrobić, zobaczyć lub zjeść w okolicy. ☺️
 information: >
@@ -13,7 +12,8 @@ listSubtitle: Toskanię
 activities:
   - img: /img/activities/siena.jpg
     name: Zwiedź Sienę
-    description: Siena to miasto, które zapiera dech w piersiach z dwóch powodów: po pierwsze, jest naprawdę piękne, a po drugie, jest położone na wzgórzu, więc zwiedzanie tego miejsca to świetne ćwiczenie kardio. Wybierz się do Osteria Permalico na pyszne lokalne jedzenie lub, jeśli chcesz spróbować restauracji nagrodzonej gwiazdkami Michelin, spróbuj La Taverna di San Giuseppe, rezerwując stolik z wyprzedzeniem. 🏛️
+    description: >
+      Siena to miasto, które zapiera dech w piersiach z dwóch powodów: po pierwsze, jest naprawdę piękne, a po drugie, jest położone na wzgórzu, więc zwiedzanie tego miejsca to świetne ćwiczenie kardio. Wybierz się do Osteria Permalico na pyszne lokalne jedzenie lub, jeśli chcesz spróbować restauracji nagrodzonej gwiazdkami Michelin, spróbuj La Taverna di San Giuseppe, rezerwując stolik z wyprzedzeniem. 🏛️
   - img: /img/activities/vespa.jpg
     name: Wynajmij Vespę
     description: Świetnym sposobem na przemieszczanie się i odkrywanie okolicy jest wypożyczenie Vespy i przejażdżka po toskańskich wzgórzach w słoneczny dzień, zupełnie jak w filmie. Wiejskie drogi są bardzo spokojne i zapewniają nieograniczoną ilość pięknych widoków po drodze. Po drodze można wypić kieliszek lub dwa wina, ponieważ we Włoszech można legalnie prowadzić pojazdy, mając 0,5‰ alkoholu, ale prosimy, abyście pili odpowiedzialnie i zachowywali bezpieczeństwo. 🛵
@@ -38,7 +38,7 @@ activities:
 questions:
   - question: Jak dojechać z miejsca zakwaterowania do miejsca ślubu? 🚕
     answer: >
-      Jeśli potrzebujesz transportu z miejsca zakwaterowania w Sienie do Tenuta Larnianone lub odwrotnie, radzimy zorganizować go z Sartini Siena.
+      Jeśli potrzebujesz transportu z miejsca zakwaterowania w Sienie do Tenuta Larnianone lub odwrotnie, radzimy zorganizować go z Sartini Siena lub innymi uczestnikami wesela.
 ---
 
 ### Hast du Fragen?

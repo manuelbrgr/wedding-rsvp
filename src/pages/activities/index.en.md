@@ -1,6 +1,5 @@
 ---
-templateKey: "activities-page"
-path: "/activities"
+templateKey: activities-page
 title: Some tips and ideas
 image: /img/home-tuscany.jpg
 subheading: Things to do
@@ -38,7 +37,7 @@ activities:
 questions:
   - question: How to get from the accommodation to the wedding location? 🚕
     answer: >
-      If you need a drive from your accommodation in Siena to the Tenuta Larnianone or vice versa we recommend to organise it with Sartini Siena.
+      If you need a drive from your accommodation in Siena to the Tenuta Larnianone or vice versa we recommend to organise it with Sartini Siena or other wedding guests.
 ---
 
 ### Hast du Fragen?
