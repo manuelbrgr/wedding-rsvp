@@ -3,36 +3,36 @@ templateKey: index-page
 title: Angelika & Manuel
 image: /img/home-tuscany.jpg
 imageUs: /img/us.jpg
-date: 10th of September in Siena
+date: 10. September in Siena
 mainpitch:
-  title: Join us under the Tuscan sun
+  title: Komm mit uns unter die Sonne der Toskana
   description: >
-    Dear friends and family, we are happy and excited to finally get married and have you all join us in Tuscany as we say "I do". As an international couple we can only organize an even more international party, so brace yourself for a lot of wine, fun and simply having a great time. This website contains all the infos and updates about our Big Day, so make sure to check it all out. 🥳
-heading: Wedding day
-subheading: schedule
+    Liebe Freunde und Familie, wir sind sehr glücklich und gespannt, endlich zu heiraten und euch alle in der Toskana dabei zu haben, wenn wir uns das Ja-Wort geben. Als internationales Paar können wir nur eine noch internationalere Party organisieren, also macht euch auf viel Wein, Spaß und einfach eine tolle Zeit bereit. Auf dieser Website findet ihr alle Infos und Updates zu unserem großen Tag, also checkt sie gerne mal aus. 🥳
+heading: Zeitplan für den
+subheading: Hochzeitstag
 intro:
   blurbs:
     - image: /img/ceremony.jpg
-      headline: Join us for
-      subheading: I do
+      headline: Komm zu unserem
+      subheading: Ich will
       text: >
-        From 15:00 at the garden of Villa Ca' Nova Sud with a view to the medieval city of Siena.
+        Ab 15:00 Uhr im Garten der Villa Ca' Nova Sud mit Blick auf die mittelalterliche Stadt Siena.
     - image: /img/apertivo.jpg
-      headline: Have some bubbles
-      subheading: and mingle
+      headline: Nimm einen Spritzer und
+      subheading: triff neue Leute
       text: >
-        From 16:00 at the front garden of Villa Colombaio, with Live Music from the amazing <a href="https://www.instagram.com/gisellazambito" target="_blank">Gisella Zambito</a>.
+        Ab 16:00 Uhr im Vorgarten der Villa Colombaio, mit Live-Musik von der wunderbaren <a href="https://www.instagram.com/gisellazambito" target="_blank">Gisella Zambito</a>.
     - image: /img/dinner.jpg
-      headline: Bring me the
-      subheading: pasta!
+      headline: Bring mir das
+      subheading: Essen!
       text: >
-        From 17:00 at the back garden of Villa Colombaio, with authentic Tuscan food from <a href="https://www.lauroracatering.it/" target="_blank"> L'Aurora Catering</a>.
+        Ab 17:00 Uhr im hinteren Garten der Villa Colombaio, mit authentischer toskanischer Küche von <a href="https://www.lauroracatering.it/" target="_blank"> L'Aurora Catering</a>.
     - image: /img/party.jpg
-      headline: Let's get the party
-      subheading: started!
+      headline: Die Party kann
+      subheading: loslegen!
       text: >
-        From 20:00 at the back garden of Villa Colombaio, and from midnight inside of the Villa Colombaio.
+        Ab 20:00 Uhr im hinteren Garten der Villa Colombaio und ab Mitternacht im Innenraum der Villa Colombaio..
   heading: Heading
 description: >
-  The times and places of events might be subject to spontaneous changes due to weather conditions, so please check the website for any updates.
+  Zeit und Ort der Trauung können sich wetterbedingt spontan ändern. Bitte prüft daher auf der Website, ob es Änderungen gibt.
 ---

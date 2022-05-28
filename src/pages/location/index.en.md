@@ -43,7 +43,7 @@ questions:
     answer: >
       There are many convenient ways to reach Siena.<br>
       🚜&nbsp; You can travel all the way down by car (around 550km one way) and discover cities like Venice, Bologna or Florence on the way. It’s also a convenient way to be flexible and drive around Tuscany to see other beautiful towns nearby, like San Gimignano or Pienza.<br>
-      🚁&nbsp; You can travel by plane (if you fly from Vienna there’s a convenient and cheap <a href="https://www.ryanair.com/" target="_blank">Ryanair</a> connection from Vienna to Bologna on Monday to Wednesday and on Fridays). For info on other airports see the General info tab.<br>
+      🚁&nbsp; You can travel by plane (if you fly from Vienna there’s a convenient and cheap <a href="https://www.ryanair.com/" target="_blank">Ryanair</a> connection from Vienna to Bologna on Monday to Wednesday and on Fridays).<br>
       🚌&nbsp; You can take a <a href="https://www.flixbus.com/" target="_blank">FlixBus</a> all the way down to Siena.
 ---
 

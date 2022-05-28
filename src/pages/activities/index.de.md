@@ -1,43 +1,44 @@
 ---
 templateKey: activities-page
-title: Some tips and ideas
+title: Einige Tipps und Ideen
 image: /img/home-tuscany.jpg
-subheading: Things to do
+subheading: Aktivitäten
 description: >
-  Here we collected some info in case you’re planning to visit some other places around Tuscany, do a road-trip or find recommendations on what to do, see or eat around. ☺️
+  Hier haben wir einige Tipps für euch zusammengestellt, falls ihr andere Städte in der Toskana besuchen wollt, einen Roadtrip machen wollt oder Empfehlungen sucht, was ihr in der Umgebung unternehmen, sehen oder essen könnt. ☺️
 information: >
-  For people who plan to drive by car from Florence to Siena, there’s a famous road called Via Chiantigiana. It’s a scenic road between Florence and Siena through the Chianti region that lets you enjoy all around views of vineyards, olive groves and picturesque small towns.
-listTitle: Experience
-listSubtitle: Tuscany
+  Für diejenigen, die mit dem Auto von Florenz nach Siena fahren möchten, gibt es eine berühmte Straße namens Via Chiantigiana. Es ist eine Panoramastraße zwischen Florenz und Siena, die durch das Chianti-Gebiet führt und den Blick auf Weinberge, Olivenhaine und malerische kleine Städte freigibt.
+listTitle: Entdecke die
+listSubtitle: Toskana
 activities:
   - img: /img/activities/siena.jpg
-    name: Explore Siena
-    description: Siena is a city that will take your breath away for two reasons, one, it’s really beautiful and two, it’s a city located on a hill, so getting places is a great cardio. Go to Osteria Permalico for delicious local food or if you want to try a Michelin Star awarded restaurant, try La Taverna di San Giuseppe, book a table in advance. 🏛️
+    name: Siena entdecken
+    description: >
+      Siena ist eine Stadt, die aus zwei Gründen den Atem raubt: Erstens ist sie wirklich schön, und zweitens liegt sie auf einem Hügel, so dass die Ortsbesichtigung eine gute Kardioübung ist. In der Osteria Permalico gibt es köstliche lokale Gerichte, und wenn ihr mal ein von Michelin ausgezeichnetes Restaurant ausprobieren wollt, versucht es mit La Taverna di San Giuseppe, und reserviert einen Tisch im Voraus. 🏛️
   - img: /img/activities/vespa.jpg
-    name: Rent a Vespa
-    description: A great way to get places and discover the surrounding area is renting a Vespa and just strolling through those tuscan rolling hills on a sunny day, just like in a movie. The countryside roads are very relaxed and provide unlimited pretty views on the way. You can also enjoy a glass of wine or two, since in Italy it’s legal to drive with 0,5‰ but please, drink responsibly and stay safe. 🛵
+    name: Vespa mieten
+    description: Eine tolle Art, die Region zu besichtigen, ist es, eine Vespa zu mieten und an einem sonnigen Tag durch die toskanischen Hügel zu schlendern, wie in einem Film. Die Landstraßen sind sehr entspannt und bieten unendlich viele schöne Aussichten auf dem Weg. Man kann auch ein oder zwei Gläser Wein genießen, denn in Italien ist es erlaubt, mit 0,5‰ zu fahren, aber bitte, trinkt verantwortungsvoll und bleibt sicher. 🛵
   - img: /img/activities/winetasting.jpg
-    name: Make a wine tour
-    description: Tuscany is famous for their red wines, so if you want to taste what they do best, focus on red wines from the area. Having all these vineyards almost every few minutes you find a farmhouse that offers wine tasting. You can do it while hiking, renting a bike or an e-bike or while riding a horse. You can also ask others, if they want to join and have a fun group wine tasting. 🍷
+    name: Eine Weintour machen
+    description: Die Toskana ist berühmt für ihre Rotweine. Wenn ihr also probieren wollt, was sie am besten können, solltet ihr euch auf die Rotweine der Region konzentrieren. Mit all diesen Weinbergen fast alle paar Minuten findet man ein Bauernhaus, das Weinverkostung bietet. Das könnt ihr beim Wandern, beim Mieten eines Fahrrads oder E-Bikes oder beim Reiten machen. Man kann auch andere fragen, ob sie sich an einer gemeinsamen Weinverkostung beteiligen wollen. 🍷
   - img: /img/activities/bicycle.jpg
-    name: Get a bike or even an e-bike
-    description: There’s nothing better than experiencing Tuscany the old style way while also doing some sport! Especially before or after all the food and wine. Last year we really enjoyed a 50km ride on the e-bikes through paths that we probably wouldn’t go through if we had driven by a car. And if you’re not sure if you can make it with a normal bike, get an e-bike, we did it too and it was a leg-saver! 🚲
+    name: Ein Fahrrad oder ein E-Bike mieten
+    description: Es gibt nichts Besseres, als die Toskana zu erleben und gleichzeitig Sport zu machen! Vor allem vor oder nach all dem Essen und dem Wein. Letztes Jahr haben wir eine 50 km lange Fahrt mit den E-Bikes auf Wegen genossen, die wir mit dem Auto wahrscheinlich nicht befahren hätten. Und wenn ihr euch nicht sicher seid, ob ihr es mit einem normalen Fahrrad schafft, nehmt ein E-Bike, wir haben es auch gemacht und es war ein leg-saver! 🚲
   - img: /img/activities/horses.jpg
-    name: Ride into the sunset
-    description: There’s something special when you’re in the countryside, get up on a horse and casually ride through unpaved roads, surrounded by vineyards, with sun shining down on you and wind blowing through your hair. It feels like traveling back in time, being a lone ranger, looking for a tavern with some wine to drink and a bed to sleep just to continue your journey on the next day. 🐴
+    name: In den Sonnenuntergang fahren
+    description: Es ist etwas ganz Besonderes, wenn man auf dem Land ist, auf ein Pferd steigt und gemütlich über ungepflasterte Straßen reitet, umgeben von Weinbergen, während die Sonne auf einen scheint und der Wind durch die Haare weht. Es fühlt sich an wie eine Reise in die Vergangenheit, wie ein einsamer Ranger, der eine Taverne mit Wein zum Trinken und ein Bett zum Schlafen sucht, um am nächsten Tag weiterzureisen. 🐴
   - img: /img/activities/florence.jpg
-    name: Definitely visit Florence
-    description: Visit the birthplace of Leonardo da Vinci and the Italian Renaissance. Have one of the best pizzas at Il Pizzaiuolo or a beautiful night at Trattoria Zà Zà. If you want to try the famous Fiorentina Steak then Trattoria Dall'Oste is the place to go. We've always stayed at the My Forte Relais when visiting Florence. 🥩
+    name: Definitiv Florenz besuchen
+    description: Besuche den Geburtsort von Leonardo da Vinci und der italienischen Renaissance. Eine der besten Pizzen gibt es im Il Pizzaiuolo und einen schönen Abend kann man in der Trattoria Zà Zà genießen. Wenn ihr das berühmte Fiorentina Steak probieren wollt, ist die Trattoria Dall'Oste die richtige Adresse. Wenn wir Florenz besuchten, übernachteten wir immer im My Forte Relais. 🥩
   - img: /img/activities/sangimignano.jpg
-    name: Stop by in San Gimignano
-    description: Discover this medieval town with the most towers in Italy and try world famous Gelato at Gelateria Dondoli. When you go to a restaurant, try Vernaccia di San Gimignano, a type of local wine that is the region’s symbol. For a relaxing overnight stay on a farm, outside of the city, we can recommend Agriturismo La Lucciolaia with great views, home cooked food and delicious own wine. 🍦
+    name: Zwischenstopp in San Gimignano
+    description: Entdecke diese mittelalterliche Stadt mit den meisten Türmen Italiens und probiere das weltberühmte Gelato in der Gelateria Dondoli. Im Restaurant sollte man den Vernaccia di San Gimignano probieren, eine regionale Weinsorte, die das Symbol der Region ist. Für eine erholsame Übernachtung auf einem Bauernhof außerhalb der Stadt können wir euch den Agriturismo La Lucciolaia mit toller Aussicht, hausgemachtem Essen und köstlichem Hauswein empfehlen. 🍦
   - img: /img/activities/gladiator.jpg
-    name: Don't miss the beautiful Val d'Orcia
-    description: Travel further south to visit Pienza, which is located in the heart of the Val d’Orcia. You can visit the home of Maximus Decimus Meridius from the movie Gladiator. Enjoy a home-cooked meal at La Buca di Enea, one of our favorite restaurants that serves hand rolled pici pasta and wild boar ragù. 🍝
+    name: Das wunderschöne Val d'Orcia nicht vergessen
+    description: Noch weiter südlich, im Herzen des Val d'Orcia, liegt Pienza. Hier kann man das Haus von Maximus Decimus Meridius aus dem Film Gladiator besichtigen. Im La Buca di Enea, einem unserer Lieblingsrestaurants, könnt ihr hausgemachtes Essen genießen, wie zum Beispiel handgerollte Pici-Pasta oder Wildschwein-Ragout. 🍝
 questions:
-  - question: How to get from the accommodation to the wedding location? 🚕
+  - question: Wie kommt man von der Unterkunft zur Hochzeitslocation? 🚕
     answer: >
-      If you need a drive from your accommodation in Siena to the Tenuta Larnianone or vice versa we recommend to organise it with Sartini Siena.
+      Wenn ihr eine Fahrt von eurer Unterkunft in Siena zur Tenuta Larnianone oder zurück braucht, empfehlen wir euch, dies mit Sartini Siena oder anderen Hochzeitsgästen zu organisieren.
 ---
 
 ### Hast du Fragen?
