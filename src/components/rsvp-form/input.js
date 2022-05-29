@@ -10,9 +10,7 @@ const Input = (props) => {
       <div className="form__controls">
         <div className="control__textbox-group">
           <label className="control__textbox-label" htmlFor="firstName">
-            {props.guestNum === 0
-              ? t("form.firstName")
-              : t("form.guestReference", { number: props.guestNum })}
+            {t("form.firstName")}
           </label>
           <input
             className="control__textbox-input"
@@ -28,9 +26,7 @@ const Input = (props) => {
         </div>
         <div className="control__textbox-group">
           <label className="control__textbox-label" htmlFor="firstName">
-            {props.guestNum === 0
-              ? t("form.lastName")
-              : t("form.guestReference", { number: props.guestNum })}
+            {t("form.lastName")}
           </label>
           <input
             className="control__textbox-input"

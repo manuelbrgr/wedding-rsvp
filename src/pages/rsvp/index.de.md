@@ -2,8 +2,8 @@
 
 templateKey: "rsvp-page"
 image: /img/home-tuscany.jpg
-title: Please RSVP by July 1st
-description: Please add each person individually to the RSVP form. Once you've added one person, e.g. yourself, on the next page you can add the next member of your family or group by clicking the button "Add another guest".
-rsvpTitle: So, what do you
-rsvpSubheading: say?
-subheading: Rückmeldung
+title: Bitte gebt uns bis zum 1. Juli Bescheid
+description: Im Anmeldeformular kann jede Person einzeln hinzugefügt werden. Sobald die erste Person (z.B. Du) angelegt ist, kann auf der Übersichtsseite die nächste Person (z.B. Partner oder Kinder) hinzugefügt werden, indem man auf "Weiteren Gast hinzufügen" klickt.
+rsvpTitle: Bist du
+rsvpSubheading: dabei?
+subheading: Die Entscheidung

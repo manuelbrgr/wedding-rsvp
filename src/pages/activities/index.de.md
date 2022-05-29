@@ -2,7 +2,7 @@
 templateKey: activities-page
 title: Einige Tipps und Ideen
 image: /img/home-tuscany.jpg
-subheading: Aktivitäten
+subheading: Was hat die Gegend zu bieten?
 description: >
   Hier haben wir einige Tipps für euch zusammengestellt, falls ihr andere Städte in der Toskana besuchen wollt, einen Roadtrip machen wollt oder Empfehlungen sucht, was ihr in der Umgebung unternehmen, sehen oder essen könnt. ☺️
 information: >

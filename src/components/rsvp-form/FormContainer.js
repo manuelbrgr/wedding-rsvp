@@ -273,7 +273,7 @@ class FormContainer extends React.Component {
           case 1:
             return this.props.t("form.header.oneperson");
           default:
-            return this.props.t("form.header.moreperson", { numGuests });
+            return this.props.t("form.header.morepeople", { numGuests });
         }
       case "showResult":
         switch (attending) {

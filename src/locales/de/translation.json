@@ -33,10 +33,10 @@
       "morepeople": "Du hast {{numGuests}} Personen hinzugefügt."
     },
     "cta": {
-      "success": "Hurra! Wir können es nicht erwarten, euch zu sehen!",
+      "success": "Hurra! Wir können es nicht erwarten, dich/euch zu sehen!",
       "continue": "Weiter",
       "remove": "Lösche diesen Gast",
-      "send": "Sende RSVP",
+      "send": "Sende Antwort",
       "home": "Hochzeitsdetails"
     }
   }

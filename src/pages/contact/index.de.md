@@ -1,6 +1,6 @@
 ---
 templateKey: "contact-page"
-title: Contact
+title: Kontakt
 description: >
   Hast du Fragen? Schreib uns einfach hier! Du kannst uns auch direkt über WhatsApp kontaktieren. 🤗
 image: /img/home-tuscany.jpg
