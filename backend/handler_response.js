@@ -25,7 +25,7 @@ module.exports.submitResponse = async (event) => {
     typeof firstName !== "string" ||
     typeof lastName !== "string" ||
     !responseOptionAttending.includes(attending) ||
-    !responseresponseOptionEatingMeatOption.includes(eatingMeat) ||
+    !responseOptionEatingMeat.includes(eatingMeat) ||
     typeof dietaryRestrictions !== "string" ||
     typeof message !== "string" ||
     Array.isArray(guests) === false
