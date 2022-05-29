@@ -35,5 +35,5 @@ intro:
   heading: Heading
 description: >
   Zeit und Ort der Trauung können sich wetterbedingt spontan ändern. Bitte prüft daher auf der Website, ob es Änderungen gibt.<br> 
-  Hinweise zum Dresscode und Outfit-Ideen findet ihr auf unserem speziellen <a href="https://pin.it/1mYdkGt" target="_blank"> Pinterest Board</a>.
+  Hinweise zum Dresscode und Outfit-Ideen findet ihr auf unserem speziellen <a href="https://pin.it/1mYdkGt" target="_blank"> Pinterest Board</a> 🕺 💃.
 ---

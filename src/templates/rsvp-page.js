@@ -28,7 +28,7 @@ export const RsvpPageTemplate = ({
       <section className="section section--gradient">
         <div className="container is-widescreen">
           <div className="columns">
-            <div className="column is-12-tablet is-offset-0-tablet is-8-desktop is-offset-2-desktop">
+            <div className="column is-10-tablet is-offset-1-tablet is-8-desktop is-offset-2-desktop">
               <h2 className="title is-size-3 has-text-weight-bold has-text-centered is-bold-light">
                 {title}
               </h2>
@@ -40,7 +40,7 @@ export const RsvpPageTemplate = ({
                 belowText={rsvpSubheading}
                 colorClass="color-primary"
               />
-              <div className="column is-12-tablet is-offset-0-tablet is-8-desktop is-offset-2-desktop">
+              <div className="column is-12-tablet is-offset-0-tablet is-10-desktop is-offset-1-desktop">
                 <FormContainer />
               </div>
             </div>

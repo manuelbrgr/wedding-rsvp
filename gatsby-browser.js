@@ -4,7 +4,7 @@ const languages = require("./src/data/languages");
 const { getLangKey } = require("./src/utils/getLangKey");
 
 const userLang = navigator.language;
-const locale = ~languages.langs.indexOf(userLang)
+let locale = ~languages.langs.indexOf(userLang)
   ? userLang
   : languages.defaultLangKey;
 
@@ -12,9 +12,12 @@ const translationEN = require("./src/locales/en/translation.json");
 const translationDE = require("./src/locales/de/translation.json");
 const translationPL = require("./src/locales/pl/translation.json");
 
+const pathArray = window.location.pathname.split("/");
 exports.onClientEntry = () => {
   if (window.location.pathname === "/") {
     window.location.pathname = `/${locale}`;
+  } else if (pathArray.length > 1) {
+    locale = window.location.pathname.split("/")[1];
   }
 
   i18n.use(initReactI18next).init({
@@ -23,7 +26,6 @@ exports.onClientEntry = () => {
       en: {
         translation: translationEN,
       },
-
       de: {
         translation: translationDE,
       },
@@ -37,4 +39,7 @@ exports.onClientEntry = () => {
       escapeValue: false,
     },
   });
+
+  console.log(locale);
+  i18n.changeLanguage(locale);
 };

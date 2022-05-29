@@ -23,7 +23,7 @@ export const ImprintPageTemplate = ({
       <section>
         <div className="container is-widescreen">
           <div className="columns">
-            <div className="column is-10-tablet is-offset-1-tablet is-6-desktop is-offset-3-desktop">
+            <div className="column is-12-tablet is-offset-0-tablet is-10-desktop is-offset-1-desktop">
               <div className="section">
                 <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                   {title}

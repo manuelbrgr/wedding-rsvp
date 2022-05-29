@@ -31,10 +31,10 @@ export const ActivitiesPageTemplate = ({
       <section className="section section--gradient">
         <div className="container is-widescreen">
           <div className="columns">
-            <div className="column is-12-tablet is-offset-0-tablet is-8-desktop is-offset-2-desktop">
+            <div className="column is-12-tablet is-offset-0-tablet is-10-desktop is-offset-1-desktop">
               <div className="content">
                 <div className="content has-text-centered">
-                  <h2 className="title has-text-weight-semibold has-text-centered">
+                  <h2 className="title is-size-3 has-text-weight-semibold has-text-centered">
                     {title}
                   </h2>
                   <div className="tile">
@@ -51,26 +51,26 @@ export const ActivitiesPageTemplate = ({
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="column has-text-centered is-12-tablet is-offset-0-tablet is-8-desktop is-offset-2-desktop mb-5">
-          <div className="tile">
-            <p className="subtitle">{information}</p>
+          <div className="column has-text-centered is-12-tablet is-offset-0-tablet is-10-desktop is-offset-1-desktop mb-5">
+            <div className="tile">
+              <p className="subtitle">{information}</p>
+            </div>
           </div>
-        </div>
 
-        <div className="columns">
-          <div className="column is-10-tablet is-offset-1-tablet is-6-desktop is-offset-3-desktop">
-            <Accordion>
-              {questions.map((item, i) => (
-                <Accordion.Item eventKey={i}>
-                  <Accordion.Header>{item.question}</Accordion.Header>
-                  <Accordion.Body
-                    dangerouslySetInnerHTML={{ __html: item.answer }}
-                  ></Accordion.Body>
-                </Accordion.Item>
-              ))}
-            </Accordion>
+          <div className="columns">
+            <div className="column is-10-tablet is-offset-1-tablet is-6-desktop is-offset-3-desktop">
+              <Accordion>
+                {questions.map((item, i) => (
+                  <Accordion.Item eventKey={i}>
+                    <Accordion.Header>{item.question}</Accordion.Header>
+                    <Accordion.Body
+                      dangerouslySetInnerHTML={{ __html: item.answer }}
+                    ></Accordion.Body>
+                  </Accordion.Item>
+                ))}
+              </Accordion>
+            </div>
           </div>
         </div>
       </section>

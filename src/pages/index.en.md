@@ -35,5 +35,5 @@ intro:
   heading: Heading
 description: >
   The times and places of events might be subject to spontaneous changes due to weather conditions, so please check the website for any updates. <br> 
-  For dresscode and outfit ideas check our special <a href="https://pin.it/1mYdkGt" target="_blank"> Pinterest Board</a>.
+  For dresscode and outfit ideas check our special <a href="https://pin.it/1mYdkGt" target="_blank"> Pinterest Board</a>🕺 💃.
 ---

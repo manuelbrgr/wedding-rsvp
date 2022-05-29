@@ -24,10 +24,10 @@ export const FaqPageTemplate = ({
       <section className="section section--gradient">
         <div className="container is-widescreen">
           <div className="columns">
-            <div className="column is-12-tablet is-offset-0-tablet is-8-desktop is-offset-2-desktop">
+            <div className="column is-12-tablet is-offset-0-tablet is-10-desktop is-offset-1-desktop">
               <div className="content">
                 <div className="content has-text-centered">
-                  <h2 className="title has-text-weight-semibold has-text-centered">
+                  <h2 className="title is-size-3 has-text-weight-semibold has-text-centered">
                     {title}
                   </h2>
                   <div className="tile">

@@ -32,7 +32,7 @@ export const LocationPageTemplate = ({
       <section className="section section--gradient">
         <div className="container is-widescreen">
           <div className="columns mb-0">
-            <div className="column is-12-tablet is-offset-0-tablet is-8-desktop is-offset-2-desktop">
+            <div className="column is-12-tablet is-offset-0-tablet is-10-desktop is-offset-1-desktop">
               <div className="content has-text-centered">
                 <Heading
                   aboveText={handwrittenTitle}
@@ -113,7 +113,7 @@ export const LocationPageTemplate = ({
             </div>
           </div>
           <div className="columns">
-            <div className="column is-12-tablet is-offset-0-tablet is-8-desktop is-offset-2-desktop">
+            <div className="column is-12-tablet is-offset-0-tablet is-10-desktop is-offset-1-desktop">
               <PageContent
                 className="content has-text-centered"
                 content={content}
