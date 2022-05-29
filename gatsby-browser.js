@@ -40,6 +40,5 @@ exports.onClientEntry = () => {
     },
   });
 
-  console.log(locale);
   i18n.changeLanguage(locale);
 };

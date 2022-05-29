@@ -66,7 +66,6 @@ const putResponse = async function putResponseInDynamo(response) {
 };
 
 const createEmailResponse = (guests) => {
-  console.log("JSON here: " + JSON.stringify(guests) + " pure " + guests);
   return guests.map((guestList) => {
     const {
       firstName,
