@@ -1,5 +1,5 @@
 {
-  "baseUrl": "/de",
+  "langKey": "de",
   "navigation": {
     "home": "Home",
     "location": "Hochzeitslocation",
@@ -17,9 +17,24 @@
   },
   "form": {
     "title": "Gästeliste",
-    "firstName": "Vorname",
-    "lastName": "Nachname",
+    "firstName": "Vorame",
+    "lastName": "Nachame",
     "guestReference": "Name des Gastes Nr. {{number}}",
+    "foodPreference": "Essen Präferenz",
+    "dietaryRestrictions": "Diätetische Einschränkungen",
+    "meat": "Fleisch 🥩",
+    "veggie": "Vegetarisch 🥦",
+    "comment": "Anmerkungen",
+    "noDietaryRestrictions": "Keine diätetischen Einschränkungen",
+    "willYouAttend": "Wirst du an unserer Hochzeit teilnehmen??",
+    "yes": "Ja",
+    "no": "Nein",
+    "chooseFoodPreference": "Wähle deine Essenspräferenz:",
+    "foodAllergies": "Hast du irgendwelche Essensallergien oder Intoleranzen??",
+    "foodAllergiesExamples": "Zum Beispiel: Nüsse, Gluten, Meeresfrüchte, etc.",
+    "shortComment": "Möchtest du einen kurzen Kommentar hinterlassen?",
+    "receivedRsvp": "Wir haben eine Antwort erhalten für",
+    "addMore": "Weiteren Gast hinzufügen",
     "errors": {
       "firstNameRequired": "Der Vorname ist ein Pflichtfeld.",
       "lastNameRequired": "Der Nachname ist ein Pflichtfeld.",
