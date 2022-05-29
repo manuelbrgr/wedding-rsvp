@@ -5,7 +5,6 @@ import Navbar from "../components/Navbar";
 import "./styles/all.scss";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
-import "bootstrap/dist/js/bootstrap.min.js";
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
