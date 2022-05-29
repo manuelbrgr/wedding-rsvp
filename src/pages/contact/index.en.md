@@ -7,7 +7,7 @@ image: /img/home-tuscany.jpg
 subheading: Write a message
 formProps:
   email: Email
-  placeholderEmail: legen_wait_for_it@dary.com
+  placeholderEmail: suitup@barney.com
   name: Name
   placeholderName: Barney Stinson
   message: Your Message
