@@ -40,7 +40,7 @@ export const RsvpPageTemplate = ({
                 belowText={rsvpSubheading}
                 colorClass="color-primary"
               />
-              <div className="column is-12-tablet is-offset-0-tablet is-10-desktop is-offset-1-desktop">
+              <div className="column p-0 is-12-tablet is-offset-0-tablet is-10-desktop is-offset-1-desktop">
                 <FormContainer />
               </div>
             </div>

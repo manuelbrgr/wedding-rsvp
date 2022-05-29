@@ -18,12 +18,14 @@ module.exports.submitResponse = async (event) => {
     guests,
   } = requestBody;
 
-  const responseOption = ["yes", "no"];
+  const responseOptionAttending = ["yes", "no"];
+  const responseOptionEatingMeat = ["yes", "no", ""];
+
   if (
     typeof firstName !== "string" ||
     typeof lastName !== "string" ||
-    !responseOption.includes(attending) ||
-    !responseOption.includes(eatingMeat) ||
+    !responseOptionAttending.includes(attending) ||
+    !responseresponseOptionEatingMeatOption.includes(eatingMeat) ||
     typeof dietaryRestrictions !== "string" ||
     typeof message !== "string" ||
     Array.isArray(guests) === false

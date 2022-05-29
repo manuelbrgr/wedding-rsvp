@@ -42,7 +42,7 @@ questions:
       Wir planen keine offiziellen Aktivitäten rund um den Hochzeitstag, aber in den Tagen rund um die Hochzeit kann es immer Leute geben, die fragen, ob jemand an einer Aktivität wie Reiten + Weinprobe teilnehmen möchte, also haltet unsere Facebook-Gruppe im Auge und haltet die Whatsapp-Benachrichtigungen aktiv. 🎉
   - question: Wollt ihr andere vor der Hochzeit kennenlernen?
     answer: >
-      Toll! Dann komm in unsere extra erstellte Whatsapp- oder Facebook-Gruppe! Dort könnt ihr andere Gäste kennenlernen, als größere Gruppe gemeinsam Fahrten organisieren/buchen, gemeinsam eine Unterkunft mieten, einen Reisepartner finden oder einfach eure Fragen, Nachrichten und Bilder teilen. 😄
+      Toll! Dann komm in unsere extra erstellte Whatsapp- oder <a href="https://www.facebook.com/groups/1435542876905661" target="_blank">Facebook-Gruppe</a>! Dort könnt ihr andere Gäste kennenlernen, als größere Gruppe gemeinsam Fahrten organisieren/buchen, gemeinsam eine Unterkunft mieten, einen Reisepartner finden oder einfach eure Fragen, Nachrichten und Bilder teilen. 😄
   - question: Kann ich bei bei euch in der Villa übernachten?
     answer: >
       Derzeit sind die Villen belegt, aber wenn ihr Hilfe bei der Suche nach einer Unterkunft braucht, wendet euch an uns, und wir werden versuchen, euch zu helfen. 🏡

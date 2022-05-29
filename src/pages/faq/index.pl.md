@@ -38,10 +38,10 @@ questions:
       Jesteśmy bardzo wdzięczni, że przyjeżdżacie do Włoch, by wspólnie z nami świętować. Wasza obecność jest jedynym prezentem, jakiego oczekujemy. 💝
   - question: Czy w dniu przed- lub po ślubie odbędzie się jakieś zorganizowane wydarzenie?
     answer: >
-      Nie planujemy żadnych dodatkowych atrakcji i wydarzeń przed lub po ślubie, jednak zawsze mogą pojawić się osoby, które zapytają, czy ktoś chciałby wziąć udział w jakimś wydarzeniu, na przykład w jeździe konnej lub degustacji wina. Dlatego warto sprawdzać naszą <a href="https://www.facebook.com/groups/1435542876905661" target="_blank"> grupę na Facebooku</a> i mieć aktywne powiadomienia na Whatsapp (napisz do nas by dołączyć do grupy). 🎉
+      Nie planujemy żadnych dodatkowych atrakcji i wydarzeń przed lub po ślubie, jednak zawsze mogą pojawić się osoby, które zapytają, czy ktoś chciałby wziąć udział w jakimś wydarzeniu, na przykład w jeździe konnej lub degustacji wina. Dlatego warto sprawdzać naszą <a href="https://www.facebook.com/groups/1435542876905661" target="_blank">grupę na Facebooku</a> i mieć aktywne powiadomienia na Whatsapp (napisz do nas by dołączyć do grupy). 🎉
   - question: Chcesz lepiej poznać innych gości przed ślubem?
     answer: >
-      Super! W takim razie dołącz do naszej specjalnie stworzonej grupy na Whatsapp lub Facebooku! Możecie tam poznać innych gości, zorganizować wspólne przejazdy, zarezerwować transport jako większa grupa, wynająć razem kwaterę, znaleźć towarzysza podróży lub po prostu podzielić się swoimi pytaniami, wiadomościami i zdjęciami. 😄
+      Super! W takim razie dołącz do naszej specjalnie stworzonej grupy na Whatsapp lub <a href="https://www.facebook.com/groups/1435542876905661" target="_blank">Facebooku</a>! Możecie tam poznać innych gości, zorganizować wspólne przejazdy, zarezerwować transport jako większa grupa, wynająć razem kwaterę, znaleźć towarzysza podróży lub po prostu podzielić się swoimi pytaniami, wiadomościami i zdjęciami. 😄
   - question: Czy mogę przenocować w Willi?
     answer: >
       Obecnie wille są już zajęte, ale jeśli potrzebujesz pomocy w znalezieniu zakwaterowania, skontaktuj się z nami, a my postaramy się pomóc. 🏡
