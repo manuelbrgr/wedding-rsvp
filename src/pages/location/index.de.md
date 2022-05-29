@@ -7,8 +7,8 @@ images:
   imageVilla: /img/villa-colombaio-back.jpg
 subheading: Hochzeitslocation
 title: Addresse
-handwrittenTitle: So we meet in
-handwrittenSubtitle: Tuscany!
+handwrittenTitle: Dann sehen wir uns in
+handwrittenSubtitle: der Toskana!
 mainpitch:
   descriptionTuscany: >
     Wir wollen, dass unsere Hochzeit ein unvergessliches Erlebnis und eine Möglichkeit für ein großartiges Abenteuer wird, nicht nur für uns, sondern auch für alle anderen Gäste. Und welcher Ort wäre dafür besser geeignet als die sanften Hügel der Toskana? 🌞

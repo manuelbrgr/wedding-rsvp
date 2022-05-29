@@ -7,8 +7,8 @@ images:
   imageVilla: /img/villa-colombaio-back.jpg
 subheading: Miejsce ślubu i wesela
 title: Adres
-handwrittenTitle: So we meet in
-handwrittenSubtitle: Tuscany!
+handwrittenTitle: A więc widzimy się
+handwrittenSubtitle: w Toskanii!
 mainpitch:
   descriptionTuscany: >
     Chcemy, aby nasz ślub był niezapomnianym przeżyciem i okazją do przeżycia niesamowitej przygody, nie tylko dla nas, ale także dla wszystkich osób, które przyjadą. Czy istnieje lepsze miejsce niż malownicze wzgórza Toskanii? 🌞

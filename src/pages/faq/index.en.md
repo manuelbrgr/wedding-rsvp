@@ -42,7 +42,7 @@ questions:
       We are not planning any official events around the wedding day, however, in the days around the wedding, there can always be people who will ask if somebody wants to join some activity like horseback riding + wine tasting so keep checking our facebook group and keep the Whatsapp notifications active. 🎉
   - question: Wanna get to know others before the wedding?
     answer: >
-      Awesome! Then join our especially created <a>Whatsapp</a> or Facebook group! You can get to know other guests, organize carpooling/book a transportation together as a bigger group, rent an accommodation together, find a travel buddy or simply share your questions, messages and pictures there. 😄
+      Awesome! Then join our especially created Whatsapp (contact us to be added) or <a href="https://www.facebook.com/groups/1435542876905661" target="_blank"> Facebook group</a>! You can get to know other guests, organize carpooling/book a transportation together as a bigger group, rent an accommodation together, find a travel buddy or simply share your questions, messages and pictures there. 😄
   - question: Can I stay at the Villa?
     answer: >
       Currently, the villas have been filled but if you need help with finding accommodation, reach out to us and we will try to help you. 🏡
@@ -60,7 +60,7 @@ questions:
       We are hoping for a rain-free and warm day. Historically, the weather in Siena mid-September is lovely and reliable, with the average minimum temperature being 14.2°C and the average maximum daytime temperature lying around 23.5°C. It rains on average a total of 5 days with an average of 57mm. We advise putting on sunscreen for our outdoor wedding. 🌡️
   - question: Whom can I contact with questions?
     answer: >
-      Most of the questions should be answered on our website, however if you have problems/questions that you can’t find the answers to here, feel free to ask on Whatsapp/Facebook group or contact us directly. Due to intensive wedding preparations and travel we will have limited possibilities to answer from 05.09.2022, in that case please contact Arthur Chimeno (DE, EN) or Zuzanna Lech (EN, PL). 🤙
+      Most of the questions should be answered on our website, however if you have problems/questions that you can’t find the answers to here, feel free to ask on Whatsapp (contact us to be added) or <a href="https://www.facebook.com/groups/1435542876905661" target="_blank"> Facebook</a> group or contact us directly. Due to intensive wedding preparations and travel we will have limited possibilities to answer from 05.09.2022, in that case please contact Arthur Chimeno (DE, EN) or Zuzanna Lech (EN, PL). 🤙
   - question: What should I keep in mind when traveling to Italy?
     answer: >
       Many hotels have Italian electricity outlets so bring an adapter. Bring sunscreen and mosquito repellant. You can drive with 0,5‰ but please be responsible and don’t risk driving if you feel not fit. Don’t order pizza with pineapple. 🤌

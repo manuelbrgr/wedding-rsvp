@@ -1,7 +1,7 @@
 ---
 templateKey: "imprint-page"
 path: "/imprint"
-title: Imprint
+title: Impressum
 image: /img/home-tuscany.jpg
 subheading: Imprint and Mentions
 ---

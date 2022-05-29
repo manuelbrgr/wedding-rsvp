@@ -1,4 +1,5 @@
 ---
+
 templateKey: "rsvp-page"
 image: /img/home-tuscany.jpg
 title: Please RSVP by July 1st
@@ -6,8 +7,3 @@ description: Please add each person individually to the RSVP form. Once you've a
 rsvpTitle: So, what do you
 rsvpSubheading: say?
 subheading: RSVP
----
-
-### Do you come?
-
-Hello World
