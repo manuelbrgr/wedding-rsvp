@@ -7,6 +7,8 @@ images:
   imageVilla: /img/villa-colombaio-back.jpg
 subheading: Wedding Location
 title: Address
+handwrittenTitle: So we meet in
+handwrittenSubtitle: Tuscany!
 mainpitch:
   descriptionTuscany: >
     We want our wedding to be an unforgettable experience and an opportunity for an amazing adventure, not only for us but also for everybody coming. And what better place than the rolling hills of Tuscany? 🌞

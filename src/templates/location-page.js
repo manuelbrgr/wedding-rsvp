@@ -20,6 +20,8 @@ export const LocationPageTemplate = ({
   contentComponent,
   address,
   questions,
+  handwrittenTitle,
+  handwrittenSubtitle,
 }) => {
   const PageContent = contentComponent || Content;
   const heroImage = getImage(images.home) || images.home;
@@ -32,8 +34,8 @@ export const LocationPageTemplate = ({
           <div className="column is-8 is-offset-2">
             <div className="content has-text-centered">
               <Heading
-                aboveText={"So we meet in"}
-                belowText={"Tuscany!"}
+                aboveText={handwrittenTitle}
+                belowText={handwrittenSubtitle}
                 colorClass="color-success"
               />
               <p className="subtitle has-text-weight-semibold mb-5">
@@ -145,6 +147,8 @@ const LocationPage = ({ data }) => {
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         subheading={post.frontmatter.subheading}
+        handwrittenTitle={post.frontmatter.handwrittenTitle}
+        handwrittenSubtitle={post.frontmatter.handwrittenSubtitle}
         mainpitch={post.frontmatter.mainpitch}
         content={post.html}
         address={post.frontmatter.address}
@@ -167,6 +171,8 @@ export const locationPageQuery = graphql`
       frontmatter {
         title
         subheading
+        handwrittenTitle
+        handwrittenSubtitle
         images {
           home {
             childImageSharp {
