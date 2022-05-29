@@ -24,7 +24,7 @@ const FeatureGrid = ({ gridItems }) => (
               <PreviewCompatibleImage imageInfo={item} />
             </div>
           </div>
-          <div className="has-text-left column is-6">
+          <div className="has-text-centered-mobile has-text-left column is-6">
             <h4 style={{ textTransform: "uppercase" }}>{item.headline}</h4>
             <span
               className={`font-northwell is-size-0 ${colorPalette[i]} push-in push-up`}

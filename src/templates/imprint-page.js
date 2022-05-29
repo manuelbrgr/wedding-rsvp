@@ -20,10 +20,10 @@ export const ImprintPageTemplate = ({
   return (
     <>
       <FullWidthImage img={heroImage} subheading={subheading} />
-      <section className="section section--gradient">
-        <div className="container">
+      <section>
+        <div className="container is-widescreen">
           <div className="columns">
-            <div className="column is-10 is-offset-1">
+            <div className="column is-10-tablet is-offset-1-tablet is-6-desktop is-offset-3-desktop">
               <div className="section">
                 <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                   {title}

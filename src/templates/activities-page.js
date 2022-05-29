@@ -29,36 +29,38 @@ export const ActivitiesPageTemplate = ({
     <div>
       <FullWidthImage img={heroImage} subheading={subheading} />
       <section className="section section--gradient">
-        <div className="columns">
-          <div className="column is-8 is-offset-2">
-            <div className="content">
-              <div className="content has-text-centered">
-                <h2 className="title has-text-weight-semibold has-text-centered">
-                  {title}
-                </h2>
-                <div className="tile">
-                  <p className="subtitle">{description}</p>
+        <div className="container is-widescreen">
+          <div className="columns">
+            <div className="column is-12-tablet is-offset-0-tablet is-8-desktop is-offset-2-desktop">
+              <div className="content">
+                <div className="content has-text-centered">
+                  <h2 className="title has-text-weight-semibold has-text-centered">
+                    {title}
+                  </h2>
+                  <div className="tile">
+                    <p className="subtitle">{description}</p>
+                  </div>
                 </div>
-              </div>
 
-              <Heading
-                aboveText={listTitle}
-                belowText={listSubtitle}
-                colorClass="color-secondary"
-              />
-              <Cards gridItems={activities} />
+                <Heading
+                  aboveText={listTitle}
+                  belowText={listSubtitle}
+                  colorClass="color-secondary"
+                />
+                <Cards gridItems={activities} />
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="column has-text-centered is-8 is-offset-2 mb-5">
+        <div className="column has-text-centered is-12-tablet is-offset-0-tablet is-8-desktop is-offset-2-desktop mb-5">
           <div className="tile">
             <p className="subtitle">{information}</p>
           </div>
         </div>
 
         <div className="columns">
-          <div className="column is-6 is-offset-3">
+          <div className="column is-10-tablet is-offset-1-tablet is-6-desktop is-offset-3-desktop">
             <Accordion>
               {questions.map((item, i) => (
                 <Accordion.Item eventKey={i}>

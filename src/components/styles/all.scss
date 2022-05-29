@@ -118,6 +118,7 @@ $menu-label-color: white;
 .menu-list {
   list-style: none !important;
   text-align: left;
+  justify-content: center;
 }
 .social {
   padding: 2em;
@@ -129,8 +130,11 @@ $menu-label-color: white;
   margin: 0.5em;
   width: 1em;
   height: 1em;
-  vertical-align: middle;
+  vertical-align: center;
   display: inline;
+  > img {
+    vertical-align: text-top;
+  }
 }
 // blog roll
 .blog-list-item.is-featured {

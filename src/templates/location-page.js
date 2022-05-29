@@ -30,95 +30,95 @@ export const LocationPageTemplate = ({
     <div>
       <FullWidthImage img={heroImage} subheading={subheading} />
       <section className="section section--gradient">
-        <div className="columns mb-0">
-          <div className="column is-8 is-offset-2">
-            <div className="content has-text-centered">
-              <Heading
-                aboveText={handwrittenTitle}
-                belowText={handwrittenSubtitle}
-                colorClass="color-success"
-              />
-              <p className="subtitle has-text-weight-semibold mb-5">
-                {mainpitch.descriptionTuscany}
-              </p>
-            </div>
-            <div className="column is-8 mb-5" style={{ margin: "auto" }}>
-              <Zoom zoomMargin={40}>
-                <GatsbyImage
-                  image={images.imageVilla.childImageSharp.gatsbyImageData}
-                  alt={"Tenuta Larnianone"}
+        <div className="container is-widescreen">
+          <div className="columns mb-0">
+            <div className="column is-12-tablet is-offset-0-tablet is-8-desktop is-offset-2-desktop">
+              <div className="content has-text-centered">
+                <Heading
+                  aboveText={handwrittenTitle}
+                  belowText={handwrittenSubtitle}
+                  colorClass="color-success"
                 />
-              </Zoom>
-            </div>
-            <div className="content has-text-centered mb-5">
-              <p className="subtitle has-text-weight-semibold">
-                {mainpitch.descriptionTenuta}
-              </p>
-            </div>
-            <div className="column is-12">
-              <div className="columns mt-5 mb-5">
-                <div className="column is-4">
-                  <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                    {title}
-                  </h2>
-                  <div className="is-size-4">
-                    <h3 className="is-size-5">{address.name}</h3>
-                    <h4 className="is-size-1 font-northwell push-in color-info">
-                      {address.villa}
-                    </h4>
-                    <p>{address.street}</p>
-                    <p>{address.city}</p>
-                    <p>{address.country}</p>
-                    <a
-                      className="is-size-6"
-                      href="https://goo.gl/maps/Svvok29DSFe7vwT47"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <p>{address.linkToGoogle}</p>
-                    </a>
-                    <a
-                      className="is-size-6"
-                      href="https://tenutalarnianone.com/villas/colombaio/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <p>{address.linkToTenuta}</p>
-                    </a>
+                <p className="subtitle  mb-5">{mainpitch.descriptionTuscany}</p>
+              </div>
+              <div className="column is-8 mb-5" style={{ margin: "auto" }}>
+                <Zoom zoomMargin={40}>
+                  <GatsbyImage
+                    image={images.imageVilla.childImageSharp.gatsbyImageData}
+                    alt={"Tenuta Larnianone"}
+                  />
+                </Zoom>
+              </div>
+              <div className="content has-text-centered mb-5">
+                <p className="subtitle">{mainpitch.descriptionTenuta}</p>
+              </div>
+              <div className="column is-12">
+                <div className="columns mt-5 mb-5">
+                  <div className="column is-4 has-text-centered-mobile">
+                    <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+                      {title}
+                    </h2>
+                    <div className="is-size-4">
+                      <h3 className="is-size-5">{address.name}</h3>
+                      <h4 className="is-size-1 font-northwell push-in color-info">
+                        {address.villa}
+                      </h4>
+                      <p>{address.street}</p>
+                      <p>{address.city}</p>
+                      <p>{address.country}</p>
+                      <a
+                        className="is-size-6"
+                        href="https://goo.gl/maps/Svvok29DSFe7vwT47"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <p>{address.linkToGoogle}</p>
+                      </a>
+                      <a
+                        className="is-size-6"
+                        href="https://tenutalarnianone.com/villas/colombaio/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <p>{address.linkToTenuta}</p>
+                      </a>
+                    </div>
                   </div>
-                </div>
-                <div className="column is-8">
-                  <Zoom zoomMargin={40}>
-                    <GatsbyImage
-                      image={images.imageTenuta.childImageSharp.gatsbyImageData}
-                      alt={"Tenuta Larnianone"}
-                    />
-                  </Zoom>
+                  <div className="column is-8">
+                    <Zoom zoomMargin={40}>
+                      <GatsbyImage
+                        image={
+                          images.imageTenuta.childImageSharp.gatsbyImageData
+                        }
+                        alt={"Tenuta Larnianone"}
+                      />
+                    </Zoom>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="columns mb-5">
-          <div className="column is-6 is-offset-3">
-            <Accordion>
-              {questions.map((item, i) => (
-                <Accordion.Item eventKey={i}>
-                  <Accordion.Header>{item.question}</Accordion.Header>
-                  <Accordion.Body
-                    dangerouslySetInnerHTML={{ __html: item.answer }}
-                  ></Accordion.Body>
-                </Accordion.Item>
-              ))}
-            </Accordion>
+          <div className="columns mb-5">
+            <div className="column is-10-tablet is-offset-1-tablet is-6-desktop is-offset-3-desktop">
+              <Accordion>
+                {questions.map((item, i) => (
+                  <Accordion.Item eventKey={i}>
+                    <Accordion.Header>{item.question}</Accordion.Header>
+                    <Accordion.Body
+                      dangerouslySetInnerHTML={{ __html: item.answer }}
+                    ></Accordion.Body>
+                  </Accordion.Item>
+                ))}
+              </Accordion>
+            </div>
           </div>
-        </div>
-        <div className="columns">
-          <div className="column is-8 is-offset-2">
-            <PageContent
-              className="content has-text-centered"
-              content={content}
-            />
+          <div className="columns">
+            <div className="column is-12-tablet is-offset-0-tablet is-8-desktop is-offset-2-desktop">
+              <PageContent
+                className="content has-text-centered"
+                content={content}
+              />
+            </div>
           </div>
         </div>
       </section>

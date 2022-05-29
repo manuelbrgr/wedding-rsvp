@@ -42,7 +42,7 @@ questions:
       We are not planning any official events around the wedding day, however, in the days around the wedding, there can always be people who will ask if somebody wants to join some activity like horseback riding + wine tasting so keep checking our facebook group and keep the Whatsapp notifications active. 🎉
   - question: Wanna get to know others before the wedding?
     answer: >
-      Awesome! Then join our especially created Whatsapp or Facebook group! You can get to know other guests, organize carpooling/book a transportation together as a bigger group, rent an accommodation together, find a travel buddy or simply share your questions, messages and pictures there. 😄
+      Awesome! Then join our especially created <a>Whatsapp</a> or Facebook group! You can get to know other guests, organize carpooling/book a transportation together as a bigger group, rent an accommodation together, find a travel buddy or simply share your questions, messages and pictures there. 😄
   - question: Can I stay at the Villa?
     answer: >
       Currently, the villas have been filled but if you need help with finding accommodation, reach out to us and we will try to help you. 🏡

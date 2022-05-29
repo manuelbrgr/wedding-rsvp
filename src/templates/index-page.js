@@ -29,59 +29,62 @@ export const IndexPageTemplate = ({
     <div>
       <FullWidthImage img={heroImage} subheading={date} />
       <section className="section section--gradient">
-        <Countdown className="has-text-centered mb-5" />
-        <div className="columns">
-          <div className="column is-8 is-offset-2">
-            <div className="content">
-              <div className="content has-text-centered">
-                <h2 className="title has-text-weight-semibold has-text-centered">
-                  {mainpitch.title}
-                </h2>
-                <div className="tile">
-                  <p className="subtitle">{mainpitch.description}</p>
+        <div className="container is-widescreen">
+          <Countdown className="has-text-centered mb-5" />
+          <div className="columns">
+            <div className="column is-12-tablet is-offset-0-tablet is-8-desktop is-offset-2-desktop">
+              <div className="content">
+                <div className="content has-text-centered">
+                  <h2 className="title has-text-weight-semibold has-text-centered">
+                    {mainpitch.title}
+                  </h2>
+                  <div className="tile">
+                    <p className="subtitle">{mainpitch.description}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="column is-8 mb-5" style={{ margin: "auto" }}>
-                <Zoom zoomMargin={40}>
-                  <GatsbyImage
-                    image={imageUs.childImageSharp.gatsbyImageData}
-                    alt={"Tenuta Larnianone"}
-                  />
-                </Zoom>
-              </div>
-              <div className="columns">
-                <div className="column is-12 has-text-centered">
-                  <h3
-                    style={{
-                      textTransform: "uppercase",
-                      position: "relative",
-                      top: "30px",
-                      right: "10%",
-                    }}
-                    className="has-text-weight-semibold is-size-4"
-                  >
-                    {heading}
-                  </h3>
-                  <p
-                    style={{
-                      position: "relative",
-                      left: "40px",
-                      top: "-20px",
-                      marginBottom: "-20px",
-                    }}
-                    className="is-size-0-h font-northwell color-info"
-                  >
-                    {subheading}
-                  </p>
+                <div className="column is-8 mb-5" style={{ margin: "auto" }}>
+                  <Zoom zoomMargin={40}>
+                    <GatsbyImage
+                      image={imageUs.childImageSharp.gatsbyImageData}
+                      alt={"Tenuta Larnianone"}
+                    />
+                  </Zoom>
                 </div>
+                <div className="columns">
+                  <div className="column is-12 has-text-centered">
+                    <h3
+                      style={{
+                        textTransform: "uppercase",
+                        position: "relative",
+                        top: "30px",
+                        right: "10%",
+                      }}
+                      className="has-text-weight-semibold is-size-4"
+                    >
+                      {heading}
+                    </h3>
+                    <p
+                      style={{
+                        position: "relative",
+                        left: "40px",
+                        top: "-20px",
+                        marginBottom: "-20px",
+                      }}
+                      className="is-size-0-h font-northwell color-info"
+                    >
+                      {subheading}
+                    </p>
+                  </div>
+                </div>
+                <Features gridItems={intro.blurbs} />
               </div>
-              <Features gridItems={intro.blurbs} />
             </div>
           </div>
-        </div>
-        <div className="columns">
-          <div className="column is-10 is-offset-1 has-text-centered">
-            {description}
+          <div className="columns">
+            <div
+              className="column is-10 is-offset-1 has-text-centered"
+              dangerouslySetInnerHTML={{ __html: description }}
+            />
           </div>
         </div>
       </section>
