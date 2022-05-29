@@ -10,7 +10,8 @@ questions:
   - question: What's the dress code?
     answer: >
       Knowing what to wear for the wedding is never easy so we defined the wedding dress code as Garden Party - think of something that is pretty but not too formal and at the same time location and event appropriate. Please don't wear jeans or shorts and a t-shirt. The weather should be warm, so light and flowy summer dresses or jumpsuits for women, and light coloured or mixed colour suits for men should be a perfect choice.<br><br>
-      Please don’t wear black, white/off-white, or neon colors. If possible go for something inspired by Tuscan landscape or earthy colors (click for inspiration here). Also, bring something to put on in the evening as it might get chilly. Some terrain is uneven, so girls opt for block heels, wedges, sandals or flats, and guys, if you want, feel free to swap your formal dress shoes for loafers if that’s more comfortable. 😄
+      Please don’t wear black, white/off-white, or neon colors. If possible go for something inspired by Tuscan landscape or earthy colors (click for inspiration here). Also, bring something to put on in the evening as it might get chilly. Some terrain is uneven, so girls opt for block heels, wedges, sandals or flats, and guys, if you want, feel free to swap your formal dress shoes for loafers if that’s more comfortable. 😄 <br><br>
+      For dresscode and outfit ideas check our special <a href="https://pin.it/1mYdkGt" target="_blank"> Pinterest Board</a>.
   - question: When is the RSVP deadline?
     answer: >
       Please RSVP by July 1st, so we can have an accurate headcount. We also understand that unexpected things happen and if that will be the case, please let us know about it as soon as possible. 😄

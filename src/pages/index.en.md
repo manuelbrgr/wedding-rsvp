@@ -34,5 +34,6 @@ intro:
         From 20:00 at the back garden of Villa Colombaio, and from midnight inside of the Villa Colombaio.
   heading: Heading
 description: >
-  The times and places of events might be subject to spontaneous changes due to weather conditions, so please check the website for any updates.
+  The times and places of events might be subject to spontaneous changes due to weather conditions, so please check the website for any updates. <br><br> 
+  For dresscode and outfit ideas check our special <a href="https://pin.it/1mYdkGt" target="_blank"> Pinterest Board</a>.
 ---

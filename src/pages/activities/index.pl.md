@@ -39,6 +39,9 @@ questions:
   - question: Jak dojechać z miejsca zakwaterowania do miejsca ślubu? 🚕
     answer: >
       Jeśli potrzebujesz transportu z miejsca zakwaterowania w Sienie do Tenuta Larnianone lub odwrotnie, radzimy zorganizować go z Sartini Siena lub innymi uczestnikami wesela.
+  - question: Chcesz znaleźć kogoś do wspólnych podróży lub udziału w ciekawych aktywnościach? 👫
+    answer: >
+      To super! Dołącz do naszej grupy na Whatsapp (skontaktuj się z nami, aby zostać dodanym) lub <a href="https://www.facebook.com/groups/1435542876905661" target="_blank"> Facebooku</a> i zapytaj, kto chciałby z Tobą wyruszyć na przygodę!
 ---
 
 ### Hast du Fragen?

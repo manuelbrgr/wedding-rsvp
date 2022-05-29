@@ -1,12 +1,60 @@
 {
+  "langKey": "pl",
   "navigation": {
     "home": "Strona główna",
     "location": "Miejsce",
-    "accommodation": "Noclegi",
-    "activities": "Atrakcje",
+    "accommodation": "Nocleg",
+    "activities": "Aktywności",
     "rsvp": "RSVP",
     "faq": "FAQ",
     "contact": "Kontakt",
-    "imprint": "Imprint"
+    "imprint": "Stopka redakcyjna"
+  },
+  "countdown": {
+    "months": "miesiące",
+    "days": "dni",
+    "hours": "godziny"
+  },
+  "form": {
+    "title": "wpisz dane gościa",
+    "firstName": "Imię",
+    "lastName": "Nazwisko",
+    "guestReference": "Imię {{number}}-ego gościa",
+    "foodPreference": "Preferencje żywieniowe",
+    "dietaryRestrictions": "Ograniczenia żywieniowe",
+    "meat": "Mięsko 🥩",
+    "veggie": "Wege 🥦",
+    "comment": "Komentarz",
+    "noDietaryRestrictions": "Brak ograniczeń żywieniowych",
+    "willYouAttend": "Czy będziesz na naszym weselu?",
+    "yes": "Tak",
+    "no": "Nie",
+    "chooseFoodPreference": "Zaznacz swoje preferencje żywieniowe:",
+    "foodAllergies": "Czy masz alergie bądź nietolerancje pokarmowe?",
+    "foodAllergiesExamples": "Na przykład orzechy, gluten, owoce morza, etc.",
+    "shortComment": "Czy chcesz zostawić dla nas krótki komentarz?",
+    "receivedRsvp": "Otrzymaliśmy zawiadomienie o udziale w imprezie od",
+    "addMore": "Dodaj kolejnego gościa",
+    "errors": {
+      "firstNameRequired": "Imię wymagane.",
+      "lastNameRequired": "Nazwisko wymagane.",
+      "attendingRequired": "Zaznacz, czy bierzesz udział w wydarzeniu.",
+      "eatingMeatRequired": "Daj nam znać, co wolisz.",
+      "serverRequestFailed": "Wystąpił błąd. Spróbój ponownie wysłać odpowiedź."
+    },
+    "nodietaryrestrictions": "Brak ograniczeń żywieniowych",
+    "header": {
+      "title": "Ślub Angeliki i Manuela 10 września 2022 r.",
+      "oneperson": "Do tej pory dodano odpowiedź dla 1 osoby.",
+      "morepeople": "Do tej pory dodano odpowiedź dla {{numGuests}} osoby."
+    },
+    "cta": {
+      "success": "Hurra! Nie możemy się doczekać, by się zobaczyć w wielkim dniu!",
+      "continue": "Kontynuuj",
+      "edit": "Edytuj",
+      "remove": "Usuń tego gościa",
+      "send": "Wyślij powiadomienie o udziale",
+      "home": "Szczegóły wesela"
+    }
   }
 }

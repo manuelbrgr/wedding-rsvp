@@ -39,6 +39,9 @@ questions:
   - question: Wie kommt man von der Unterkunft zur Hochzeitslocation? 🚕
     answer: >
       Wenn ihr eine Fahrt von eurer Unterkunft in Siena zur Tenuta Larnianone oder zurück braucht, empfehlen wir euch, dies mit Sartini Siena oder anderen Hochzeitsgästen zu organisieren.
+  - question: Suchst du einen Buddy für Reisen oder Aktivitäten? 👫
+    answer: >
+      Voll cool! So einfach ist das. Komm in unsere Whatsapp- (kontaktiere uns, um hinzugefügt zu werden) oder <a href="https://www.facebook.com/groups/1435542876905661" target="_blank"> Facebook</a>-Gruppe und frag herum, wer mit dir ein Abenteuer erleben möchte!
 ---
 
 ### Hast du Fragen?

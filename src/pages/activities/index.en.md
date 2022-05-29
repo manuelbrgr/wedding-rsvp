@@ -38,6 +38,9 @@ questions:
   - question: How to get from the accommodation to the wedding location? 🚕
     answer: >
       If you need a drive from your accommodation in Siena to the Tenuta Larnianone or vice versa we recommend to organise it with Sartini Siena or other wedding guests.
+  - question: Want to find a buddy for travel or activities? 👫
+    answer: >
+      That's so cool! Here's how you can do it, join our on Whatsapp (contact us to be added) or <a href="https://www.facebook.com/groups/1435542876905661" target="_blank"> Facebook</a> group and ask around who would like to join you on an adventure!
 ---
 
 ### Hast du Fragen?
