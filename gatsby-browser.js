@@ -3,8 +3,6 @@ const { initReactI18next } = require("react-i18next");
 const languages = require("./src/data/languages");
 const { getLangKey } = require("./src/utils/getLangKey");
 
-require("bootstrap/dist/js/bootstrap.min.js");
-
 const userLang = navigator.language;
 let locale = ~languages.langs.indexOf(userLang)
   ? userLang
