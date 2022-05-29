@@ -1,22 +1,78 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import Content, { HTMLContent } from "../components/Content";
+import { HTMLContent } from "../components/Content";
 import { getImage } from "gatsby-plugin-image";
 import FullWidthImage from "../components/FullWidthImage";
+import { Button, Form, Spinner } from "react-bootstrap";
 
 // eslint-disable-next-line
 export const ContactPageTemplate = ({
   title,
   subheading,
-  content,
+  description,
   image,
-  contentComponent,
   formProps,
 }) => {
-  const PageContent = contentComponent || Content;
   const heroImage = getImage(image) || image;
+
+  const [loading, setLoading] = useState(false);
+  const [submissionError, setSubmissionError] = useState(false);
+  const [submissionSuccess, setSubmissionSuccess] = useState(false);
+  const [inputValue, setInputValue] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (event) => {
+    setInputValue({
+      ...inputValue,
+      [event.target.id]: event.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    if (form.checkValidity() === false) {
+      e.stopPropagation();
+    } else {
+      setLoading(true);
+      setSubmissionError(false);
+
+      try {
+        //Test http errors - https://httpstat.us/500
+        const response = await fetch("https://wedding-api.brgr.rocks/contact", {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          method: "POST",
+          body: JSON.stringify({
+            name: inputValue.name,
+            email: inputValue.email,
+            message: inputValue.message,
+          }),
+        });
+
+        //In case of http errors
+        if (!response.ok) {
+          throw Error(response.statusText);
+        }
+
+        await response.json();
+        setLoading(false);
+        setSubmissionSuccess(true);
+
+        //In case of network errors
+      } catch (err) {
+        setLoading(false);
+        setSubmissionError(true);
+      }
+    }
+  };
 
   return (
     <>
@@ -25,11 +81,80 @@ export const ContactPageTemplate = ({
         <div className="container">
           <div className="columns">
             <div className="column is-10 is-offset-1">
-              <div className="section">
+              <div className="section pb-0">
                 <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                   {title}
                 </h2>
-                <PageContent className="content" content={content} />
+                <div className="tile">
+                  <p className="subtitle">{description}</p>
+                </div>
+              </div>
+              <div className="section">
+                <Form onSubmit={handleSubmit}>
+                  <Form.Group className="mb-3" controlId="name">
+                    <Form.Label>{formProps.name}</Form.Label>
+                    <Form.Control
+                      required
+                      type="text"
+                      placeholder={formProps.placeholderName}
+                      disabled={submissionSuccess}
+                      onChange={handleChange}
+                      value={inputValue.name}
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="email">
+                    <Form.Label>{formProps.email}</Form.Label>
+                    <Form.Control
+                      required
+                      type="email"
+                      placeholder={formProps.placeholderEmail}
+                      disabled={submissionSuccess}
+                      onChange={handleChange}
+                      value={inputValue.email}
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="message">
+                    <Form.Label>{formProps.message}</Form.Label>
+                    <Form.Control
+                      required
+                      as="textarea"
+                      maxLength={1200}
+                      rows={6}
+                      disabled={submissionSuccess}
+                      onChange={handleChange}
+                      value={inputValue.message}
+                    />
+                  </Form.Group>
+                  {!submissionSuccess && (
+                    <Button
+                      type="submit"
+                      variant={"outline-primary"}
+                      disabled={loading}
+                      onSubmit={handleSubmit}
+                    >
+                      {loading ? (
+                        <>
+                          <Spinner
+                            as="span"
+                            animation="border"
+                            size="sm"
+                            role="status"
+                            aria-hidden="true"
+                          />
+                          &nbsp;{formProps.sending}
+                        </>
+                      ) : (
+                        formProps.send
+                      )}
+                    </Button>
+                  )}
+                  {submissionError && (
+                    <p className="color-warning pt-2">{formProps.error}</p>
+                  )}
+                  {submissionSuccess && (
+                    <p className="color-success">{formProps.success}</p>
+                  )}
+                </Form>
               </div>
             </div>
           </div>
@@ -43,9 +168,10 @@ ContactPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   image: PropTypes.object,
   subheading: PropTypes.string,
+  description: PropTypes.string,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
-  formProps: PropTypes.object.isRequired,
+  formProps: PropTypes.object,
 };
 
 const ContactPage = ({ data }) => {
@@ -58,6 +184,7 @@ const ContactPage = ({ data }) => {
         title={post.frontmatter.title}
         image={post.frontmatter.image}
         subheading={post.frontmatter.subheading}
+        description={post.frontmatter.description}
         formProps={post.frontmatter.formProps}
         content={post.html}
       />
@@ -78,6 +205,7 @@ export const contactPageQuery = graphql`
       frontmatter {
         title
         subheading
+        description
         image {
           childImageSharp {
             gatsbyImageData(
@@ -88,7 +216,15 @@ export const contactPageQuery = graphql`
           }
         }
         formProps {
-          firstName
+          email
+          placeholderEmail
+          name
+          placeholderName
+          message
+          send
+          sending
+          error
+          success
         }
       }
     }

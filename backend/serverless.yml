@@ -34,15 +34,23 @@ custom:
 
 functions:
   submitResponse:
-    handler: handler_response.submitResponse
-    description: Submits response
+    handler: handler_rspv.submitResponse
+    description: Submit response
     events:
       - http:
           path: responses/accept
           method: post
           cors: true
+  submitContactform:
+    handler: handler_contactform.submit
+    description: Submit contact form
+    events:
+      - http:
+          path: contact
+          method: post
+          cors: true
   # listResponses:
-  #   handler: handler_response.listResponses
+  #   handler: handler_rspv.listResponses
   #  description: Lists all responses
   #  events:
   #    - http:

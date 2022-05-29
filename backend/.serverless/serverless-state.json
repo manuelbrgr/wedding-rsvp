@@ -106,6 +106,12 @@
               "LogGroupName": "/aws/lambda/rsvp-prod-submitResponse"
             }
           },
+          "SubmitContactformLogGroup": {
+            "Type": "AWS::Logs::LogGroup",
+            "Properties": {
+              "LogGroupName": "/aws/lambda/rsvp-prod-submitContactform"
+            }
+          },
           "IamRoleLambdaExecution": {
             "Type": "AWS::IAM::Role",
             "Properties": {
@@ -193,14 +199,14 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/rsvp/prod/1653730955282-2022-05-28T09:42:35.282Z/rsvp.zip"
+                "S3Key": "serverless/rsvp/prod/1653847591507-2022-05-29T18:06:31.507Z/rsvp.zip"
               },
-              "Handler": "handler_response.submitResponse",
+              "Handler": "handler_rspv.submitResponse",
               "Runtime": "nodejs14.x",
               "FunctionName": "rsvp-prod-submitResponse",
               "MemorySize": 128,
               "Timeout": 6,
-              "Description": "Submits response",
+              "Description": "Submit response",
               "Environment": {
                 "Variables": {
                   "RESPONSES_TABLE": "rsvp-responses-prod"
@@ -217,15 +223,57 @@
               "SubmitResponseLogGroup"
             ]
           },
-          "SubmitResponseLambdaVersiondPcUIp56UWiZUX6nbXBWZLugfXguJ5X8IG1GXl0Ntk": {
+          "SubmitContactformLambdaFunction": {
+            "Type": "AWS::Lambda::Function",
+            "Properties": {
+              "Code": {
+                "S3Bucket": {
+                  "Ref": "ServerlessDeploymentBucket"
+                },
+                "S3Key": "serverless/rsvp/prod/1653847591507-2022-05-29T18:06:31.507Z/rsvp.zip"
+              },
+              "Handler": "handler_contactform.submit",
+              "Runtime": "nodejs14.x",
+              "FunctionName": "rsvp-prod-submitContactform",
+              "MemorySize": 128,
+              "Timeout": 6,
+              "Description": "Submit contact form",
+              "Environment": {
+                "Variables": {
+                  "RESPONSES_TABLE": "rsvp-responses-prod"
+                }
+              },
+              "Role": {
+                "Fn::GetAtt": [
+                  "IamRoleLambdaExecution",
+                  "Arn"
+                ]
+              }
+            },
+            "DependsOn": [
+              "SubmitContactformLogGroup"
+            ]
+          },
+          "SubmitResponseLambdaVersion87b4O350nlZjV56tjJmjpqA8pHAN2rcI19DPDzUu0MI": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "SubmitResponseLambdaFunction"
               },
-              "CodeSha256": "sBOAF8Vwtxe0m4nmdLTK42pOI0v3sjqLddYu8vpk44w=",
-              "Description": "Submits response"
+              "CodeSha256": "NhET4mS9LChZG2Vw9hJaeMA0tyIJTwYvWasPtXS+XOY=",
+              "Description": "Submit response"
+            }
+          },
+          "SubmitContactformLambdaVersionj6Fu4anFuB3291SEt64Di8YvjmHtl8JplgZkIANJUxg": {
+            "Type": "AWS::Lambda::Version",
+            "DeletionPolicy": "Retain",
+            "Properties": {
+              "FunctionName": {
+                "Ref": "SubmitContactformLambdaFunction"
+              },
+              "CodeSha256": "NhET4mS9LChZG2Vw9hJaeMA0tyIJTwYvWasPtXS+XOY=",
+              "Description": "Submit contact form"
             }
           },
           "ApiGatewayRestApi": {
@@ -262,6 +310,21 @@
                 "Ref": "ApiGatewayResourceResponses"
               },
               "PathPart": "accept",
+              "RestApiId": {
+                "Ref": "ApiGatewayRestApi"
+              }
+            }
+          },
+          "ApiGatewayResourceContact": {
+            "Type": "AWS::ApiGateway::Resource",
+            "Properties": {
+              "ParentId": {
+                "Fn::GetAtt": [
+                  "ApiGatewayRestApi",
+                  "RootResourceId"
+                ]
+              },
+              "PathPart": "contact",
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               }
@@ -306,6 +369,51 @@
               },
               "ResourceId": {
                 "Ref": "ApiGatewayResourceResponsesAccept"
+              },
+              "RestApiId": {
+                "Ref": "ApiGatewayRestApi"
+              }
+            }
+          },
+          "ApiGatewayMethodContactOptions": {
+            "Type": "AWS::ApiGateway::Method",
+            "Properties": {
+              "AuthorizationType": "NONE",
+              "HttpMethod": "OPTIONS",
+              "MethodResponses": [
+                {
+                  "StatusCode": "200",
+                  "ResponseParameters": {
+                    "method.response.header.Access-Control-Allow-Origin": true,
+                    "method.response.header.Access-Control-Allow-Headers": true,
+                    "method.response.header.Access-Control-Allow-Methods": true
+                  },
+                  "ResponseModels": {}
+                }
+              ],
+              "RequestParameters": {},
+              "Integration": {
+                "Type": "MOCK",
+                "RequestTemplates": {
+                  "application/json": "{statusCode:200}"
+                },
+                "ContentHandling": "CONVERT_TO_TEXT",
+                "IntegrationResponses": [
+                  {
+                    "StatusCode": "200",
+                    "ResponseParameters": {
+                      "method.response.header.Access-Control-Allow-Origin": "'*'",
+                      "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent'",
+                      "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,POST'"
+                    },
+                    "ResponseTemplates": {
+                      "application/json": ""
+                    }
+                  }
+                ]
+              },
+              "ResourceId": {
+                "Ref": "ApiGatewayResourceContact"
               },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
@@ -358,7 +466,53 @@
               "SubmitResponseLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1653730951585": {
+          "ApiGatewayMethodContactPost": {
+            "Type": "AWS::ApiGateway::Method",
+            "Properties": {
+              "HttpMethod": "POST",
+              "RequestParameters": {},
+              "ResourceId": {
+                "Ref": "ApiGatewayResourceContact"
+              },
+              "RestApiId": {
+                "Ref": "ApiGatewayRestApi"
+              },
+              "ApiKeyRequired": false,
+              "AuthorizationType": "NONE",
+              "Integration": {
+                "IntegrationHttpMethod": "POST",
+                "Type": "AWS_PROXY",
+                "Uri": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":apigateway:",
+                      {
+                        "Ref": "AWS::Region"
+                      },
+                      ":lambda:path/2015-03-31/functions/",
+                      {
+                        "Fn::GetAtt": [
+                          "SubmitContactformLambdaFunction",
+                          "Arn"
+                        ]
+                      },
+                      "/invocations"
+                    ]
+                  ]
+                }
+              },
+              "MethodResponses": []
+            },
+            "DependsOn": [
+              "SubmitContactformLambdaPermissionApiGateway"
+            ]
+          },
+          "ApiGatewayDeployment1653847587222": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -368,7 +522,9 @@
             },
             "DependsOn": [
               "ApiGatewayMethodResponsesAcceptOptions",
-              "ApiGatewayMethodResponsesAcceptPost"
+              "ApiGatewayMethodContactOptions",
+              "ApiGatewayMethodResponsesAcceptPost",
+              "ApiGatewayMethodContactPost"
             ]
           },
           "SubmitResponseLambdaPermissionApiGateway": {
@@ -377,6 +533,43 @@
               "FunctionName": {
                 "Fn::GetAtt": [
                   "SubmitResponseLambdaFunction",
+                  "Arn"
+                ]
+              },
+              "Action": "lambda:InvokeFunction",
+              "Principal": "apigateway.amazonaws.com",
+              "SourceArn": {
+                "Fn::Join": [
+                  "",
+                  [
+                    "arn:",
+                    {
+                      "Ref": "AWS::Partition"
+                    },
+                    ":execute-api:",
+                    {
+                      "Ref": "AWS::Region"
+                    },
+                    ":",
+                    {
+                      "Ref": "AWS::AccountId"
+                    },
+                    ":",
+                    {
+                      "Ref": "ApiGatewayRestApi"
+                    },
+                    "/*/*"
+                  ]
+                ]
+              }
+            }
+          },
+          "SubmitContactformLambdaPermissionApiGateway": {
+            "Type": "AWS::Lambda::Permission",
+            "Properties": {
+              "FunctionName": {
+                "Fn::GetAtt": [
+                  "SubmitContactformLambdaFunction",
                   "Arn"
                 ]
               },
@@ -440,10 +633,19 @@
           "SubmitResponseLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "SubmitResponseLambdaVersiondPcUIp56UWiZUX6nbXBWZLugfXguJ5X8IG1GXl0Ntk"
+              "Ref": "SubmitResponseLambdaVersion87b4O350nlZjV56tjJmjpqA8pHAN2rcI19DPDzUu0MI"
             },
             "Export": {
               "Name": "sls-rsvp-prod-SubmitResponseLambdaFunctionQualifiedArn"
+            }
+          },
+          "SubmitContactformLambdaFunctionQualifiedArn": {
+            "Description": "Current Lambda function version",
+            "Value": {
+              "Ref": "SubmitContactformLambdaVersionj6Fu4anFuB3291SEt64Di8YvjmHtl8JplgZkIANJUxg"
+            },
+            "Export": {
+              "Name": "sls-rsvp-prod-SubmitContactformLambdaFunctionQualifiedArn"
             }
           },
           "ServiceEndpoint": {
@@ -571,8 +773,8 @@
     "pluginsData": {},
     "functions": {
       "submitResponse": {
-        "handler": "handler_response.submitResponse",
-        "description": "Submits response",
+        "handler": "handler_rspv.submitResponse",
+        "description": "Submit response",
         "events": [
           {
             "http": {
@@ -604,7 +806,43 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "SubmitResponseLambdaVersiondPcUIp56UWiZUX6nbXBWZLugfXguJ5X8IG1GXl0Ntk"
+        "versionLogicalId": "SubmitResponseLambdaVersion87b4O350nlZjV56tjJmjpqA8pHAN2rcI19DPDzUu0MI"
+      },
+      "submitContactform": {
+        "handler": "handler_contactform.submit",
+        "description": "Submit contact form",
+        "events": [
+          {
+            "http": {
+              "path": "contact",
+              "method": "post",
+              "cors": {
+                "origin": "*",
+                "methods": [
+                  "OPTIONS",
+                  "POST"
+                ],
+                "headers": [
+                  "Content-Type",
+                  "X-Amz-Date",
+                  "Authorization",
+                  "X-Api-Key",
+                  "X-Amz-Security-Token",
+                  "X-Amz-User-Agent"
+                ],
+                "allowCredentials": false
+              },
+              "integration": "AWS_PROXY"
+            }
+          }
+        ],
+        "name": "rsvp-prod-submitContactform",
+        "package": {},
+        "memory": 128,
+        "timeout": 6,
+        "runtime": "nodejs14.x",
+        "vpc": {},
+        "versionLogicalId": "SubmitContactformLambdaVersionj6Fu4anFuB3291SEt64Di8YvjmHtl8JplgZkIANJUxg"
       }
     },
     "resources": {
@@ -657,7 +895,7 @@
     "artifact": "/Users/manuelberger/Documents/dev/github/wedding-website/backend/.serverless/rsvp.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/rsvp/prod/1653730955282-2022-05-28T09:42:35.282Z",
+    "artifactDirectoryName": "serverless/rsvp/prod/1653847591507-2022-05-29T18:06:31.507Z",
     "artifact": "rsvp.zip"
   }
 }

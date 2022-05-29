@@ -105,7 +105,7 @@ class FormContainer extends React.Component {
         throw Error(response.statusText);
       }
 
-      const data = await response.json();
+      await response.json();
       this.setState({
         isSubmissionError: false,
         isLoading: false,
