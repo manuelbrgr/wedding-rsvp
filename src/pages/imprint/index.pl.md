@@ -1,19 +1,27 @@
 ---
 templateKey: "imprint-page"
 path: "/imprint"
-title: Imprint
+title: Stopka redakcyjna
 image: /img/home-tuscany.jpg
-subheading: Stopka redakcyjna i wzmianki
+subheading: Informacje ogólne
 ---
 
-### Informacje ogólne
+### Programowanie i obsługa techniczna
 
-Ta strona służy wyłącznie celom prywatnym, rodzinnym i dlatego nie podlega obowiązkowi imprintu. Jeśli jednak masz jakieś pytania, zawsze możesz skontaktować się z nami za pomocą formularza kontaktowego. Postaramy się odpowiedzieć tak szybko, jak to możliwe!
+Manuel Berger _ze wspaniałą i kreatywną pomocą Angeliki Jabłońskiej_.
+
+### Informacja
+
+Ta strona służy wyłącznie celom prywatnym, rodzinnym i dlatego nie podlega obowiązkowi zamieszczania na niej Impressum. Jeśli jednak masz jakieś pytania, zawsze możesz skontaktować się z nami za pomocą formularza kontaktowego. Postaramy się odpowiedzieć tak szybko, jak to możliwe!
 
 ### Media
 
-Większość zdjęć, które znajdziesz na tej stronie, pochodzi z serwisu unsplash.com. Są to zdjęcia, które można swobodnie wykorzystywać. Zdjęcia miejsca ślubu pochodzą ze strony internetowej Tenuta Larnianone. Zdjęcia polecanych przez nas pobliskich miejsc noclegowych pochodzą z odnośnych stron internetowych.
+Większość zdjęć, które znajdziesz na tej stronie, pochodzi z serwisu Unsplash. Są to zdjęcia, które można swobodnie wykorzystywać. Zdjęcia miejsca ślubu pochodzą ze strony internetowej Tenuta Larnianone. Zdjęcia polecanych przez nas pobliskich miejsc noclegowych pochodzą z poszczególnych stron internetowych.
 
 ### Technologia
 
-Więcej inspiracji można znaleźć na stronie github.com/manuelbrgr.
+Odwiedź stronę github.com/manuelbrgr, aby zaczerpnąć inspiracji i zobaczyć kod źródłowy implementacji. Frontend został zaimplementowany za pomocą opartego na React framework'u open source Gatsby, a backend działa w architekturze bezserwerowej w AWS.
+
+### Specjalne podziękowania
+
+Szczególne podziękowania kieruję do mojej ukochanej narzeczonej Angeliki za jej nieustającą i niesamowitą pomoc, ale także do mojego drogiego przyjaciela Dominika Brauna za wprowadzenie, zainspirowanie i przekonanie mnie o potędze AWS i rozwoju w chmurze. Ogromne podziękowania należą się również światu Open Source za dostarczenie wspaniałych przykładów i możliwości nauki, takich jak statyczna strona internetowa w Gatsby (github.com/netlify-templates) czy architektura obsługi RSVP (github.com/enrubio).

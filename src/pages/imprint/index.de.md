@@ -3,17 +3,25 @@ templateKey: "imprint-page"
 path: "/imprint"
 title: Impressum
 image: /img/home-tuscany.jpg
-subheading: Imprint and Mentions
+subheading: Allgemeine Informationen
 ---
 
-### Information
+### Entwicklung und Wartungsarbeiten
 
-This website serves exclusively a private, family purpose and is therefore not subject to an imprint obligation. Although, if you have any questions always feel free to reach out through the Contact form. We'll do our best to answer you as soon as we can!
+Manuel Berger _mit großartiger und kreativer Hilfe von Angelika Jablonska_
 
-### Media
+### Informationen
 
-Most of the pictures you find on this website we found on unsplash.com. These photos are made to be used freely. The pictures of the wedding venue are from the website of Tenuta Larnianone. And the pictures of the accommodations nearby that we recommend are from the respective websites.
+Diese Website dient ausschließlich einem privaten, familiären Zweck und unterliegt daher nicht der Impressumspflicht. Sollten Sie dennoch Fragen haben, können Sie sich jederzeit über das Kontaktformular an uns wenden. Wir werden unser Bestes tun, um Ihnen so schnell wie möglich zu antworten!
 
-### Technology
+### Medien
 
-Visit github.com/manuelbrgr for more inspirations.
+Die meisten Bilder, die Sie auf dieser Website finden, haben wir auf Unsplash gefunden. Diese Fotos sind zur freien Verwendung zugelassen. Die Bilder der Hochzeitslocation stammen von der Website der Tenuta Larnianone. Und die Bilder von den Unterkünften in der Nähe, die wir empfehlen, stammen von den jeweiligen Websites.
+
+### Technologie
+
+Besuchen Sie github.com/manuelbrgr, um sich inspirieren zu lassen und den Quellcode der Implementierung zu sehen. Das Frontend ist mit dem React-basierten Open-Source-Framework Gatsby implementiert, und das Backend läuft über eine serverlose Architektur in AWS.
+
+### Spezielles Dankeschön
+
+Ein besonderer Dank geht an meine geliebte Verlobte Angelika für ihre unermüdliche und fantastische Hilfe, aber auch an meinen lieben Freund Dominik Braun für die Einführung, Inspiration und Überzeugung von der Leistung von AWS und Cloud Development. Ein großes Dankeschön geht auch an die Open-Source-Welt, die tolle Beispiele und Lernmöglichkeiten in Form einer statischen Webseite in Gatsby (github.com/netlify-templates) oder einer Architektur für einen RSVP-Service (github.com/enrubio) bietet.
