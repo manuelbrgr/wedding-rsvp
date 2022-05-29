@@ -2,31 +2,31 @@
   "baseUrl": "/de",
   "navigation": {
     "home": "Home",
-    "location": "Location",
-    "accommodation": "Accommodation",
-    "activities": "Things to do",
+    "location": "Hochzeitslocation",
+    "accommodation": "Unterkünfte",
+    "activities": "Aktivitäten",
     "rsvp": "RSVP",
     "faq": "FAQ",
-    "contact": "Contact",
-    "imprint": "Imprint"
+    "contact": "Kontakt",
+    "imprint": "Impressum"
   },
   "countdown": {
-    "months": "Months",
-    "days": "Days",
-    "hours": "Hours"
+    "months": "Monate",
+    "days": "Tage",
+    "hours": "Stunden"
   },
   "form": {
-    "title": "Guest List",
-    "firstName": "First Name",
-    "lastName": "Last Name",
-    "guestReference": "Guest {{number}}'s name",
+    "title": "Gästeliste",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "guestReference": "Name des Gastes Nr. {{number}}",
     "errors": {
-      "firstNameRequired": "First name is required.",
-      "lastNameRequired": "Last name is required.",
-      "attendingRequired": "Please answer, if you attend.",
-      "eatingMeatRequired": "Please let us know what you prefer."
+      "firstNameRequired": "Der Vorname ist ein Pflichtfeld.",
+      "lastNameRequired": "Der Nachname ist ein Pflichtfeld.",
+      "attendingRequired": "Antworte bitte, ob du teilnimmst.",
+      "eatingMeatRequired": "Sag uns, was du lieber essen würdest."
     },
-    "nodietaryrestrictions": "No dietary restrictions",
+    "nodietaryrestrictions": "Keine diätetischen Einschränkungen",
     "header": {
       "title": "Manuel und Angelika's Feier",
       "oneperson": "Du hast eine Person hinzugefügt.",

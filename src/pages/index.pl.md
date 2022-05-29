@@ -34,6 +34,6 @@ intro:
         Od godz. 20:00 w ogrodzie na tyłach willi Colombaio, a od północy wewnątrz willi Colombaio.
   heading: Heading
 description: >
-  Godziny i miejsca wydarzeń mogą ulec zmianie ze względu na warunki pogodowe, dlatego prosimy o sprawdzanie aktualności na stronie internetowej.<br><br> 
-  Informacje na temat dresscode'u i pomysły na ubiór można znaleźć na naszej specjalnej tablicy na <a href="https://pin.it/1mYdkGt" target="_blank"> Pintereście</a>.
+  Godziny i miejsca wydarzeń mogą ulec zmianie ze względu na warunki pogodowe, dlatego prosimy o sprawdzanie aktualności na stronie internetowej.<br> 
+  Informacje na temat dresscode'u i pomysły na ubiór można znaleźć na naszej specjalnej tablicy na <a href="https://pin.it/1mYdkGt" target="_blank"> Pintereście</a>🕺 💃.
 ---
