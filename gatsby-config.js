@@ -18,6 +18,14 @@ module.exports = {
         prefixDefault: true,
       },
     },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://wedding.brgr.rocks",
+        sitemap: "https://wedding.brgr.rocks/sitemap.xml",
+        policy: [{ userAgent: "*", disallow: "/" }],
+      },
+    },
     "gatsby-plugin-sass",
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support

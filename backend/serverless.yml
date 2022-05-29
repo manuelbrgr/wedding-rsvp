@@ -34,7 +34,7 @@ custom:
 
 functions:
   submitResponse:
-    handler: handler_rspv.submitResponse
+    handler: handler_response.submitResponse
     description: Submit response
     events:
       - http:
