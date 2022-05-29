@@ -1,12 +1,15 @@
+import { useTranslation } from "gatsby-plugin-react-i18next";
 import React from "react";
 import FormFooter from "./form-footer";
 
 const Result = (props) => {
+  const { t } = useTranslation();
+
   return (
     <div className="form__body">
       <div className="form__result">
         <span className="result__emoji">🎉</span>
-        <p className="result__title">We've received your RSVP for</p>
+        <p className="result__title">{t("form.receivedRsvp")}</p>
         <ul className="result__guest-list">
           {props.guestInfo.map((guest) => {
             return (
@@ -23,7 +26,7 @@ const Result = (props) => {
                       fillRule="nonzero"
                     />
                   </svg>
-                  {guest.firstName}
+                  {guest.firstName} {guest.lastName}
                 </div>
               </li>
             );

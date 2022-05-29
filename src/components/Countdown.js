@@ -1,16 +1,23 @@
 import React from "react";
 import moment from "moment";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
-export const toCountdown = ({ from = moment(), until }) => {
+export const toCountdown = ({ from = moment(), until, t }) => {
   if (!until) return "";
   if (typeof from === "string") from = moment(from);
   const targetTime = moment(until);
   if (from.isAfter(until)) return "";
   const timeBetween = moment.duration(targetTime.diff(from));
-  return `${timeBetween.months()} Months ${timeBetween.days()} Days ${timeBetween.hours()} Hours`;
+  return `${timeBetween.months()} ${t(
+    "countdown.months"
+  )} ${timeBetween.days()} ${t("countdown.days")} ${timeBetween.hours()} ${t(
+    "countdown.hours"
+  )}`;
 };
 
 const Countdown = (props) => {
+  const { t } = useTranslation();
+
   return (
     <>
       <h3
@@ -18,7 +25,7 @@ const Countdown = (props) => {
         style={{ fontSize: "30px" }}
         {...props}
       >
-        <span>{toCountdown({ until: "2022-09-10" })}</span>
+        <span>{toCountdown({ until: "2022-09-10", t })}</span>
       </h3>
     </>
   );

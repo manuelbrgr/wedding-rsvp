@@ -10,17 +10,22 @@ module.exports.submitResponse = async (event) => {
   const requestBody = JSON.parse(event.body);
   const {
     firstName,
-    attendingCeremony,
+    lastName,
+    attending,
     eatingMeat,
     dietaryRestrictions,
+    message,
     guests,
   } = requestBody;
 
+  const responseOption = ["yes", "no"];
   if (
     typeof firstName !== "string" ||
-    typeof attendingCeremony !== "boolean" ||
-    typeof eatingMeat !== "boolean" ||
+    typeof lastName !== "string" ||
+    !responseOption.includes(attending) ||
+    !responseOption.includes(eatingMeat) ||
     typeof dietaryRestrictions !== "string" ||
+    typeof message !== "string" ||
     Array.isArray(guests) === false
   ) {
     return buildResponse(400, "Validation failed. Invalid input type(s)");
@@ -28,13 +33,24 @@ module.exports.submitResponse = async (event) => {
 
   const response = buildResponseItem(
     firstName,
-    attendingCeremony,
+    lastName,
+    attending,
     eatingMeat,
     dietaryRestrictions,
+    message,
     guests
   );
 
   await putResponse(response);
+  await sendEmail({
+    firstName,
+    lastName,
+    attending,
+    eatingMeat,
+    dietaryRestrictions,
+    message,
+    guests,
+  });
   return buildResponse(200, response);
 };
 
@@ -49,21 +65,81 @@ const putResponse = async function putResponseInDynamo(response) {
   return response;
 };
 
+const createEmailResponse = (guests) => {
+  console.log("JSON here: " + JSON.stringify(guests) + " pure " + guests);
+  return guests.map((guestList) => {
+    const {
+      firstName,
+      lastName,
+      attending,
+      eatingMeat,
+      dietaryRestrictions,
+      message,
+    } = guestList;
+
+    return `<b>${firstName} ${lastName}</b><br>attending: ${attending}<br>eatingMeat: ${eatingMeat}<br>dietaryRestrictions: ${dietaryRestrictions}${
+      message ? "<br>message: " + message : ""
+    }<br><br>`;
+  });
+};
+
+const sendEmail = async function sendEmail({
+  firstName,
+  lastName,
+  attending,
+  eatingMeat,
+  dietaryRestrictions,
+  message,
+  guests,
+}) {
+  const ses = new AWS.SES({ region: "us-east-1" });
+  guests.unshift({
+    firstName,
+    lastName,
+    attending,
+    eatingMeat,
+    dietaryRestrictions,
+    message,
+  });
+
+  var params = {
+    Destination: {
+      ToAddresses: ["manuel@brgr.rocks", "angelika@brgr.rocks"],
+    },
+    Message: {
+      Body: {
+        Html: {
+          Data: createEmailResponse(guests).join(""),
+        },
+      },
+
+      Subject: { Data: `RSVP from ${firstName} ${lastName}` },
+    },
+    Source: "noreply@brgr.rocks",
+  };
+
+  return ses.sendEmail(params).promise();
+};
+
 /* Creates response item */
 const buildResponseItem = function buildResponseItemDynamoModel(
   firstName,
-  attendingCeremony,
+  lastName,
+  attending,
   eatingMeat,
   dietaryRestrictions,
+  message,
   guests
 ) {
   let timestamp = new Date().toLocaleString();
   return {
     id: uuid.v1(),
     firstName: firstName,
-    attendingCeremony: attendingCeremony,
-    eatingMeat: eatingMeat,
+    lastName: lastName,
+    attending: attending === "yes",
+    eatingMeat: eatingMeat === "yes",
     dietaryRestrictions: dietaryRestrictions,
+    message: message,
     guests: guests,
     timestamp: timestamp,
   };
@@ -75,7 +151,7 @@ module.exports.listResponses = async (event) => {
     TableName: process.env.RESPONSES_TABLE,
     ExpressionAttributeNames: { "#t": "timestamp" },
     ProjectionExpression:
-      "id, firstName, attendingCeremony, eatingMeat, dietaryRestrictions, guests, #t",
+      "id, firstName, lastName, attending, eatingMeat, dietaryRestrictions, message, guests, #t",
   };
 
   const data = await dynamoDb.scan(params).promise();

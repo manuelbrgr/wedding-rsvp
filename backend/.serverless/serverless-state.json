@@ -8,12 +8,13 @@
       "name": "aws",
       "runtime": "nodejs14.x",
       "memorySize": 128,
-      "stage": "dev",
+      "stage": "prod",
       "region": "us-east-1",
       "iamRoleStatements": [
         {
           "Effect": "Allow",
           "Action": [
+            "ses:SendEmail",
             "dynamodb:Query",
             "dynamodb:Scan",
             "dynamodb:GetItem",
@@ -23,8 +24,7 @@
         }
       ],
       "environment": {
-        "GUESTS_TABLE": "rsvp-guests-dev",
-        "RESPONSES_TABLE": "rsvp-responses-dev"
+        "RESPONSES_TABLE": "rsvp-responses-prod"
       },
       "versionFunctions": true,
       "compiledCloudFormationTemplate": {
@@ -100,28 +100,10 @@
               }
             }
           },
-          "SubmitGuestLogGroup": {
-            "Type": "AWS::Logs::LogGroup",
-            "Properties": {
-              "LogGroupName": "/aws/lambda/rsvp-dev-submitGuest"
-            }
-          },
-          "ListGuestsLogGroup": {
-            "Type": "AWS::Logs::LogGroup",
-            "Properties": {
-              "LogGroupName": "/aws/lambda/rsvp-dev-listGuests"
-            }
-          },
           "SubmitResponseLogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
-              "LogGroupName": "/aws/lambda/rsvp-dev-submitResponse"
-            }
-          },
-          "ListResponsesLogGroup": {
-            "Type": "AWS::Logs::LogGroup",
-            "Properties": {
-              "LogGroupName": "/aws/lambda/rsvp-dev-listResponses"
+              "LogGroupName": "/aws/lambda/rsvp-prod-submitResponse"
             }
           },
           "IamRoleLambdaExecution": {
@@ -150,7 +132,7 @@
                       "-",
                       [
                         "rsvp",
-                        "dev",
+                        "prod",
                         "lambda"
                       ]
                     ]
@@ -166,7 +148,7 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rsvp-dev*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rsvp-prod*:*"
                           }
                         ]
                       },
@@ -177,7 +159,7 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rsvp-dev*:*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/rsvp-prod*:*:*"
                           }
                         ]
                       },
@@ -194,7 +176,7 @@
                   "-",
                   [
                     "rsvp",
-                    "dev",
+                    "prod",
                     {
                       "Ref": "AWS::Region"
                     },
@@ -204,70 +186,6 @@
               }
             }
           },
-          "SubmitGuestLambdaFunction": {
-            "Type": "AWS::Lambda::Function",
-            "Properties": {
-              "Code": {
-                "S3Bucket": {
-                  "Ref": "ServerlessDeploymentBucket"
-                },
-                "S3Key": "serverless/rsvp/dev/1651607217240-2022-05-03T19:46:57.240Z/rsvp.zip"
-              },
-              "Handler": "handler_guest.submitGuest",
-              "Runtime": "nodejs14.x",
-              "FunctionName": "rsvp-dev-submitGuest",
-              "MemorySize": 128,
-              "Timeout": 6,
-              "Description": "Submits guest info",
-              "Environment": {
-                "Variables": {
-                  "GUESTS_TABLE": "rsvp-guests-dev",
-                  "RESPONSES_TABLE": "rsvp-responses-dev"
-                }
-              },
-              "Role": {
-                "Fn::GetAtt": [
-                  "IamRoleLambdaExecution",
-                  "Arn"
-                ]
-              }
-            },
-            "DependsOn": [
-              "SubmitGuestLogGroup"
-            ]
-          },
-          "ListGuestsLambdaFunction": {
-            "Type": "AWS::Lambda::Function",
-            "Properties": {
-              "Code": {
-                "S3Bucket": {
-                  "Ref": "ServerlessDeploymentBucket"
-                },
-                "S3Key": "serverless/rsvp/dev/1651607217240-2022-05-03T19:46:57.240Z/rsvp.zip"
-              },
-              "Handler": "handler_guest.listGuests",
-              "Runtime": "nodejs14.x",
-              "FunctionName": "rsvp-dev-listGuests",
-              "MemorySize": 128,
-              "Timeout": 6,
-              "Description": "Lists all guests",
-              "Environment": {
-                "Variables": {
-                  "GUESTS_TABLE": "rsvp-guests-dev",
-                  "RESPONSES_TABLE": "rsvp-responses-dev"
-                }
-              },
-              "Role": {
-                "Fn::GetAtt": [
-                  "IamRoleLambdaExecution",
-                  "Arn"
-                ]
-              }
-            },
-            "DependsOn": [
-              "ListGuestsLogGroup"
-            ]
-          },
           "SubmitResponseLambdaFunction": {
             "Type": "AWS::Lambda::Function",
             "Properties": {
@@ -275,18 +193,17 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/rsvp/dev/1651607217240-2022-05-03T19:46:57.240Z/rsvp.zip"
+                "S3Key": "serverless/rsvp/prod/1653730955282-2022-05-28T09:42:35.282Z/rsvp.zip"
               },
               "Handler": "handler_response.submitResponse",
               "Runtime": "nodejs14.x",
-              "FunctionName": "rsvp-dev-submitResponse",
+              "FunctionName": "rsvp-prod-submitResponse",
               "MemorySize": 128,
               "Timeout": 6,
               "Description": "Submits response",
               "Environment": {
                 "Variables": {
-                  "GUESTS_TABLE": "rsvp-guests-dev",
-                  "RESPONSES_TABLE": "rsvp-responses-dev"
+                  "RESPONSES_TABLE": "rsvp-responses-prod"
                 }
               },
               "Role": {
@@ -300,107 +217,27 @@
               "SubmitResponseLogGroup"
             ]
           },
-          "ListResponsesLambdaFunction": {
-            "Type": "AWS::Lambda::Function",
-            "Properties": {
-              "Code": {
-                "S3Bucket": {
-                  "Ref": "ServerlessDeploymentBucket"
-                },
-                "S3Key": "serverless/rsvp/dev/1651607217240-2022-05-03T19:46:57.240Z/rsvp.zip"
-              },
-              "Handler": "handler_response.listResponses",
-              "Runtime": "nodejs14.x",
-              "FunctionName": "rsvp-dev-listResponses",
-              "MemorySize": 128,
-              "Timeout": 6,
-              "Description": "Lists all responses",
-              "Environment": {
-                "Variables": {
-                  "GUESTS_TABLE": "rsvp-guests-dev",
-                  "RESPONSES_TABLE": "rsvp-responses-dev"
-                }
-              },
-              "Role": {
-                "Fn::GetAtt": [
-                  "IamRoleLambdaExecution",
-                  "Arn"
-                ]
-              }
-            },
-            "DependsOn": [
-              "ListResponsesLogGroup"
-            ]
-          },
-          "SubmitGuestLambdaVersionfRtZPTtiMi8irUkOqOM6M4zle8WsJS3CSHvis4MssY": {
-            "Type": "AWS::Lambda::Version",
-            "DeletionPolicy": "Retain",
-            "Properties": {
-              "FunctionName": {
-                "Ref": "SubmitGuestLambdaFunction"
-              },
-              "CodeSha256": "15dyyErU9kr7jNLUFsyhDhjWmPzukX/sH1p9E/rWOBk=",
-              "Description": "Submits guest info"
-            }
-          },
-          "ListGuestsLambdaVersionlNHBYL1hiF5JFPm2zIcSK1URFqlTlKRquAZhQsnpui4": {
-            "Type": "AWS::Lambda::Version",
-            "DeletionPolicy": "Retain",
-            "Properties": {
-              "FunctionName": {
-                "Ref": "ListGuestsLambdaFunction"
-              },
-              "CodeSha256": "15dyyErU9kr7jNLUFsyhDhjWmPzukX/sH1p9E/rWOBk=",
-              "Description": "Lists all guests"
-            }
-          },
-          "SubmitResponseLambdaVersionbrTXy5D8emU8HOSkfU556e6qNofNIGObZ9vK8Bo9BBw": {
+          "SubmitResponseLambdaVersiondPcUIp56UWiZUX6nbXBWZLugfXguJ5X8IG1GXl0Ntk": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "SubmitResponseLambdaFunction"
               },
-              "CodeSha256": "15dyyErU9kr7jNLUFsyhDhjWmPzukX/sH1p9E/rWOBk=",
+              "CodeSha256": "sBOAF8Vwtxe0m4nmdLTK42pOI0v3sjqLddYu8vpk44w=",
               "Description": "Submits response"
-            }
-          },
-          "ListResponsesLambdaVersion31Vsnvi5SF2625L08KYccLUQUfq5ShPKgjdTyHckd4": {
-            "Type": "AWS::Lambda::Version",
-            "DeletionPolicy": "Retain",
-            "Properties": {
-              "FunctionName": {
-                "Ref": "ListResponsesLambdaFunction"
-              },
-              "CodeSha256": "15dyyErU9kr7jNLUFsyhDhjWmPzukX/sH1p9E/rWOBk=",
-              "Description": "Lists all responses"
             }
           },
           "ApiGatewayRestApi": {
             "Type": "AWS::ApiGateway::RestApi",
             "Properties": {
-              "Name": "dev-rsvp",
+              "Name": "prod-rsvp",
               "EndpointConfiguration": {
                 "Types": [
                   "EDGE"
                 ]
               },
               "Policy": ""
-            }
-          },
-          "ApiGatewayResourceGuests": {
-            "Type": "AWS::ApiGateway::Resource",
-            "Properties": {
-              "ParentId": {
-                "Fn::GetAtt": [
-                  "ApiGatewayRestApi",
-                  "RootResourceId"
-                ]
-              },
-              "PathPart": "guests",
-              "RestApiId": {
-                "Ref": "ApiGatewayRestApi"
-              }
             }
           },
           "ApiGatewayResourceResponses": {
@@ -425,63 +262,6 @@
                 "Ref": "ApiGatewayResourceResponses"
               },
               "PathPart": "accept",
-              "RestApiId": {
-                "Ref": "ApiGatewayRestApi"
-              }
-            }
-          },
-          "ApiGatewayResourceResponsesDecline": {
-            "Type": "AWS::ApiGateway::Resource",
-            "Properties": {
-              "ParentId": {
-                "Ref": "ApiGatewayResourceResponses"
-              },
-              "PathPart": "decline",
-              "RestApiId": {
-                "Ref": "ApiGatewayRestApi"
-              }
-            }
-          },
-          "ApiGatewayMethodGuestsOptions": {
-            "Type": "AWS::ApiGateway::Method",
-            "Properties": {
-              "AuthorizationType": "NONE",
-              "HttpMethod": "OPTIONS",
-              "MethodResponses": [
-                {
-                  "StatusCode": "200",
-                  "ResponseParameters": {
-                    "method.response.header.Access-Control-Allow-Origin": true,
-                    "method.response.header.Access-Control-Allow-Headers": true,
-                    "method.response.header.Access-Control-Allow-Methods": true
-                  },
-                  "ResponseModels": {}
-                }
-              ],
-              "RequestParameters": {},
-              "Integration": {
-                "Type": "MOCK",
-                "RequestTemplates": {
-                  "application/json": "{statusCode:200}"
-                },
-                "ContentHandling": "CONVERT_TO_TEXT",
-                "IntegrationResponses": [
-                  {
-                    "StatusCode": "200",
-                    "ResponseParameters": {
-                      "method.response.header.Access-Control-Allow-Origin": "'*'",
-                      "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent'",
-                      "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET,POST'"
-                    },
-                    "ResponseTemplates": {
-                      "application/json": ""
-                    }
-                  }
-                ]
-              },
-              "ResourceId": {
-                "Ref": "ApiGatewayResourceGuests"
-              },
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               }
@@ -532,188 +312,6 @@
               }
             }
           },
-          "ApiGatewayMethodResponsesDeclineOptions": {
-            "Type": "AWS::ApiGateway::Method",
-            "Properties": {
-              "AuthorizationType": "NONE",
-              "HttpMethod": "OPTIONS",
-              "MethodResponses": [
-                {
-                  "StatusCode": "200",
-                  "ResponseParameters": {
-                    "method.response.header.Access-Control-Allow-Origin": true,
-                    "method.response.header.Access-Control-Allow-Headers": true,
-                    "method.response.header.Access-Control-Allow-Methods": true
-                  },
-                  "ResponseModels": {}
-                }
-              ],
-              "RequestParameters": {},
-              "Integration": {
-                "Type": "MOCK",
-                "RequestTemplates": {
-                  "application/json": "{statusCode:200}"
-                },
-                "ContentHandling": "CONVERT_TO_TEXT",
-                "IntegrationResponses": [
-                  {
-                    "StatusCode": "200",
-                    "ResponseParameters": {
-                      "method.response.header.Access-Control-Allow-Origin": "'*'",
-                      "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent'",
-                      "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,POST'"
-                    },
-                    "ResponseTemplates": {
-                      "application/json": ""
-                    }
-                  }
-                ]
-              },
-              "ResourceId": {
-                "Ref": "ApiGatewayResourceResponsesDecline"
-              },
-              "RestApiId": {
-                "Ref": "ApiGatewayRestApi"
-              }
-            }
-          },
-          "ApiGatewayMethodResponsesOptions": {
-            "Type": "AWS::ApiGateway::Method",
-            "Properties": {
-              "AuthorizationType": "NONE",
-              "HttpMethod": "OPTIONS",
-              "MethodResponses": [
-                {
-                  "StatusCode": "200",
-                  "ResponseParameters": {
-                    "method.response.header.Access-Control-Allow-Origin": true,
-                    "method.response.header.Access-Control-Allow-Headers": true,
-                    "method.response.header.Access-Control-Allow-Methods": true
-                  },
-                  "ResponseModels": {}
-                }
-              ],
-              "RequestParameters": {},
-              "Integration": {
-                "Type": "MOCK",
-                "RequestTemplates": {
-                  "application/json": "{statusCode:200}"
-                },
-                "ContentHandling": "CONVERT_TO_TEXT",
-                "IntegrationResponses": [
-                  {
-                    "StatusCode": "200",
-                    "ResponseParameters": {
-                      "method.response.header.Access-Control-Allow-Origin": "'*'",
-                      "method.response.header.Access-Control-Allow-Headers": "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,X-Amz-User-Agent'",
-                      "method.response.header.Access-Control-Allow-Methods": "'OPTIONS,GET'"
-                    },
-                    "ResponseTemplates": {
-                      "application/json": ""
-                    }
-                  }
-                ]
-              },
-              "ResourceId": {
-                "Ref": "ApiGatewayResourceResponses"
-              },
-              "RestApiId": {
-                "Ref": "ApiGatewayRestApi"
-              }
-            }
-          },
-          "ApiGatewayMethodGuestsPost": {
-            "Type": "AWS::ApiGateway::Method",
-            "Properties": {
-              "HttpMethod": "POST",
-              "RequestParameters": {},
-              "ResourceId": {
-                "Ref": "ApiGatewayResourceGuests"
-              },
-              "RestApiId": {
-                "Ref": "ApiGatewayRestApi"
-              },
-              "ApiKeyRequired": false,
-              "AuthorizationType": "NONE",
-              "Integration": {
-                "IntegrationHttpMethod": "POST",
-                "Type": "AWS_PROXY",
-                "Uri": {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "arn:",
-                      {
-                        "Ref": "AWS::Partition"
-                      },
-                      ":apigateway:",
-                      {
-                        "Ref": "AWS::Region"
-                      },
-                      ":lambda:path/2015-03-31/functions/",
-                      {
-                        "Fn::GetAtt": [
-                          "SubmitGuestLambdaFunction",
-                          "Arn"
-                        ]
-                      },
-                      "/invocations"
-                    ]
-                  ]
-                }
-              },
-              "MethodResponses": []
-            },
-            "DependsOn": [
-              "SubmitGuestLambdaPermissionApiGateway"
-            ]
-          },
-          "ApiGatewayMethodGuestsGet": {
-            "Type": "AWS::ApiGateway::Method",
-            "Properties": {
-              "HttpMethod": "GET",
-              "RequestParameters": {},
-              "ResourceId": {
-                "Ref": "ApiGatewayResourceGuests"
-              },
-              "RestApiId": {
-                "Ref": "ApiGatewayRestApi"
-              },
-              "ApiKeyRequired": false,
-              "AuthorizationType": "NONE",
-              "Integration": {
-                "IntegrationHttpMethod": "POST",
-                "Type": "AWS_PROXY",
-                "Uri": {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "arn:",
-                      {
-                        "Ref": "AWS::Partition"
-                      },
-                      ":apigateway:",
-                      {
-                        "Ref": "AWS::Region"
-                      },
-                      ":lambda:path/2015-03-31/functions/",
-                      {
-                        "Fn::GetAtt": [
-                          "ListGuestsLambdaFunction",
-                          "Arn"
-                        ]
-                      },
-                      "/invocations"
-                    ]
-                  ]
-                }
-              },
-              "MethodResponses": []
-            },
-            "DependsOn": [
-              "ListGuestsLambdaPermissionApiGateway"
-            ]
-          },
           "ApiGatewayMethodResponsesAcceptPost": {
             "Type": "AWS::ApiGateway::Method",
             "Properties": {
@@ -760,191 +358,18 @@
               "SubmitResponseLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayMethodResponsesDeclinePost": {
-            "Type": "AWS::ApiGateway::Method",
-            "Properties": {
-              "HttpMethod": "POST",
-              "RequestParameters": {},
-              "ResourceId": {
-                "Ref": "ApiGatewayResourceResponsesDecline"
-              },
-              "RestApiId": {
-                "Ref": "ApiGatewayRestApi"
-              },
-              "ApiKeyRequired": false,
-              "AuthorizationType": "NONE",
-              "Integration": {
-                "IntegrationHttpMethod": "POST",
-                "Type": "AWS_PROXY",
-                "Uri": {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "arn:",
-                      {
-                        "Ref": "AWS::Partition"
-                      },
-                      ":apigateway:",
-                      {
-                        "Ref": "AWS::Region"
-                      },
-                      ":lambda:path/2015-03-31/functions/",
-                      {
-                        "Fn::GetAtt": [
-                          "SubmitResponseLambdaFunction",
-                          "Arn"
-                        ]
-                      },
-                      "/invocations"
-                    ]
-                  ]
-                }
-              },
-              "MethodResponses": []
-            },
-            "DependsOn": [
-              "SubmitResponseLambdaPermissionApiGateway"
-            ]
-          },
-          "ApiGatewayMethodResponsesGet": {
-            "Type": "AWS::ApiGateway::Method",
-            "Properties": {
-              "HttpMethod": "GET",
-              "RequestParameters": {},
-              "ResourceId": {
-                "Ref": "ApiGatewayResourceResponses"
-              },
-              "RestApiId": {
-                "Ref": "ApiGatewayRestApi"
-              },
-              "ApiKeyRequired": false,
-              "AuthorizationType": "NONE",
-              "Integration": {
-                "IntegrationHttpMethod": "POST",
-                "Type": "AWS_PROXY",
-                "Uri": {
-                  "Fn::Join": [
-                    "",
-                    [
-                      "arn:",
-                      {
-                        "Ref": "AWS::Partition"
-                      },
-                      ":apigateway:",
-                      {
-                        "Ref": "AWS::Region"
-                      },
-                      ":lambda:path/2015-03-31/functions/",
-                      {
-                        "Fn::GetAtt": [
-                          "ListResponsesLambdaFunction",
-                          "Arn"
-                        ]
-                      },
-                      "/invocations"
-                    ]
-                  ]
-                }
-              },
-              "MethodResponses": []
-            },
-            "DependsOn": [
-              "ListResponsesLambdaPermissionApiGateway"
-            ]
-          },
-          "ApiGatewayDeployment1651607214104": {
+          "ApiGatewayDeployment1653730951585": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
                 "Ref": "ApiGatewayRestApi"
               },
-              "StageName": "dev"
+              "StageName": "prod"
             },
             "DependsOn": [
-              "ApiGatewayMethodGuestsOptions",
               "ApiGatewayMethodResponsesAcceptOptions",
-              "ApiGatewayMethodResponsesDeclineOptions",
-              "ApiGatewayMethodResponsesOptions",
-              "ApiGatewayMethodGuestsPost",
-              "ApiGatewayMethodGuestsGet",
-              "ApiGatewayMethodResponsesAcceptPost",
-              "ApiGatewayMethodResponsesDeclinePost",
-              "ApiGatewayMethodResponsesGet"
+              "ApiGatewayMethodResponsesAcceptPost"
             ]
-          },
-          "SubmitGuestLambdaPermissionApiGateway": {
-            "Type": "AWS::Lambda::Permission",
-            "Properties": {
-              "FunctionName": {
-                "Fn::GetAtt": [
-                  "SubmitGuestLambdaFunction",
-                  "Arn"
-                ]
-              },
-              "Action": "lambda:InvokeFunction",
-              "Principal": "apigateway.amazonaws.com",
-              "SourceArn": {
-                "Fn::Join": [
-                  "",
-                  [
-                    "arn:",
-                    {
-                      "Ref": "AWS::Partition"
-                    },
-                    ":execute-api:",
-                    {
-                      "Ref": "AWS::Region"
-                    },
-                    ":",
-                    {
-                      "Ref": "AWS::AccountId"
-                    },
-                    ":",
-                    {
-                      "Ref": "ApiGatewayRestApi"
-                    },
-                    "/*/*"
-                  ]
-                ]
-              }
-            }
-          },
-          "ListGuestsLambdaPermissionApiGateway": {
-            "Type": "AWS::Lambda::Permission",
-            "Properties": {
-              "FunctionName": {
-                "Fn::GetAtt": [
-                  "ListGuestsLambdaFunction",
-                  "Arn"
-                ]
-              },
-              "Action": "lambda:InvokeFunction",
-              "Principal": "apigateway.amazonaws.com",
-              "SourceArn": {
-                "Fn::Join": [
-                  "",
-                  [
-                    "arn:",
-                    {
-                      "Ref": "AWS::Partition"
-                    },
-                    ":execute-api:",
-                    {
-                      "Ref": "AWS::Region"
-                    },
-                    ":",
-                    {
-                      "Ref": "AWS::AccountId"
-                    },
-                    ":",
-                    {
-                      "Ref": "ApiGatewayRestApi"
-                    },
-                    "/*/*"
-                  ]
-                ]
-              }
-            }
           },
           "SubmitResponseLambdaPermissionApiGateway": {
             "Type": "AWS::Lambda::Permission",
@@ -983,62 +408,6 @@
               }
             }
           },
-          "ListResponsesLambdaPermissionApiGateway": {
-            "Type": "AWS::Lambda::Permission",
-            "Properties": {
-              "FunctionName": {
-                "Fn::GetAtt": [
-                  "ListResponsesLambdaFunction",
-                  "Arn"
-                ]
-              },
-              "Action": "lambda:InvokeFunction",
-              "Principal": "apigateway.amazonaws.com",
-              "SourceArn": {
-                "Fn::Join": [
-                  "",
-                  [
-                    "arn:",
-                    {
-                      "Ref": "AWS::Partition"
-                    },
-                    ":execute-api:",
-                    {
-                      "Ref": "AWS::Region"
-                    },
-                    ":",
-                    {
-                      "Ref": "AWS::AccountId"
-                    },
-                    ":",
-                    {
-                      "Ref": "ApiGatewayRestApi"
-                    },
-                    "/*/*"
-                  ]
-                ]
-              }
-            }
-          },
-          "GuestsDynamoDbTable": {
-            "Type": "AWS::DynamoDB::Table",
-            "Properties": {
-              "AttributeDefinitions": [
-                {
-                  "AttributeName": "id",
-                  "AttributeType": "S"
-                }
-              ],
-              "KeySchema": [
-                {
-                  "AttributeName": "id",
-                  "KeyType": "HASH"
-                }
-              ],
-              "BillingMode": "PAY_PER_REQUEST",
-              "TableName": "rsvp-guests-dev"
-            }
-          },
           "ResponsesDynamoDbTable": {
             "Type": "AWS::DynamoDB::Table",
             "Properties": {
@@ -1055,7 +424,7 @@
                 }
               ],
               "BillingMode": "PAY_PER_REQUEST",
-              "TableName": "rsvp-responses-dev"
+              "TableName": "rsvp-responses-prod"
             }
           }
         },
@@ -1065,43 +434,16 @@
               "Ref": "ServerlessDeploymentBucket"
             },
             "Export": {
-              "Name": "sls-rsvp-dev-ServerlessDeploymentBucketName"
-            }
-          },
-          "SubmitGuestLambdaFunctionQualifiedArn": {
-            "Description": "Current Lambda function version",
-            "Value": {
-              "Ref": "SubmitGuestLambdaVersionfRtZPTtiMi8irUkOqOM6M4zle8WsJS3CSHvis4MssY"
-            },
-            "Export": {
-              "Name": "sls-rsvp-dev-SubmitGuestLambdaFunctionQualifiedArn"
-            }
-          },
-          "ListGuestsLambdaFunctionQualifiedArn": {
-            "Description": "Current Lambda function version",
-            "Value": {
-              "Ref": "ListGuestsLambdaVersionlNHBYL1hiF5JFPm2zIcSK1URFqlTlKRquAZhQsnpui4"
-            },
-            "Export": {
-              "Name": "sls-rsvp-dev-ListGuestsLambdaFunctionQualifiedArn"
+              "Name": "sls-rsvp-prod-ServerlessDeploymentBucketName"
             }
           },
           "SubmitResponseLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "SubmitResponseLambdaVersionbrTXy5D8emU8HOSkfU556e6qNofNIGObZ9vK8Bo9BBw"
+              "Ref": "SubmitResponseLambdaVersiondPcUIp56UWiZUX6nbXBWZLugfXguJ5X8IG1GXl0Ntk"
             },
             "Export": {
-              "Name": "sls-rsvp-dev-SubmitResponseLambdaFunctionQualifiedArn"
-            }
-          },
-          "ListResponsesLambdaFunctionQualifiedArn": {
-            "Description": "Current Lambda function version",
-            "Value": {
-              "Ref": "ListResponsesLambdaVersion31Vsnvi5SF2625L08KYccLUQUfq5ShPKgjdTyHckd4"
-            },
-            "Export": {
-              "Name": "sls-rsvp-dev-ListResponsesLambdaFunctionQualifiedArn"
+              "Name": "sls-rsvp-prod-SubmitResponseLambdaFunctionQualifiedArn"
             }
           },
           "ServiceEndpoint": {
@@ -1122,12 +464,12 @@
                   {
                     "Ref": "AWS::URLSuffix"
                   },
-                  "/dev"
+                  "/prod"
                 ]
               ]
             },
             "Export": {
-              "Name": "sls-rsvp-dev-ServiceEndpoint"
+              "Name": "sls-rsvp-prod-ServiceEndpoint"
             }
           }
         }
@@ -1216,80 +558,18 @@
       },
       "vpc": {}
     },
+    "custom": {
+      "customDomain": {
+        "domainName": "wedding-api.brgr.rocks",
+        "basePath": "",
+        "stage": "prod"
+      }
+    },
+    "plugins": [
+      "serverless-domain-manager"
+    ],
     "pluginsData": {},
     "functions": {
-      "submitGuest": {
-        "handler": "handler_guest.submitGuest",
-        "description": "Submits guest info",
-        "events": [
-          {
-            "http": {
-              "path": "guests",
-              "method": "post",
-              "cors": {
-                "origin": "*",
-                "methods": [
-                  "OPTIONS",
-                  "POST"
-                ],
-                "headers": [
-                  "Content-Type",
-                  "X-Amz-Date",
-                  "Authorization",
-                  "X-Api-Key",
-                  "X-Amz-Security-Token",
-                  "X-Amz-User-Agent"
-                ],
-                "allowCredentials": false
-              },
-              "integration": "AWS_PROXY"
-            }
-          }
-        ],
-        "name": "rsvp-dev-submitGuest",
-        "package": {},
-        "memory": 128,
-        "timeout": 6,
-        "runtime": "nodejs14.x",
-        "vpc": {},
-        "versionLogicalId": "SubmitGuestLambdaVersionfRtZPTtiMi8irUkOqOM6M4zle8WsJS3CSHvis4MssY"
-      },
-      "listGuests": {
-        "handler": "handler_guest.listGuests",
-        "description": "Lists all guests",
-        "events": [
-          {
-            "http": {
-              "path": "guests",
-              "method": "get",
-              "cors": {
-                "origin": "*",
-                "methods": [
-                  "OPTIONS",
-                  "GET"
-                ],
-                "headers": [
-                  "Content-Type",
-                  "X-Amz-Date",
-                  "Authorization",
-                  "X-Api-Key",
-                  "X-Amz-Security-Token",
-                  "X-Amz-User-Agent"
-                ],
-                "allowCredentials": false
-              },
-              "integration": "AWS_PROXY"
-            }
-          }
-        ],
-        "name": "rsvp-dev-listGuests",
-        "package": {},
-        "memory": 128,
-        "timeout": 6,
-        "runtime": "nodejs14.x",
-        "vpc": {},
-        "versionLogicalId": "ListGuestsLambdaVersionlNHBYL1hiF5JFPm2zIcSK1URFqlTlKRquAZhQsnpui4"
-      },
       "submitResponse": {
         "handler": "handler_response.submitResponse",
         "description": "Submits response",
@@ -1316,97 +596,19 @@
               },
               "integration": "AWS_PROXY"
             }
-          },
-          {
-            "http": {
-              "path": "responses/decline",
-              "method": "post",
-              "cors": {
-                "origin": "*",
-                "methods": [
-                  "OPTIONS",
-                  "POST"
-                ],
-                "headers": [
-                  "Content-Type",
-                  "X-Amz-Date",
-                  "Authorization",
-                  "X-Api-Key",
-                  "X-Amz-Security-Token",
-                  "X-Amz-User-Agent"
-                ],
-                "allowCredentials": false
-              },
-              "integration": "AWS_PROXY"
-            }
           }
         ],
-        "name": "rsvp-dev-submitResponse",
+        "name": "rsvp-prod-submitResponse",
         "package": {},
         "memory": 128,
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "SubmitResponseLambdaVersionbrTXy5D8emU8HOSkfU556e6qNofNIGObZ9vK8Bo9BBw"
-      },
-      "listResponses": {
-        "handler": "handler_response.listResponses",
-        "description": "Lists all responses",
-        "events": [
-          {
-            "http": {
-              "path": "responses",
-              "method": "get",
-              "cors": {
-                "origin": "*",
-                "methods": [
-                  "OPTIONS",
-                  "GET"
-                ],
-                "headers": [
-                  "Content-Type",
-                  "X-Amz-Date",
-                  "Authorization",
-                  "X-Api-Key",
-                  "X-Amz-Security-Token",
-                  "X-Amz-User-Agent"
-                ],
-                "allowCredentials": false
-              },
-              "integration": "AWS_PROXY"
-            }
-          }
-        ],
-        "name": "rsvp-dev-listResponses",
-        "package": {},
-        "memory": 128,
-        "timeout": 6,
-        "runtime": "nodejs14.x",
-        "vpc": {},
-        "versionLogicalId": "ListResponsesLambdaVersion31Vsnvi5SF2625L08KYccLUQUfq5ShPKgjdTyHckd4"
+        "versionLogicalId": "SubmitResponseLambdaVersiondPcUIp56UWiZUX6nbXBWZLugfXguJ5X8IG1GXl0Ntk"
       }
     },
     "resources": {
       "Resources": {
-        "GuestsDynamoDbTable": {
-          "Type": "AWS::DynamoDB::Table",
-          "Properties": {
-            "AttributeDefinitions": [
-              {
-                "AttributeName": "id",
-                "AttributeType": "S"
-              }
-            ],
-            "KeySchema": [
-              {
-                "AttributeName": "id",
-                "KeyType": "HASH"
-              }
-            ],
-            "BillingMode": "PAY_PER_REQUEST",
-            "TableName": "rsvp-guests-dev"
-          }
-        },
         "ResponsesDynamoDbTable": {
           "Type": "AWS::DynamoDB::Table",
           "Properties": {
@@ -1423,7 +625,7 @@
               }
             ],
             "BillingMode": "PAY_PER_REQUEST",
-            "TableName": "rsvp-responses-dev"
+            "TableName": "rsvp-responses-prod"
           }
         }
       },
@@ -1437,6 +639,12 @@
       "provider": {
         "$ref": "$[\"service\"][\"provider\"]"
       },
+      "plugins": {
+        "$ref": "$[\"service\"][\"plugins\"]"
+      },
+      "custom": {
+        "$ref": "$[\"service\"][\"custom\"]"
+      },
       "functions": {
         "$ref": "$[\"service\"][\"functions\"]"
       },
@@ -1449,7 +657,7 @@
     "artifact": "/Users/manuelberger/Documents/dev/github/wedding-website/backend/.serverless/rsvp.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/rsvp/dev/1651607217240-2022-05-03T19:46:57.240Z",
+    "artifactDirectoryName": "serverless/rsvp/prod/1653730955282-2022-05-28T09:42:35.282Z",
     "artifact": "rsvp.zip"
   }
 }

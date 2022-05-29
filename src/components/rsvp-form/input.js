@@ -46,7 +46,7 @@ const Input = (props) => {
         </div>
         <fieldset className="control__checkbox-fieldset">
           <legend className="control__checkbox-legend">
-            Will you attend our wedding?
+            {t("form.willYouAttend")}
           </legend>
 
           <div className="control__checkbox-group">
@@ -64,7 +64,7 @@ const Input = (props) => {
                 className="control__checkbox-description"
                 htmlFor="attend-1"
               >
-                <span className="control__checkbox-label">Yes</span>
+                <span className="control__checkbox-label">{t("form.yes")}</span>
               </label>
             </div>
             <div>
@@ -81,7 +81,7 @@ const Input = (props) => {
                 className="control__checkbox-description"
                 htmlFor="attend-0"
               >
-                <span className="control__checkbox-label">No</span>
+                <span className="control__checkbox-label">{t("form.no")}</span>
               </label>
             </div>
           </div>
@@ -102,7 +102,7 @@ const Input = (props) => {
         >
           <fieldset className="control__checkbox-fieldset">
             <legend className="control__checkbox-legend">
-              Choose your food preference:
+              {t("form.chooseFoodPreference")}
             </legend>
 
             <div className="control__checkbox-group">
@@ -120,7 +120,9 @@ const Input = (props) => {
                   className="control__checkbox-description"
                   htmlFor="meat-1"
                 >
-                  <span className="control__checkbox-label">Meat 🥩</span>
+                  <span className="control__checkbox-label">
+                    {t("form.meat")}
+                  </span>
                 </label>
               </div>
               <div>
@@ -137,7 +139,9 @@ const Input = (props) => {
                   className="control__checkbox-description"
                   htmlFor="meat-0"
                 >
-                  <span className="control__checkbox-label">Veggie 🥦</span>
+                  <span className="control__checkbox-label">
+                    {t("form.veggie")}
+                  </span>
                 </label>
               </div>
             </div>
@@ -156,13 +160,13 @@ const Input = (props) => {
               className="control__textbox-label"
               htmlFor="dietaryRestrictions"
             >
-              Do you have any food allergies or intolerances?
+              {t("form.foodAllergies")}
             </label>
             <label
               className="control__textbox-caption"
               htmlFor="dietaryRestrictions"
             >
-              (For example: nuts, gluten, seafood, etc.)
+              ({t("form.foodAllergiesExamples")})
             </label>
             <input
               className="control__textbox-input"
@@ -175,14 +179,14 @@ const Input = (props) => {
           </div>
         </div>
         <div className="control__textbox-group">
-          <label className="control__textbox-label" htmlFor="comment">
-            Do you want to leave a short comment?
+          <label className="control__textbox-label" htmlFor="message">
+            {t("form.shortComment")}
           </label>
           <textarea
             className="control__textbox-input"
-            id="comment"
-            name="comment"
-            value={props.comment}
+            id="message"
+            name="message"
+            value={props.message}
             onChange={props.handleChange}
           />
         </div>

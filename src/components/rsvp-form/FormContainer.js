@@ -15,7 +15,7 @@ class FormContainer extends React.Component {
     attending: "",
     eatingMeat: "",
     dietaryRestrictions: "",
-    comment: "",
+    message: "",
     guestList: [],
     display: "showForm",
     isInvalidFirstName: false,
@@ -38,7 +38,7 @@ class FormContainer extends React.Component {
         attending,
         eatingMeat,
         dietaryRestrictions,
-        comment,
+        message,
       },
       ...guests
     ] = guestList;
@@ -48,7 +48,7 @@ class FormContainer extends React.Component {
       attending,
       eatingMeat,
       dietaryRestrictions,
-      comment,
+      message,
       guests,
     };
   };
@@ -60,10 +60,12 @@ class FormContainer extends React.Component {
     attending,
     eatingMeat,
     dietaryRestrictions,
-    comment,
+    message,
   }) => {
+    const { t } = this.props;
+
     if (dietaryRestrictions === "") {
-      dietaryRestrictions = "No dietary restrictions";
+      dietaryRestrictions = t("form.nodietaryrestrictions");
     }
     return {
       firstName,
@@ -71,7 +73,7 @@ class FormContainer extends React.Component {
       attending,
       eatingMeat,
       dietaryRestrictions,
-      comment,
+      message,
       id: uuid.v1(),
     };
   };
@@ -88,7 +90,7 @@ class FormContainer extends React.Component {
     try {
       //Test http errors - https://httpstat.us/500
       const response = await fetch(
-        "https://511kh3csq8.execute-api.us-east-1.amazonaws.com/dev/responses/accept",
+        "https://wedding-api.brgr.rocks/responses/accept",
         {
           headers: {
             "Content-Type": "application/json",
@@ -127,7 +129,7 @@ class FormContainer extends React.Component {
       attending: "",
       eatingMeat: "",
       dietaryRestrictions: "",
-      comment: "",
+      message: "",
       isEdit: false,
       editGuestNum: 0,
       display: "showForm",
@@ -169,7 +171,6 @@ class FormContainer extends React.Component {
       isInvalidEatingMeat: isInvalidEatingMeat,
     });
 
-    console.log(isInvalid);
     switch (isInvalid) {
       case false:
         const newGuest = this.buildGuest(this.state);
@@ -211,18 +212,14 @@ class FormContainer extends React.Component {
       attending,
       eatingMeat,
       dietaryRestrictions,
-      comment,
+      message,
     } = personInfo;
 
-    if (dietaryRestrictions === "No dietary restrictions") {
+    if (dietaryRestrictions === this.props.t("form.noDietaryRestrictions")) {
       dietaryRestrictions = "";
     }
 
     console.dir(personInfo);
-    console.warn(attending);
-    console.warn(eatingMeat);
-    console.warn(dietaryRestrictions);
-    console.warn(comment);
 
     this.setState({
       firstName: firstName,
@@ -230,7 +227,7 @@ class FormContainer extends React.Component {
       attending: attending,
       eatingMeat: eatingMeat,
       dietaryRestrictions: dietaryRestrictions,
-      comment: comment,
+      message: message,
       isEdit: true,
       editGuestNum: guestNum,
       display: "showForm",
@@ -243,10 +240,7 @@ class FormContainer extends React.Component {
 
     if (e.target.type === "radio") {
       name = e.target.name;
-      console.warn("radio");
-      console.warn(name);
       this.setState((prevState) => {
-        console.warn(prevState);
         return {
           [name]: e.target.value,
         };
@@ -271,20 +265,20 @@ class FormContainer extends React.Component {
   renderHeaderSubtitle = () => {
     const numGuests = this.state.guestList.length;
     const attending = this.isAttending();
-    const currentGuest = this.state.editGuestNum;
+    const currentGuest = `${this.state.firstName} ${this.state.lastName}`;
 
     switch (this.state.display) {
       case "showSummary":
         switch (numGuests) {
           case 1:
-            return "You've added 1 person to your party so far.";
+            return this.props.t("form.header.oneperson");
           default:
-            return `You've added ${numGuests} people to your party so far.`;
+            return this.props.t("form.header.moreperson", { numGuests });
         }
       case "showResult":
         switch (attending) {
           case true:
-            return "Hurray! Can't wait to see you on the big day!";
+            return this.props.t("form.cta.success");
           default:
             break;
         }
@@ -292,13 +286,13 @@ class FormContainer extends React.Component {
       case "showForm":
         switch (this.state.isEdit) {
           case true:
-            return `Guest ${currentGuest}`;
+            return `${currentGuest}`;
           default:
             break;
         }
         break;
       default:
-        return "Angelika and Manuel's celebration on September 10th, 2022";
+        return this.props.t("form.header.title");
     }
   };
 
@@ -319,14 +313,14 @@ class FormContainer extends React.Component {
                       type="button"
                       onClick={this.handleRemoveGuest}
                     >
-                      Remove this guest
+                      {this.props.t("form.cta.remove")}
                     </button>
                     <button
                       className="form-btn"
                       type="button"
                       onClick={this.handleNext}
                     >
-                      Continue
+                      {this.props.t("form.cta.continue")}
                       <svg
                         width="16"
                         height="8"
@@ -352,7 +346,7 @@ class FormContainer extends React.Component {
                 type="button"
                 onClick={this.handleNext}
               >
-                Continue
+                {this.props.t("form.cta.continue")}
                 <svg
                   width="16"
                   height="8"
@@ -386,29 +380,8 @@ class FormContainer extends React.Component {
           case false:
             return (
               <div>
-                <div className="control__textbox-group">
-                  <label
-                    className="control__textbox-label"
-                    htmlFor="dietaryRestrictions"
-                  >
-                    Since when are Angelika and Manuel together?
-                  </label>
-                  <label
-                    className="control__textbox-caption"
-                    htmlFor="dietaryRestrictions"
-                  >
-                    (Security Question: If you don't know the answer, send us a
-                    message.)
-                  </label>
-                  <input
-                    className="control__textbox-input"
-                    type="date"
-                    id="dietaryRestrictions"
-                    name="dietaryRestrictions"
-                  />
-                </div>
                 <button className="form-btn" type="submit">
-                  Send RSVP
+                  {this.props.t("form.cta.send")}
                   <svg
                     width="16"
                     height="8"
@@ -430,9 +403,9 @@ class FormContainer extends React.Component {
         break;
       case "showResult":
         return (
-          <a className="result__link" href="/">
+          <a className="result__link" href={`/${this.props.t("langKey")}`}>
             <button className="form-btn" type="button">
-              Wedding details
+              {this.props.t("form.cta.home")}
               <svg
                 width="16"
                 height="8"
@@ -498,7 +471,7 @@ class FormContainer extends React.Component {
             firstNameValue={this.state.firstName}
             lastNameValue={this.state.lastName}
             dietaryRestrictionsValue={this.state.dietaryRestrictions}
-            comment={this.state.comment}
+            message={this.state.message}
             attendingValue={this.state.attending}
             eatingMeatValue={this.state.eatingMeat}
             guestNum={this.state.editGuestNum}

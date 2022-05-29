@@ -17,7 +17,7 @@ function Footer(props) {
           <div style={{ maxWidth: "100vw" }} className="columns">
             <div className="column is-4" style={{ marginTop: "-1.5em" }}>
               <section className="menu">
-                <ul className="menu-list">
+                <ul className="menu-list has-text-centered">
                   <li>
                     <Link to={`/${langKey}/imprint`} className="navbar-item">
                       Imprint

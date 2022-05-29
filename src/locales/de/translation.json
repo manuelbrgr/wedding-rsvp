@@ -1,12 +1,43 @@
 {
+  "baseUrl": "/de",
   "navigation": {
     "home": "Home",
-    "location": "Ort",
-    "accommodation": "Unterkunft",
-    "activities": "Aktivitäten",
+    "location": "Location",
+    "accommodation": "Accommodation",
+    "activities": "Things to do",
     "rsvp": "RSVP",
     "faq": "FAQ",
-    "contact": "Kontakt",
-    "imprint": "Impressum"
+    "contact": "Contact",
+    "imprint": "Imprint"
+  },
+  "countdown": {
+    "months": "Months",
+    "days": "Days",
+    "hours": "Hours"
+  },
+  "form": {
+    "title": "Guest List",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "guestReference": "Guest {{number}}'s name",
+    "errors": {
+      "firstNameRequired": "First name is required.",
+      "lastNameRequired": "Last name is required.",
+      "attendingRequired": "Please answer, if you attend.",
+      "eatingMeatRequired": "Please let us know what you prefer."
+    },
+    "nodietaryrestrictions": "No dietary restrictions",
+    "header": {
+      "title": "Manuel und Angelika's Feier",
+      "oneperson": "Du hast eine Person hinzugefügt.",
+      "morepeople": "Du hast {{numGuests}} Personen hinzugefügt."
+    },
+    "cta": {
+      "success": "Hurra! Wir können es nicht erwarten, euch zu sehen!",
+      "continue": "Weiter",
+      "remove": "Lösche diesen Gast",
+      "send": "Sende RSVP",
+      "home": "Hochzeitsdetails"
+    }
   }
 }

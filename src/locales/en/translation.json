@@ -1,4 +1,5 @@
 {
+  "langKey": "en",
   "navigation": {
     "home": "Home",
     "location": "Location",
@@ -9,16 +10,51 @@
     "contact": "Contact",
     "imprint": "Imprint"
   },
+  "countdown": {
+    "months": "Months",
+    "days": "Days",
+    "hours": "Hours"
+  },
   "form": {
-    "title": "Guest List",
+    "title": "Guest Sign Up",
     "firstName": "First Name",
     "lastName": "Last Name",
     "guestReference": "Guest {{number}}'s name",
+    "foodPreference": "Food Preference",
+    "dietaryRestrictions": "Dietary restrictions",
+    "meat": "Meat 🥩",
+    "veggie": "Veggie 🥦",
+    "comment": "Comment",
+    "noDietaryRestrictions": "No dietary restrictions",
+    "willYouAttend": "Will you attend our wedding?",
+    "yes": "Yes",
+    "no": "No",
+    "chooseFoodPreference": "Choose your food preference:",
+    "foodAllergies": "Do you have any food allergies or intolerances?",
+    "foodAllergiesExamples": "For example: nuts, gluten, seafood, etc.",
+    "shortComment": "Do you want to leave a short comment?",
+    "receivedRsvp": "We've received your RSVP for",
+    "addMore": "Add another guest",
     "errors": {
       "firstNameRequired": "First name is required.",
       "lastNameRequired": "Last name is required.",
       "attendingRequired": "Please answer, if you attend.",
-      "eatingMeatRequired": "Do you eat meat?"
+      "eatingMeatRequired": "Please let us know what you prefer.",
+      "serverRequestFailed": "There was an error. Please try submitting again."
+    },
+    "nodietaryrestrictions": "No dietary restrictions",
+    "header": {
+      "title": "Angelika and Manuel's celebration on September 10th, 2022",
+      "oneperson": "You've added 1 person to your party so far.",
+      "morepeople": "You've added {{numGuests}} people to your party so far."
+    },
+    "cta": {
+      "success": "Hurray! Can't wait to see you on the big day!",
+      "continue": "Continue",
+      "edit": "Edit",
+      "remove": "Remove this guest",
+      "send": "Send RSVP",
+      "home": "Wedding details"
     }
   }
 }

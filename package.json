@@ -44,6 +44,7 @@
     "react-helmet": "^6.0.0",
     "react-i18next": "^11.16.9",
     "react-medium-image-zoom": "^4.4.0",
+    "react-router-dom": "^6.3.0",
     "sass": "^1.43.2",
     "scss": "^0.2.4",
     "uuid": "^8.0.0"

@@ -7,12 +7,13 @@ provider:
   runtime: nodejs14.x
   memorySize: 128
 
-  stage: dev
+  stage: prod
   region: us-east-1
 
   iamRoleStatements:
     - Effect: Allow
       Action:
+        - "ses:SendEmail"
         - dynamodb:Query
         - dynamodb:Scan
         - dynamodb:GetItem
@@ -20,38 +21,18 @@ provider:
       Resource: "*"
 
   environment:
-    GUESTS_TABLE: "${self:service}-guests-${opt:stage, self:provider.stage}"
     RESPONSES_TABLE: "${self:service}-responses-${opt:stage, self:provider.stage}"
 
+plugins:
+  - serverless-domain-manager
+
+custom:
+  customDomain:
+    domainName: wedding-api.brgr.rocks
+    basePath: ""
+    stage: ${self:provider.stage}
+
 functions:
-  submitGuest:
-    handler: handler_guest.submitGuest
-    description: Submits guest info
-    events:
-      - http:
-          path: guests
-          method: post
-          cors: true
-  listGuests:
-    handler: handler_guest.listGuests
-    description: Lists all guests
-    events:
-      - http:
-          path: guests
-          method: get
-          cors: true
-  # deleteGuest:
-  #   handler: handler_guest.deleteGuest
-  #   description: Removes a guest from guest list
-  #   events:
-  #     - http:
-  #         path: guests/{uuid}
-  #         method: delete
-  #         cors: true
-  #         request:
-  #           parameters:
-  #             paths:
-  #               uuid: true
   submitResponse:
     handler: handler_response.submitResponse
     description: Submits response
@@ -60,32 +41,17 @@ functions:
           path: responses/accept
           method: post
           cors: true
-      - http:
-          path: responses/decline
-          method: post
-          cors: true
-  listResponses:
-    handler: handler_response.listResponses
-    description: Lists all responses
-    events:
-      - http:
-          path: responses
-          method: get
-          cors: true
+  # listResponses:
+  #   handler: handler_response.listResponses
+  #  description: Lists all responses
+  #  events:
+  #    - http:
+  #        path: responses
+  #        method: get
+  #        cors: true
 
 resources:
   Resources:
-    GuestsDynamoDbTable:
-      Type: "AWS::DynamoDB::Table"
-      Properties:
-        AttributeDefinitions:
-          - AttributeName: "id"
-            AttributeType: "S"
-        KeySchema:
-          - AttributeName: "id"
-            KeyType: "HASH"
-        BillingMode: PAY_PER_REQUEST
-        TableName: ${self:provider.environment.GUESTS_TABLE}
     ResponsesDynamoDbTable:
       Type: "AWS::DynamoDB::Table"
       Properties:
