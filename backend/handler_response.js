@@ -79,9 +79,14 @@ const createEmailResponse = (guests) => {
       message,
     } = guestList;
 
-    return `<b>${firstName} ${lastName}</b><br>attending: ${attending}<br>eatingMeat: ${eatingMeat}<br>dietaryRestrictions: ${dietaryRestrictions}${
-      message ? "<br>message: " + message : ""
-    }<br><br>`;
+    return `<b>${firstName} ${lastName}</b><br>attending: ${attending}${
+      attending !== "no" && eatingMeat ? "<br>eatingMeat: " + eatingMeat : ""
+    }
+    ${
+      attending !== "no" && dietaryRestrictions
+        ? "<br>dietaryRestrictions: " + dietaryRestrictions
+        : ""
+    }${message ? "<br>message: " + message : ""}<br><br>`;
   });
 };
 
@@ -139,8 +144,8 @@ const buildResponseItem = function buildResponseItemDynamoModel(
     firstName: firstName,
     lastName: lastName,
     attending: attending === "yes",
-    eatingMeat: eatingMeat === "yes",
-    dietaryRestrictions: dietaryRestrictions,
+    eatingMeat: attending ? eatingMeat === "yes" : "",
+    dietaryRestrictions: attending ? dietaryRestrictions : "",
     message: message,
     guests: guests,
     timestamp: timestamp,

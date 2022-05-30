@@ -199,7 +199,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/rsvp/prod/1653867253326-2022-05-29T23:34:13.326Z/rsvp.zip"
+                "S3Key": "serverless/rsvp/prod/1653895832288-2022-05-30T07:30:32.288Z/rsvp.zip"
               },
               "Handler": "handler_response.submitResponse",
               "Runtime": "nodejs14.x",
@@ -230,7 +230,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/rsvp/prod/1653867253326-2022-05-29T23:34:13.326Z/rsvp.zip"
+                "S3Key": "serverless/rsvp/prod/1653895832288-2022-05-30T07:30:32.288Z/rsvp.zip"
               },
               "Handler": "handler_contactform.submit",
               "Runtime": "nodejs14.x",
@@ -254,25 +254,25 @@
               "SubmitContactformLogGroup"
             ]
           },
-          "SubmitResponseLambdaVersionHMHbcO5PPbO1QHdLcjf0JaSoApdGFpgVB4FwfzF18": {
+          "SubmitResponseLambdaVersioncquV6ceAxBmrxsC2ZBQyp3vNK7ulmcaFcfGHfXKvsk": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "SubmitResponseLambdaFunction"
               },
-              "CodeSha256": "ddTWj5fh1Ev7Q4ICD3WmPBO2Tgf8d2jh0Bb5Fuf/cWQ=",
+              "CodeSha256": "Tvn/srmd/56P+IAnGZ3N74KEWA5gri4sCOde/MkU/Vg=",
               "Description": "Submit response"
             }
           },
-          "SubmitContactformLambdaVersionsMFz73qmu7Cr3mTl3ohZfSHCIcDOVdOnPIXPsdxN8LE": {
+          "SubmitContactformLambdaVersiontiYggAKrgKRdMDVVWp55JqGOwtawEO5UqJHfValUg": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "SubmitContactformLambdaFunction"
               },
-              "CodeSha256": "ddTWj5fh1Ev7Q4ICD3WmPBO2Tgf8d2jh0Bb5Fuf/cWQ=",
+              "CodeSha256": "Tvn/srmd/56P+IAnGZ3N74KEWA5gri4sCOde/MkU/Vg=",
               "Description": "Submit contact form"
             }
           },
@@ -512,7 +512,7 @@
               "SubmitContactformLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1653867249431": {
+          "ApiGatewayDeployment1653895828139": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -633,7 +633,7 @@
           "SubmitResponseLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "SubmitResponseLambdaVersionHMHbcO5PPbO1QHdLcjf0JaSoApdGFpgVB4FwfzF18"
+              "Ref": "SubmitResponseLambdaVersioncquV6ceAxBmrxsC2ZBQyp3vNK7ulmcaFcfGHfXKvsk"
             },
             "Export": {
               "Name": "sls-rsvp-prod-SubmitResponseLambdaFunctionQualifiedArn"
@@ -642,7 +642,7 @@
           "SubmitContactformLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "SubmitContactformLambdaVersionsMFz73qmu7Cr3mTl3ohZfSHCIcDOVdOnPIXPsdxN8LE"
+              "Ref": "SubmitContactformLambdaVersiontiYggAKrgKRdMDVVWp55JqGOwtawEO5UqJHfValUg"
             },
             "Export": {
               "Name": "sls-rsvp-prod-SubmitContactformLambdaFunctionQualifiedArn"
@@ -806,7 +806,7 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "SubmitResponseLambdaVersionHMHbcO5PPbO1QHdLcjf0JaSoApdGFpgVB4FwfzF18"
+        "versionLogicalId": "SubmitResponseLambdaVersioncquV6ceAxBmrxsC2ZBQyp3vNK7ulmcaFcfGHfXKvsk"
       },
       "submitContactform": {
         "handler": "handler_contactform.submit",
@@ -842,7 +842,7 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "SubmitContactformLambdaVersionsMFz73qmu7Cr3mTl3ohZfSHCIcDOVdOnPIXPsdxN8LE"
+        "versionLogicalId": "SubmitContactformLambdaVersiontiYggAKrgKRdMDVVWp55JqGOwtawEO5UqJHfValUg"
       }
     },
     "resources": {
@@ -895,7 +895,7 @@
     "artifact": "/Users/manuelberger/Documents/dev/github/wedding-website/backend/.serverless/rsvp.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/rsvp/prod/1653867253326-2022-05-29T23:34:13.326Z",
+    "artifactDirectoryName": "serverless/rsvp/prod/1653895832288-2022-05-30T07:30:32.288Z",
     "artifact": "rsvp.zip"
   }
 }
