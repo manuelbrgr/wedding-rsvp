@@ -4,9 +4,9 @@ title: Übernachtungsmöglichkeiten
 image: /img/home-tuscany.jpg
 subheading: Wo kann man übernachten?
 description: >
-  Es gibt viele verschiedene Übernachtungsmöglichkeiten, von Hotels, Airbnbs, B&Bs und Agriturismos in der Umgebung, wir sind sicher, dass ihr etwas finden werdet. Um euch die Suche zu erleichtern, haben wir einige Unterkünfte auf dem Land gesucht, die außerhalb des Stadtzentrums liegen und von denen aus ihr sowohl den Hochzeitsort als auch die Altstadt bequem erreichen könnt, und eine Liste erstellt. Wenn ihr im Zentrum von Siena übernachten wollt, gibt es viele Möglichkeiten, also sucht euch eine aus, die am besten zu euren Wünschen passt.
+  Es gibt viele verschiedene Übernachtungsmöglichkeiten, von Hotels, Airbnbs, B&Bs und Agriturismos in der Umgebung. Wir sind sicher, dass ihr etwas finden werdet. Um euch die Suche zu erleichtern, haben wir einige Unterkünfte auf dem Land gesucht und zusammengefasst, die außerhalb des Stadtzentrums liegen und von denen aus ihr sowohl den Hochzeitsort als auch die Altstadt bequem erreichen könnt. Wenn ihr im Zentrum von Siena übernachten wollt, gibt es viele Möglichkeiten, also sucht euch die Option, die am besten zu euren Wünschen passt.
 information: >
-  Einige Hotels sind vielleicht nicht mehr auf Booking.com oder anderen Suchportalen verfügbar, aber es könnte sich lohnen, dort anzurufen und zu fragen. Wenn man mit dem Auto anreist und innerhalb von Siena oder einer anderen größeren Stadt übernachtet, sollte man ein Hotel wählen, das außerhalb der ZTL (Zona Traffico Limitato - Begrenzte Verkehrszone) liegt ⛔ oder eines, das eine Erlaubnis zum Einfahren und Parken gibt, sonst muss man ein Bußgeld zahlen. 👮 ⚠️
+  Einige Hotels sind vielleicht nicht mehr auf Booking.com oder anderen Suchportalen verfügbar, aber es könnte sich lohnen, dort anzurufen und zu fragen. Wenn man mit dem Auto anreist und innerhalb von Siena oder einer anderen größeren Stadt übernachtet, sollte man ein Hotel wählen, das außerhalb der ZTL (Zona Traffico Limitato - Begrenzte Verkehrszone) liegt ⛔ oder eines, das eine Erlaubnis zum Einfahren und Parken gibt, sonst muss man mit einer Strafe rechnen. 👮 ⚠️
 listTitle: Was können wir
 listSubtitle: empfehlen?
 accommodations:

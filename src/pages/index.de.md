@@ -31,7 +31,7 @@ intro:
       headline: Auf geht's
       subheading: Party!
       text: >
-        Ab 20:00 Uhr im Hintergarten der Villa Colombaio und ab Mitternacht im Innenraum der Villa Colombaio..
+        Ab 20:00 Uhr im Hintergarten der Villa Colombaio und ab Mitternacht im Innenraum der Villa Colombaio.
   heading: Heading
 description: >
   Zeit und Ort der Trauung können sich wetterbedingt spontan ändern. Bitte prüft daher auf der Website, ob es Änderungen gibt.<br> 

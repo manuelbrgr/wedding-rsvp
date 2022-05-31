@@ -27,6 +27,15 @@ $black: #2b2523;
   src: url("../../../static/fonts/lato-bold.ttf");
 }
 
+html {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
 body * {
   font-family: "lato";
 }
