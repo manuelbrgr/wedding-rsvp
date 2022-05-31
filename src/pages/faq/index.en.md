@@ -39,6 +39,9 @@ questions:
   - question: Will there be an event the day before or after the wedding?
     answer: >
       We are not planning any official events around the wedding day, however, in the days around the wedding, there can always be people who will ask if somebody wants to join some activity like horseback riding + wine tasting so keep checking our facebook group and keep the Whatsapp notifications active. 🎉
+  - question: Can I use the pool?
+    answer: >
+      On the wedding day (10.09.2022) no wedding guests are allowed to sit or stand by the pool or to use it. 🚫&nbsp Please stay away from the pool's space and enjoy all the drinks and talking in the gardens. On all the other days, guests that are staying at Tenuta Larnianone are free to use the shared pool located in between of Villa Colombaio and Villa Ca' Nova Sud. 🏊
   - question: Wanna get to know others before the wedding?
     answer: >
       Awesome! Then join our especially created Whatsapp (contact us to be added) or <a href="https://www.facebook.com/groups/1435542876905661" target="_blank">Facebook group</a>! You can get to know other guests, organize carpooling/book a transportation together as a bigger group, rent an accommodation together, find a travel buddy or simply share your questions, messages and pictures there. 😄

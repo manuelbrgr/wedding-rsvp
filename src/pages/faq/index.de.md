@@ -40,6 +40,9 @@ questions:
   - question: Gibt es am Tag vor oder nach der Hochzeit eine andere Aktivität?
     answer: >
       Wir planen keine offiziellen Aktivitäten rund um den Hochzeitstag, aber in den Tagen rund um die Hochzeit kann es immer Leute geben, die fragen, ob jemand an einer Aktivität wie Reiten + Weinprobe teilnehmen möchte, also haltet unsere Facebook-Gruppe im Auge und haltet die Whatsapp-Benachrichtigungen aktiv. 🎉
+  - question: Darf ich den Schwimmbad benutzen?
+    answer: >
+      Am Hochzeitstag (10.09.2022) ist es den Gästen nicht erlaubt, am Pool zu sitzen oder zu stehen oder ihn zu benutzen. 🚫&nbsp Bitte haltet euch vom poolbereich fern und genießt alle Getränke und Unterhaltungen im Garten. An allen anderen Tagen können die Gäste der Tenuta Larnianone den gemeinsamen Pool zwischen der Villa Colombaio und der Villa Ca' Nova Sud nutzen. 🏊
   - question: Wollt ihr andere vor der Hochzeit kennenlernen?
     answer: >
       Toll! Dann komm in unsere extra erstellte Whatsapp- oder <a href="https://www.facebook.com/groups/1435542876905661" target="_blank">Facebook-Gruppe</a>! Dort könnt ihr andere Gäste kennenlernen, als größere Gruppe gemeinsam Fahrten organisieren/buchen, gemeinsam eine Unterkunft mieten, einen Reisepartner finden oder einfach eure Fragen, Nachrichten und Bilder teilen. 😄
