@@ -24,4 +24,4 @@ Visit github.com/manuelbrgr for inspiration and to see the source code of the im
 
 ### Special Thanks
 
-A special thanks goes to my beloved fiancee Angelika for her restless and amazing help, but also to my dear friend Dominik Braun for introducing, inspiring and convincing me about the power of AWS and Cloud Development. Also, a huge appreciation to the Open Source world for providing great examples and learning opportunities in terms of a static web page in Gatsby (github.com/netlify-templates) or an architecture for an RSVP service (github.com/enrubio).
+A special thanks goes to my beloved fiancee Angelika for her restless and amazing help, but also to my dear friend Dominik Braun for introducing, inspiring and convincing me about the power of AWS and Cloud Development.

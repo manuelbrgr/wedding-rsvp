@@ -24,4 +24,4 @@ Besuchen Sie github.com/manuelbrgr, um sich inspirieren zu lassen und den Quellc
 
 ### Spezielles Dankeschön
 
-Ein besonderer Dank geht an meine geliebte Verlobte Angelika für ihre unermüdliche und fantastische Hilfe, aber auch an meinen tollen Freund Dominik Braun für die Einführung, Inspiration und Überzeugung von der Leistung von AWS und Cloud Development. Ein großes Dankeschön geht auch an die Open-Source-Welt, die tolle Beispiele und Lernmöglichkeiten in Form einer statischen Webseite in Gatsby (github.com/netlify-templates) oder einer Architektur für einen RSVP-Service (github.com/enrubio) bietet.
+Ein besonderer Dank geht an meine geliebte Verlobte Angelika für ihre unermüdliche und fantastische Hilfe, aber auch an meinen tollen Freund Dominik Braun für die Einführung, Inspiration und Überzeugung von der Leistung von AWS und Cloud Development.
