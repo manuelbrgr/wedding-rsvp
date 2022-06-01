@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import languages from "../data/languages";
 import { getLangKey, getPath } from "../utils/getLangKey";
-import { useTranslation } from "react-i18next";
+import { withTranslation } from "react-i18next";
 import { useLocation } from "@reach/router";
 
 function Navbar(props) {
@@ -10,8 +10,6 @@ function Navbar(props) {
 
   const langKey = getLangKey(location);
   const path = getPath(location);
-
-  const { t, i18n } = useTranslation();
 
   const [active, setActive] = useState(false);
   const [navBarActiveClass, setNavBarActiveClass] = useState("");
@@ -51,22 +49,22 @@ function Navbar(props) {
               Home
             </Link>
             <Link className="navbar-item" to={`/${langKey}/location`}>
-              {t("navigation.location")}
+              {props.t("navigation.location")}
             </Link>
             <Link className="navbar-item" to={`/${langKey}/accommodation`}>
-              {t("navigation.accommodation")}
+              {props.t("navigation.accommodation")}
             </Link>
             <Link className="navbar-item" to={`/${langKey}/activities`}>
-              {t("navigation.activities")}
+              {props.t("navigation.activities")}
             </Link>
             <Link className="navbar-item" to={`/${langKey}/rsvp`}>
-              {t("navigation.rsvp")}
+              {props.t("navigation.rsvp")}
             </Link>
             <Link className="navbar-item" to={`/${langKey}/faq`}>
-              {t("navigation.faq")}
+              {props.t("navigation.faq")}
             </Link>
             <Link className="navbar-item" to={`/${langKey}/contact`}>
-              {t("navigation.contact")}
+              {props.t("navigation.contact")}
             </Link>
           </div>
           <div className="navbar-end has-text-centered">
@@ -75,7 +73,7 @@ function Navbar(props) {
                 key={i}
                 className="navbar-item"
                 to={`/${lng}/${path}`}
-                onClick={() => i18n.changeLanguage(lng)}
+                onClick={() => props.i18n.changeLanguage(lng)}
               >
                 {lng.toUpperCase()}
               </Link>
@@ -87,4 +85,4 @@ function Navbar(props) {
   );
 }
 
-export default Navbar;
+export default withTranslation()(Navbar);
