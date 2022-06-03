@@ -25,7 +25,7 @@
     "meat": "Meat 🥩",
     "veggie": "Veggie 🥦",
     "comment": "Comment",
-    "noDietaryRestrictions": "No dietary restrictions",
+    "noDietaryRestrictions": "None",
     "willYouAttend": "Will you attend our wedding?",
     "yes": "Yes",
     "no": "No",
@@ -42,14 +42,14 @@
       "eatingMeatRequired": "Please let us know what you prefer.",
       "serverRequestFailed": "There was an error. Please try submitting again."
     },
-    "nodietaryrestrictions": "No dietary restrictions",
+    "nodietaryrestrictions": "None",
     "header": {
       "title": "Angelika and Manuel's celebration on September 10th, 2022",
       "oneperson": "You've added 1 person to your party so far.",
       "morepeople": "You've added {{numGuests}} people to your party so far."
     },
     "cta": {
-      "success": "Hurray! Can't wait to see you on the big day!",
+      "success": "Hooray! Can't wait to see you on the big day!",
       "continue": "Continue",
       "edit": "Edit",
       "remove": "Remove this guest",

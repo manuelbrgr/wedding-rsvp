@@ -23,7 +23,7 @@ questions:
       To wy decydujecie, czy chcecie wybrać się na romantyczny wypad we dwoje, zostawiając swoje pociechy z dziadkami, czy też chcecie przyjechać całą rodziną - tak czy inaczej cieszymy się, że będziecie z nami! Prosimy jedynie o zwrócenie uwagi w najważniejszych momentach, takich jak ceremonia czy pierwszy taniec, aby dzieci nie zakłócały ich przebiegu. 😇
   - question: Gdzie odbywa się ślub? Czy wszystkie wydarzenia odbywają się w tym samym miejscu?
     answer: >
-      Zarówno ceremonia, jak i przyjęcie weselne odbędą się w bliskim sąsiedztwie na terenie Tenuty Larnianone. Ceremonia odbędzie się w ogrodzie Willi Ca' Nova Sud, a przyjęcie weselne w ogrodzie na podwórku Willi Colombaio. Po północy impreza przenosi się do wewnątrz. 💃
+      Zarówno ceremonia, jak i przyjęcie weselne odbędą się w bliskim sąsiedztwie na terenie Tenuty Larnianone. Ceremonia odbędzie się w ogrodzie Villa Ca' Nova Sud, a przyjęcie weselne w ogrodzie na podwórku Villa Colombaio. Po północy impreza przenosi się do wewnątrz. 💃
   - question: Dlaczego po północy musimy przenieść się do środka?
     answer: >
       Będziemy mieć sąsiadów w okolicznych willach, więc aby ich uszanować i móc kontynuować imprezę, musimy się przenieść do środka. Jeśli musisz wyjść po północy, żeby zaczerpnąć powietrza, zapalić papierosa lub porozmawiać, korzystaj z ogrodu przed domem i staraj się zachować niski poziom głośności. Jeśli nie będziemy przestrzegać tych zasad, impreza zostanie przerwana przez właścicieli willi. 🔈
@@ -45,7 +45,7 @@ questions:
   - question: Chcesz lepiej poznać innych gości przed ślubem?
     answer: >
       Super! W takim razie dołącz do naszej specjalnie stworzonej grupy na Whatsapp lub <a href="https://www.facebook.com/groups/1435542876905661" target="_blank">Facebooku</a>! Możecie tam poznać innych gości, zorganizować wspólne przejazdy, zarezerwować transport jako większa grupa, wynająć razem kwaterę, znaleźć towarzysza podróży lub po prostu podzielić się swoimi pytaniami, wiadomościami i zdjęciami. 😄
-  - question: Czy mogę przenocować w Willi?
+  - question: Czy mogę przenocować w Tenuta Larnianone?
     answer: >
       Obecnie wille są już zajęte, ale jeśli potrzebujesz pomocy w znalezieniu zakwaterowania, skontaktuj się z nami, a my postaramy się pomóc. 🏡
   - question: Gdzie szukać noclegów?

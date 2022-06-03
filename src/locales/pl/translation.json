@@ -16,7 +16,7 @@
     "hours": "godziny"
   },
   "form": {
-    "title": "wpisz dane gościa",
+    "title": "Wpisz dane gościa",
     "firstName": "Imię",
     "lastName": "Nazwisko",
     "guestReference": "Imię {{number}}-ego gościa",
@@ -42,7 +42,7 @@
       "eatingMeatRequired": "Daj nam znać, co wolisz.",
       "serverRequestFailed": "Wystąpił błąd. Spróbój ponownie wysłać odpowiedź."
     },
-    "nodietaryrestrictions": "Brak ograniczeń żywieniowych",
+    "nodietaryrestrictions": "Brak",
     "header": {
       "title": "Ślub Angeliki i Manuela 10 września 2022 r.",
       "oneperson": "Do tej pory dodano odpowiedź dla 1 osoby.",

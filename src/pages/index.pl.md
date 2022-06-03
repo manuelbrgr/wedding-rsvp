@@ -16,9 +16,9 @@ intro:
       headline: Dołącz do nas podczas
       subheading: przysięgi
       text: >
-        Od godz. 15:00 w ogrodzie Willi Ca' Nova Sud z widokiem na średniowieczną Sienę.
+        Od godz. 15:00 w ogrodzie Villa Ca' Nova Sud z widokiem na średniowieczną Sienę.
     - image: /img/apertivo.jpg
-      headline: Napij się bąbelków i
+      headline: Napij się bąbelków oraz
       subheading: poznaj ludzi
       text: >
         Od godziny 16:00 w przednim ogrodzie Villa Colombaio, z muzyką na żywo w wykonaniu niesamowitej <a href="https://www.instagram.com/gisellazambito" target="_blank">Giselli Zambito</a>.
@@ -31,7 +31,7 @@ intro:
       headline: Czas rozpocząć
       subheading: imprezę!
       text: >
-        Od godz. 20:00 w ogrodzie na tyłach willi Colombaio, a od północy wewnątrz willi Colombaio.
+        Od godz. 20:00 w ogrodzie na tyłach Villa Colombaio, a od północy wewnątrz Villa Colombaio.
   heading: Heading
 description: >
   Godziny i miejsca wydarzeń mogą ulec zmianie ze względu na warunki pogodowe, dlatego prosimy o sprawdzanie aktualności na stronie internetowej.<br> 

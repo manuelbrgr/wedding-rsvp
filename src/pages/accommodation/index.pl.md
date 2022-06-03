@@ -36,11 +36,11 @@ accommodations:
     url: https://www.booking.com/hotel/it/villa-cambi.html
   - img: /img/poderelastrega.jpg
     name: Podere la Strega
-    description: Uroczy, rodzinny B&B, położony 8 km od miejsca naszego ślubu i 2,9 km od starówki Sieny. Oferuje pokoje jedno- i dwuosobowe ( od 1 do 4 osób) z wliczonym śniadaniem kontynentalnym. Łatwa rezerwacja przez booking.com.
+    description: Uroczy, rodzinny B&B, położony 8 km od miejsca naszego ślubu i 2,9 km od starówki Sieny. Oferuje pokoje jedno- i dwuosobowe (od 1 do 4 osób) z wliczonym śniadaniem kontynentalnym. Łatwa rezerwacja przez booking.com.
     url: https://www.booking.com/hotel/it/podere-la-strega.html
   - img: /img/palazzoravizza.jpg
     name: Palazzo Ravizza
-    description: W samym mieście Siena znajduje się Palazzo Ravizza, hotel, w którym zatrzymaliśmy się podczas naszych wakacji w Toskanii. Oferuje on urocze, ekskluzywne pokoje o bardzo nostalgicznym klimacie i atmosferze. To idealny wybór, jeśli chcecie zwiedzić Sienę, choć od miejsca ślubu dzieli go 8,5km pieszo i 17km samochodem.
+    description: W samym mieście Siena znajduje się Palazzo Ravizza, hotel, w którym zatrzymaliśmy się podczas naszych wakacji w Toskanii. Oferuje on urocze, ekskluzywne pokoje o bardzo nostalgicznym klimacie i atmosferze. To idealny wybór, jeśli chcecie zwiedzić Sienę, choć od miejsca ślubu dzieli go 8,5 km pieszo i 17 km samochodem.
     url: https://www.booking.com/hotel/it/palazzo-ravizza-siena.html
 questions:
   - question: Jak dojechać z miejsca zakwaterowania do miejsca ślubu? 🚕

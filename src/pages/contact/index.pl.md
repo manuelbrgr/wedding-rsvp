@@ -8,7 +8,7 @@ subheading: Wpisz wiadomość
 formProps:
   email: Email
   placeholderEmail: brzęczyszczykiewicz@grzegorz.com
-  name: Imię
+  name: Imię i nazwisko
   placeholderName: Grzegorz Brzęczyszczykiewicz
   message: Twoja wiadomość
   send: Wyślij wiadomość

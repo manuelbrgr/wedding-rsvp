@@ -40,7 +40,7 @@ accommodations:
     url: https://www.booking.com/hotel/it/podere-la-strega.html
   - img: /img/palazzoravizza.jpg
     name: Palazzo Ravizza
-    description: Direkt in der Innenstadt von Siena befindet sich der Palazzo Ravizza, ein Hotel, in dem wir während unseres Toskana-Urlaubs einmal übernachtet haben. Es bietet hübsche, exklusive Zimmer mit einem sehr nostalgischen Flair und Atmosphäre. Es ist die perfekte Wahl, wenn ihr Siena erkunden wollt, obwohl es 8,5 km zu Fuß und 17,0 km mit dem Auto vom Hochzeitsort entfernt ist.
+    description: Direkt in der Innenstadt von Siena befindet sich der Palazzo Ravizza, ein Hotel, in dem wir während unseres Toskana-Urlaubs einmal übernachtet haben. Es bietet hübsche, exklusive Zimmer mit einem sehr nostalgischen Flair und Atmosphäre. Es ist die perfekte Wahl, wenn ihr Siena erkunden wollt, obwohl es 8,5 km zu Fuß und 17 km mit dem Auto vom Hochzeitsort entfernt ist.
     url: https://www.booking.com/hotel/it/palazzo-ravizza-siena.html
 questions:
   - question: Wie kommt man von der Unterkunft zur Hochzeitslocation? 🚕

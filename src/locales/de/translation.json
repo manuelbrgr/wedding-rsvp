@@ -25,7 +25,7 @@
     "meat": "Fleisch 🥩",
     "veggie": "Vegetarisch 🥦",
     "comment": "Anmerkungen",
-    "noDietaryRestrictions": "Keine diätetischen Einschränkungen",
+    "noDietaryRestrictions": "Keine",
     "willYouAttend": "Wirst du an unserer Hochzeit teilnehmen?",
     "yes": "Ja",
     "no": "Nein",
@@ -41,7 +41,7 @@
       "attendingRequired": "Antworte bitte, ob du teilnimmst.",
       "eatingMeatRequired": "Sag uns, was du lieber essen würdest."
     },
-    "nodietaryrestrictions": "Keine diätetischen Einschränkungen",
+    "nodietaryrestrictions": "Keine",
     "header": {
       "title": "Manuel und Angelika's Feier",
       "oneperson": "Du hast eine Person hinzugefügt.",

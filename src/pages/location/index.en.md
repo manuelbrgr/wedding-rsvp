@@ -49,4 +49,4 @@ questions:
       🚌&nbsp; You can take a <a href="https://www.flixbus.com/" target="_blank">FlixBus</a> all the way down to Siena.
 ---
 
-For those of you who stay with us in the Villas, the check in is on Friday, 9th of September from 16:00 and the check out is on Monday, 12th of September until 10:00. Also, if you need to be fetched from the railway station let us know and we can arrange it.
+For those of you who stay with us in the Villas, the check in is on Friday, 9th of September from 16:00 and the check out is on Monday, 12th of September until 10:00. Also, if you need to be picked up from the railway station let us know and we can arrange it.
