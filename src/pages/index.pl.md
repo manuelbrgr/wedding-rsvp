@@ -18,8 +18,8 @@ intro:
       text: >
         Od godz. 15:00 w ogrodzie Villa Ca' Nova Sud z widokiem na średniowieczną Sienę.
     - image: /img/apertivo.jpg
-      headline: Napij się bąbelków oraz
-      subheading: poznaj ludzi
+      headline: Napij się bąbelków i
+      subheading: poznaj innych
       text: >
         Od godziny 16:00 w przednim ogrodzie Villa Colombaio, z muzyką na żywo w wykonaniu niesamowitej <a href="https://www.instagram.com/gisellazambito" target="_blank">Giselli Zambito</a>.
     - image: /img/dinner.jpg
