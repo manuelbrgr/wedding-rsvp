@@ -81,6 +81,8 @@
     "node": ">= 14.15.0"
   },
   "browserslist": [
-    "last 2 Chrome versions"
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
   ]
 }

@@ -178,7 +178,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/rsvp/prod/1653895832288-2022-05-30T07:30:32.288Z/rsvp.zip"
+          "S3Key": "serverless/rsvp/prod/1654042028638-2022-06-01T00:07:08.638Z/rsvp.zip"
         },
         "Handler": "handler_response.submitResponse",
         "Runtime": "nodejs14.x",
@@ -209,7 +209,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/rsvp/prod/1653895832288-2022-05-30T07:30:32.288Z/rsvp.zip"
+          "S3Key": "serverless/rsvp/prod/1654042028638-2022-06-01T00:07:08.638Z/rsvp.zip"
         },
         "Handler": "handler_contactform.submit",
         "Runtime": "nodejs14.x",
@@ -410,7 +410,7 @@
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
         },
-        "ApiKeyRequired": false,
+        "ApiKeyRequired": true,
         "AuthorizationType": "NONE",
         "Integration": {
           "IntegrationHttpMethod": "POST",
@@ -456,7 +456,7 @@
         "RestApiId": {
           "Ref": "ApiGatewayRestApi"
         },
-        "ApiKeyRequired": false,
+        "ApiKeyRequired": true,
         "AuthorizationType": "NONE",
         "Integration": {
           "IntegrationHttpMethod": "POST",
@@ -491,7 +491,7 @@
         "SubmitContactformLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1653895828139": {
+    "ApiGatewayDeployment1654042023914": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -505,6 +505,59 @@
         "ApiGatewayMethodResponsesAcceptPost",
         "ApiGatewayMethodContactPost"
       ]
+    },
+    "ApiGatewayApiKey1": {
+      "Type": "AWS::ApiGateway::ApiKey",
+      "Properties": {
+        "Enabled": true,
+        "Value": "86000ac1287f675172fa260cd9d25ea3af1ea146b9d07e5742d336107ac5e9e3",
+        "Description": "Basic API key for clients",
+        "StageKeys": [
+          {
+            "RestApiId": {
+              "Ref": "ApiGatewayRestApi"
+            },
+            "StageName": "prod"
+          }
+        ]
+      },
+      "DependsOn": "ApiGatewayDeployment1654042023914"
+    },
+    "ApiGatewayUsagePlan": {
+      "Type": "AWS::ApiGateway::UsagePlan",
+      "DependsOn": "ApiGatewayDeployment1654042023914",
+      "Properties": {
+        "ApiStages": [
+          {
+            "ApiId": {
+              "Ref": "ApiGatewayRestApi"
+            },
+            "Stage": "prod"
+          }
+        ],
+        "Description": "Usage plan for rsvp prod stage",
+        "UsagePlanName": "rsvp-prod",
+        "Quota": {
+          "Limit": 300,
+          "Period": "DAY"
+        },
+        "Throttle": {
+          "BurstLimit": 200,
+          "RateLimit": 100
+        }
+      }
+    },
+    "ApiGatewayUsagePlanKey1": {
+      "Type": "AWS::ApiGateway::UsagePlanKey",
+      "Properties": {
+        "KeyId": {
+          "Ref": "ApiGatewayApiKey1"
+        },
+        "KeyType": "API_KEY",
+        "UsagePlanId": {
+          "Ref": "ApiGatewayUsagePlan"
+        }
+      }
     },
     "SubmitResponseLambdaPermissionApiGateway": {
       "Type": "AWS::Lambda::Permission",

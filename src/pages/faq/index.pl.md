@@ -39,7 +39,7 @@ questions:
   - question: Czy w dniu przed- lub po ślubie odbędzie się jakieś zorganizowane wydarzenie?
     answer: >
       Nie planujemy żadnych dodatkowych atrakcji i wydarzeń przed lub po ślubie, jednak zawsze mogą pojawić się osoby, które zapytają, czy ktoś chciałby wziąć udział w jakimś wydarzeniu, na przykład w jeździe konnej lub degustacji wina. Dlatego warto sprawdzać naszą <a href="https://www.facebook.com/groups/1435542876905661" target="_blank">grupę na Facebooku</a> i mieć aktywne powiadomienia na Whatsapp (napisz do nas by dołączyć do grupy). 🎉
-   - question: Czy można korzystać z basenu??
+  - question: Czy można korzystać z basenu?
     answer: >
       W dniu ślubu (10.09.2022) gościom weselnym nie wolno siedzieć ani stać przy basenie, ani z niego korzystać. 🚫&nbsp Prosimy nie wchodzić na teren basenu oraz rozkoszować się drinkami i rozmowami w ogrodzie. W pozostałe dni goście przebywający na terenie Tenuta Larnianone mogą swobodnie korzystać ze wspólnego basenu znajdującego się pomiędzy Villa Colombaio a Villa Ca' Nova Sud. 🏊
   - question: Chcesz lepiej poznać innych gości przed ślubem?

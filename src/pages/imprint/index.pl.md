@@ -24,4 +24,4 @@ Odwiedź stronę github.com/manuelbrgr, aby zaczerpnąć inspiracji i zobaczyć 
 
 ### Specjalne podziękowania
 
-Szczególne podziękowania kieruję do mojej ukochanej narzeczonej Angeliki za jej nieustającą i niesamowitą pomoc, ale także do mojego drogiego przyjaciela Dominika Brauna za wprowadzenie, zainspirowanie i przekonanie mnie o potędze AWS i rozwoju w chmurze. Ogromne podziękowania należą się również światu Open Source za dostarczenie wspaniałych przykładów i możliwości nauki, takich jak statyczna strona internetowa w Gatsby (github.com/netlify-templates) czy architektura obsługi RSVP (github.com/enrubio).
+Szczególne podziękowania kieruję do mojej ukochanej narzeczonej Angeliki za jej nieustającą i niesamowitą pomoc, ale także do mojego drogiego przyjaciela Dominika Brauna za wprowadzenie, zainspirowanie i przekonanie mnie o potędze AWS i rozwoju w chmurze. Ogromne
