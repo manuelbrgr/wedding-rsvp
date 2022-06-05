@@ -42,6 +42,9 @@ questions:
   - question: Czy można korzystać z basenu?
     answer: >
       W dniu ślubu (10.09.2022) gościom weselnym nie wolno siedzieć ani stać przy basenie, ani z niego korzystać. 🚫&nbsp Prosimy nie wchodzić na teren basenu oraz rozkoszować się drinkami i rozmowami w ogrodzie. W pozostałe dni goście przebywający na terenie Tenuta Larnianone mogą swobodnie korzystać ze wspólnego basenu znajdującego się pomiędzy Villa Colombaio a Villa Ca' Nova Sud. 🏊
+  - question: Dla palaczy
+    answer: >
+      Prosimy o poszanowanie pięknej przyrody, którą będziemy otoczeni podczas pobytu w Tenuta Larnianone i w dniu ślubu. Utrzymujcie miejsce w czystości i używajcie popielniczek do wyrzucania petów papierosowych. Prosimy nie rzucać ich na ziemię ani na pola. Goście przebywający w Tenuta Larnianone nie mogą palić papierosów ani e-papierosów w środku pomieszczeń. 🚬
   - question: Chcesz lepiej poznać innych gości przed ślubem?
     answer: >
       Super! W takim razie dołącz do naszej specjalnie stworzonej grupy na Whatsapp lub <a href="https://www.facebook.com/groups/1435542876905661" target="_blank">Facebooku</a>! Możecie tam poznać innych gości, zorganizować wspólne przejazdy, zarezerwować transport jako większa grupa, wynająć razem kwaterę, znaleźć towarzysza podróży lub po prostu podzielić się swoimi pytaniami, wiadomościami i zdjęciami. 😄

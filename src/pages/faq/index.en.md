@@ -42,6 +42,9 @@ questions:
   - question: Can I use the pool?
     answer: >
       On the wedding day (10.09.2022) no wedding guests are allowed to sit or stand by the pool or to use it. 🚫&nbsp Please stay away from the pool's space and enjoy all the drinks and talking in the gardens. On all the other days, guests that are staying at Tenuta Larnianone are free to use the shared pool located in between of Villa Colombaio and Villa Ca' Nova Sud. 🏊
+  - question: For the smokers
+    answer: >
+      Please be respectful of the beautiful nature we will be surrounded by during the stay at Tenuta Larnianone and during the wedding day. Keep the place clean and use ash trays to throw away the cigarette butts. Please, please don't throw them onto the ground or into the fields. If you're staying at Tenuta Larnianone, it is forbidden to smoke cigarettes or e-cigarettes indoors. 🚬
   - question: Wanna get to know others before the wedding?
     answer: >
       Awesome! Then join our especially created Whatsapp (contact us to be added) or <a href="https://www.facebook.com/groups/1435542876905661" target="_blank">Facebook group</a>! You can get to know other guests, organize carpooling/book a transportation together as a bigger group, rent an accommodation together, find a travel buddy or simply share your questions, messages and pictures there. 😄

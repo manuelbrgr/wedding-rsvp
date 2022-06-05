@@ -43,6 +43,9 @@ questions:
   - question: Darf ich den Schwimmbad benutzen?
     answer: >
       Am Hochzeitstag (10.09.2022) ist es den Gästen nicht erlaubt, am Pool zu sitzen oder zu stehen oder ihn zu benutzen. 🚫&nbsp Bitte haltet euch vom poolbereich fern und genießt alle Getränke und Unterhaltungen im Garten. An allen anderen Tagen können die Gäste der Tenuta Larnianone den gemeinsamen Pool zwischen der Villa Colombaio und der Villa Ca' Nova Sud nutzen. 🏊
+  - question: Für die Raucher
+    answer: >
+      Bitte respektiert die wunderschöne Natur, von der wir während des Aufenthalts auf der Tenuta Larnianone und während des Hochzeitstages umgeben sein werden. Haltet den Ort sauber und benutzt Aschenbecher, um die Kippen zu entsorgen. Bitte, bitte werft sie nicht auf den Erdboden oder in die Felder. Falls ihr in der Tenuta Larnianone übernachtet, ist das Rauchen von Zigaretten oder E-Zigaretten in den Innenräumen verboten. 🚬
   - question: Wollt ihr andere vor der Hochzeit kennenlernen?
     answer: >
       Toll! Dann komm in unsere extra erstellte Whatsapp- oder <a href="https://www.facebook.com/groups/1435542876905661" target="_blank">Facebook-Gruppe</a>! Dort könnt ihr andere Gäste kennenlernen, als größere Gruppe gemeinsam Fahrten organisieren/buchen, gemeinsam eine Unterkunft mieten, einen Reisepartner finden oder einfach eure Fragen, Nachrichten und Bilder teilen. 😄

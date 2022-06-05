@@ -46,7 +46,7 @@ function Navbar(props) {
         <div id="navMenu" className={`navbar-menu ${navBarActiveClass}`}>
           <div className="navbar-start has-text-centered">
             <Link className="navbar-item" to={`/${langKey}`}>
-              Home
+              {props.t("navigation.home")}
             </Link>
             <Link className="navbar-item" to={`/${langKey}/location`}>
               {props.t("navigation.location")}
