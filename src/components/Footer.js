@@ -32,7 +32,10 @@ function Footer(props) {
             <div className="column is-4" style={{ marginTop: "-1.5em" }}>
               <section></section>
             </div>
-            <div className="column is-4 social has-text-right-tablet">
+            <div
+              className="column is-4 social has-text-right-tablet"
+              style={{ marginTop: "-1.25em" }}
+            >
               <a
                 title="facebook"
                 target="_blank"
