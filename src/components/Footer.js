@@ -18,7 +18,7 @@ function Footer(props) {
       <div className="content has-text-centered has-background-black has-text-white-ter">
         <div className="container has-background-black has-text-white-ter">
           <div className="columns">
-            <div className="column is-4" style={{ marginTop: "-1.5em" }}>
+            <div className="column is-4" style={{ marginTop: "-1.2em" }}>
               <section className="menu">
                 <ul className="menu-list is-flex-mobile m-0">
                   <li>
