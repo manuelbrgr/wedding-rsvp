@@ -21,15 +21,13 @@ const Countdown = (props) => {
 
   return (
     <>
-      {browser && (
-        <h3
-          className="counter has-text-centered"
-          style={{ fontSize: "30px" }}
-          {...props}
-        >
-          <span>{toCountdown({ until: "2022-09-10", t })}</span>
-        </h3>
-      )}
+      <h3
+        className="counter has-text-centered"
+        style={{ fontSize: "30px", visibility: browser ? "visible" : "hidden" }}
+        {...props}
+      >
+        <span>{toCountdown({ until: "2022-09-10", t })}</span>
+      </h3>
     </>
   );
 };
