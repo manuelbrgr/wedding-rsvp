@@ -1,5 +1,5 @@
 @mixin breakpoint($breakpoint) {
-  $value: map-get($breakpoints, $breakpoint);
+  $value: map-get($list_breakpoints, $breakpoint);
 
   @if $value != null {
     @media only screen and (min-width: $value) {

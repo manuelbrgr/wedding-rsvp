@@ -14,7 +14,7 @@ questions:
       For dresscode and outfit ideas check our special <a href="https://pin.it/1mYdkGt" target="_blank"> Pinterest Board</a> 🕺 💃.
   - question: When is the RSVP deadline?
     answer: >
-      Please RSVP by July 1st, so we can have an accurate headcount. We also understand that unexpected things happen and if that will be the case, please let us know about it as soon as possible. 😄
+      Please RSVP by July 15th, so we can have an accurate headcount. We also understand that unexpected things happen and if that will be the case, please let us know about it as soon as possible. 😄
   - question: Can I bring a date?
     answer: >
       We have a limited capacity and therefore we can only allow people whose names are on the invites. 🥹

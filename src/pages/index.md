@@ -1,3 +1,3 @@
 ---
-templateKey: index-page
+templateKey: empty-page
 ---

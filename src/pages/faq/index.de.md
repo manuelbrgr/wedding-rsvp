@@ -14,7 +14,7 @@ questions:
       Hinweise zum Dresscode und Outfit-Ideen findet ihr auf unserem speziellen <a href="https://pin.it/1mYdkGt" target="_blank"> Pinterest Board</a> 🕺 💃.
   - question: Bis wann muss ich meine Teilnahme zusagen?
     answer: >
-      Bitte bestätigt eure Teilnahme bis zum 1. Juli, damit wir die genaue Anzahl der Gäste ermitteln können. Wir haben auch Verständnis dafür, dass es zu unvorhergesehenen Situationen kommen kann, und wenn dies der Fall ist, bitten wir um eine schnellstmögliche Benachrichtigung. 😄
+      Bitte bestätigt eure Teilnahme bis zum 15. Juli, damit wir die genaue Anzahl der Gäste ermitteln können. Wir haben auch Verständnis dafür, dass es zu unvorhergesehenen Situationen kommen kann, und wenn dies der Fall ist, bitten wir um eine schnellstmögliche Benachrichtigung. 😄
   - question: Darf ich ein Date mitbringen?
     answer: >
       Wir haben eine begrenzte Kapazität und können daher nur Personen zulassen, deren Namen auf den Einladungen stehen. 🥹

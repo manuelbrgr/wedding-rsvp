@@ -17,16 +17,19 @@ export const toCountdown = ({ from = moment(), until, t }) => {
 
 const Countdown = (props) => {
   const { t } = useTranslation();
+  const browser = typeof window !== "undefined" && window;
 
   return (
     <>
-      <h3
-        className="counter has-text-centered"
-        style={{ fontSize: "30px" }}
-        {...props}
-      >
-        <span>{toCountdown({ until: "2022-09-10", t })}</span>
-      </h3>
+      {browser && (
+        <h3
+          className="counter has-text-centered"
+          style={{ fontSize: "30px" }}
+          {...props}
+        >
+          <span>{toCountdown({ until: "2022-09-10", t })}</span>
+        </h3>
+      )}
     </>
   );
 };
