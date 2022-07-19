@@ -14,7 +14,7 @@ questions:
       Informacje na temat dresscode'u i pomysły na ubiór można znaleźć na naszej specjalnej tablicy na <a href="https://pin.it/1mYdkGt" target="_blank"> Pintereście</a>.
   - question: Do kiedy mamy potwierdzić przybycie?
     answer: >
-      Prosimy o potwierdzenie przybycia do 15 lipca, abyśmy mogli ustalić dokładną liczbę osób. Rozumiemy też, że zdarzają się nieprzewidziane sytuacje i jeśli tak się stanie, prosimy o jak najszybsze poinformowanie nas o tym. 😄
+      Prosimy o potwierdzenie przybycia do 29 lipca, abyśmy mogli ustalić dokładną liczbę osób. Rozumiemy też, że zdarzają się nieprzewidziane sytuacje i jeśli tak się stanie, prosimy o jak najszybsze poinformowanie nas o tym. 😄
   - question: Czy mogę przyprowadzić osobę towarzyszącą?
     answer: >
       Mamy ograniczoną liczbę miejsc i dlatego możemy przyjąć tylko te osoby, których nazwiska znajdują się na zaproszeniach. 🥹
