@@ -25,3 +25,13 @@ Besuchen Sie github.com/manuelbrgr, um sich inspirieren zu lassen und den Quellc
 ### Spezielles Dankeschön
 
 Ein besonderer Dank geht an meine geliebte Verlobte Angelika für ihre unermüdliche und fantastische Hilfe, aber auch an meinen tollen Freund Dominik Braun für die Einführung, Inspiration und Überzeugung von der Leistung von AWS und Cloud Development.
+
+### RSVP und Kontakt Formular
+
+Vielen Dank für deinen Besuch auf unserer Hochzeitswebsite! Wenn du unser RSVP- oder Kontaktformular nutzt, werden die von dir angegebenen Informationen, wie dein Name, deine E-Mail-Adresse und andere freiwillig übermittelte Details, sicher auf unseren Servern gespeichert, die von Amazon Web Services (AWS) in der Cloud gehostet werden.
+
+Sei versichert, dass wir den Schutz deiner Daten ernst nehmen und deine Privatsphäre sicherstellen. Deine Informationen werden nur für die Verwaltung unserer Hochzeitsgästeliste und die Kommunikation im Zusammenhang mit der Veranstaltung verwendet. Ohne deine ausdrückliche Zustimmung werden wir deine Daten nicht an Dritte weitergeben, es sei denn, dies ist gesetzlich vorgeschrieben.
+
+Durch das Absenden deiner Informationen über das RSVP- oder Kontaktformular stimmst du der Speicherung und Verarbeitung deiner Daten gemäß dieser Datenschutzerklärung zu.
+
+Wenn du Bedenken oder Fragen zur Handhabung deiner Daten hast, zögere bitte nicht, uns zu kontaktieren.

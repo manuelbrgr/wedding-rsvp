@@ -3,7 +3,7 @@ templateKey: index-page
 title: Angelika & Manuel
 image: /img/home-tuscany.jpg
 imageUs: /img/us.jpg
-date: 10th of September in Siena
+date: 10th of September 2022 in Siena
 mainpitch:
   title: Join us under the Tuscan sun
   description: >

@@ -6,7 +6,7 @@ export const toCountdown = ({ from = moment(), until, t }) => {
   if (!until) return "";
   if (typeof from === "string") from = moment(from);
   const targetTime = moment(until);
-  if (from.isAfter(until)) return "";
+  if (from.isAfter(until)) return t("countdown.thanks");
   const timeBetween = moment.duration(targetTime.diff(from));
   return `${timeBetween.months()} ${t(
     "countdown.months"
@@ -20,13 +20,13 @@ const Countdown = (props) => {
   const browser = typeof window !== "undefined" && window;
 
   return (
-    <>
+    <> 
       <h3
         className="counter has-text-centered"
         style={{ fontSize: "30px" }}
         {...props}
       >
-        <span>&nbsp;{browser && toCountdown({ until: "2022-09-10", t })}</span>
+        <span>&nbsp;{browser && toCountdown({ until: "2022-09-10", t }) }</span>
       </h3>
     </>
   );

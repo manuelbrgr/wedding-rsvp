@@ -3,7 +3,7 @@ templateKey: index-page
 title: Angelika & Manuel
 image: /img/home-tuscany.jpg
 imageUs: /img/us.jpg
-date: 10-ego września w Sienie
+date: 10-ego września 2022 w Sienie
 mainpitch:
   title: Dołącz do nas pod toskańskim słońcem
   description: >

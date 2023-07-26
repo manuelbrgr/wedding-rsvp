@@ -8,12 +8,13 @@
     "rsvp": "RSVP",
     "faq": "FAQ",
     "contact": "Kontakt",
-    "imprint": "Impressum"
+    "imprint": "Impressum und Datenschutz"
   },
   "countdown": {
     "months": "Monate",
     "days": "Tage",
-    "hours": "Stunden"
+    "hours": "Stunden",
+    "thanks": "Danke, dass ihr dabei wart!"
   },
   "form": {
     "title": "Gästeliste",

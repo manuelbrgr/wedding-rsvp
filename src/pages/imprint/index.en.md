@@ -25,3 +25,13 @@ Visit github.com/manuelbrgr for inspiration and to see the source code of the im
 ### Special Thanks
 
 A special thanks goes to my beloved fiancee Angelika for her restless and amazing help, but also to my dear friend Dominik Braun for introducing, inspiring and convincing me about the power of AWS and Cloud Development.
+
+### RSVP and Contact Form
+
+Thank you for visiting our wedding website! When you use our RSVP or contact form, the information you provide, such as your name, email address, and any other details you voluntarily submit, will be securely stored on our servers hosted by Amazon Web Services (AWS) in the cloud.
+
+Rest assured, we take the privacy and security of your data seriously. Your information will only be used for the purpose of managing our wedding guest list and communication related to the event. We will not share your data with any third parties without your explicit consent, unless required by law.
+
+By submitting your information through the RSVP or contact form, you consent to the storage and processing of your data in accordance with this privacy notice.
+
+If you have any concerns or questions about how we handle your data, please don't hesitate to contact us.
